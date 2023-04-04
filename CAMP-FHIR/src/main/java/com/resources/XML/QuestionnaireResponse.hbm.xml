@@ -7,207 +7,207 @@
             <generator class="identity"/>
         </id>
         <property name="qstnaireRspsAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Author</meta>
             <column length="65535" name="QstnaireRsps_Athr"/>
         </property>
         <property name="qstnaireRspsAthred" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Authored</meta>
             <column length="65535" name="QstnaireRsps_Athred"/>
         </property>
         <property name="qstnaireRspsBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.BasedOn</meta>
             <column length="65535" name="QstnaireRsps_BasedOn"/>
         </property>
         <property name="qstnaireRspsEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Encounter</meta>
             <column length="65535" name="QstnaireRsps_Enc"/>
         </property>
         <property name="qstnaireRspsIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Assigner</meta>
             <column length="65535" name="QstnaireRsps_Id_Assigner"/>
         </property>
         <property name="qstnaireRspsIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Period.End</meta>
             <column length="65535" name="QstnaireRsps_Id_Prd_End"/>
         </property>
         <property name="qstnaireRspsIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Period.Start</meta>
             <column length="65535" name="QstnaireRsps_Id_Prd_Strt"/>
         </property>
         <property name="qstnaireRspsIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.System</meta>
             <column length="65535" name="QstnaireRsps_Id_Sys"/>
         </property>
         <property name="qstnaireRspsIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="qstnaireRspsIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="qstnaireRspsIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Coding.System</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="qstnaireRspsIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="qstnaireRspsIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="qstnaireRspsIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Type.Text</meta>
             <column length="65535" name="QstnaireRsps_Id_Typ_Txt"/>
         </property>
         <property name="qstnaireRspsIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Use</meta>
             <column length="65535" name="QstnaireRsps_Id_Use"/>
         </property>
         <property name="qstnaireRspsIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Identifier.Value</meta>
             <column length="65535" name="QstnaireRsps_Id_Vl"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.ContentType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_CntntTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Creation</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Creation"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Data</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Data"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Hash</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Hash"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Language</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Lnguage"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Size</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Sz"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Title</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Ttl"/>
         </property>
         <property name="qstnaireRspsItmAnsVlAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueAttachment.Url</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Url"/>
         </property>
         <property name="qstnaireRspsItmAnsVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueBooleanType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlBooleanTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueCoding.Code</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Cd"/>
         </property>
         <property name="qstnaireRspsItmAnsVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueCoding.Display</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Dsply"/>
         </property>
         <property name="qstnaireRspsItmAnsVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueCoding.System</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Sys"/>
         </property>
         <property name="qstnaireRspsItmAnsVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueCoding.UserSelected</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_UsrSltd"/>
         </property>
         <property name="qstnaireRspsItmAnsVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueCoding.Version</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Vrsn"/>
         </property>
         <property name="qstnaireRspsItmAnsVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueDateTimeType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlDtTimeTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueDateType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlDtTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueDecimalType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlDecimalTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueIntegerType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlIntegerTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueQuantity.Code</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Cd"/>
         </property>
         <property name="qstnaireRspsItmAnsVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueQuantity.Comparator</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Cmprtr"/>
         </property>
         <property name="qstnaireRspsItmAnsVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueQuantity.System</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Sys"/>
         </property>
         <property name="qstnaireRspsItmAnsVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueQuantity.Unit</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Unt"/>
         </property>
         <property name="qstnaireRspsItmAnsVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueQuantity.Value</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Vl"/>
         </property>
         <property name="qstnaireRspsItmAnsVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueReference</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlRfrnc"/>
         </property>
         <property name="qstnaireRspsItmAnsVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueStringType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlStrgTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueTimeType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlTimeTyp"/>
         </property>
         <property name="qstnaireRspsItmAnsVlUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Answer.ValueUriType</meta>
             <column length="65535" name="QstnaireRsps_Itm_Ans_VlUriTyp"/>
         </property>
         <property name="qstnaireRspsItmDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Definition</meta>
             <column length="65535" name="QstnaireRsps_Itm_Dfn"/>
         </property>
         <property name="qstnaireRspsItmLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.LinkId</meta>
             <column length="65535" name="QstnaireRsps_Itm_LinkId"/>
         </property>
         <property name="qstnaireRspsItmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Item.Text</meta>
             <column length="65535" name="QstnaireRsps_Itm_Txt"/>
         </property>
         <property name="qstnaireRspsPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.PartOf</meta>
             <column length="65535" name="QstnaireRsps_PartOf"/>
         </property>
         <property name="qstnaireRspsQstnaire" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Questionnaire</meta>
             <column length="65535" name="QstnaireRsps_Qstnaire"/>
         </property>
         <property name="qstnaireRspsSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Source</meta>
             <column length="65535" name="QstnaireRsps_Src"/>
         </property>
         <property name="qstnaireRspsSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Status</meta>
             <column length="65535" name="QstnaireRsps_Sts"/>
         </property>
         <property name="qstnaireRspsSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">QuestionnaireResponse.Subject</meta>
             <column length="65535" name="QstnaireRsps_Sbjct"/>
         </property>
     </class>

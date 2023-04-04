@@ -7,751 +7,751 @@
             <generator class="identity"/>
         </id>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Assigner</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Assigner"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Period.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Prd_End"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Use</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Use"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdImmediatePackagingVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.ImmediatePackaging.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_ImmediatePackaging_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Assigner</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Assigner"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Period.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Prd_End"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Use</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Use"/>
         </property>
         <property name="mdcnlPrdctPckgedBatchIdOuterPackagingVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.BatchIdentifier.OuterPackaging.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_BatchId_OuterPackaging_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Description</meta>
             <column length="65535" name="MdcnlPrdctPckged_Dscrptn"/>
         </property>
         <property name="mdcnlPrdctPckgedIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctPckgedIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctPckgedIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Use"/>
         </property>
         <property name="mdcnlPrdctPckgedIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedLegalStsOfSpplyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.LegalStatusOfSupply.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_LegalStsOfSpply_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedManufacturer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Manufacturer</meta>
             <column length="65535" name="MdcnlPrdctPckged_Manufacturer"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingAthztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingAuthorization</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingAthztn"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsCntryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Country.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Cntry_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsDtRngEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.DateRange.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_DtRng_End"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsDtRngStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.DateRange.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_DtRng_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Jurisdiction.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Jrsdctn_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsRestoreDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.RestoreDate</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_RestoreDt"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedMarketingStsStsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.MarketingStatus.Status.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_MarketingSts_Sts_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmAlternateMtrlTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.AlternateMaterial.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_AlternateMtrl_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmDvc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Device</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Dvc"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Use"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMnfctredItm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ManufacturedItem</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_MnfctredItm"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmManufacturer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Manufacturer</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Manufacturer"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmMtrlTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Material.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Mtrl_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmOtherCrctrstcsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.OtherCharacteristics.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_OtherCrctrstcs_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsColor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Color</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Color"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsDepthCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Depth.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Depth_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsDepthCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Depth.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Depth_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsDepthSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Depth.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Depth_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsDepthUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Depth.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Depth_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsDepthVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Depth.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Depth_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsExternalDiameterCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.ExternalDiameter.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_ExternalDiameter_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsExternalDiameterCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.ExternalDiameter.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_ExternalDiameter_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsExternalDiameterSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.ExternalDiameter.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_ExternalDiameter_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsExternalDiameterUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.ExternalDiameter.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_ExternalDiameter_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsExternalDiameterVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.ExternalDiameter.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_ExternalDiameter_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsHeightCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Height.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Height_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsHeightCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Height.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Height_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsHeightSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Height.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Height_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsHeightUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Height.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Height_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsHeightVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Height.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Height_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.ContentType</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_CntntTyp"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Creation</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Creation"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Data</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Data"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Hash</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Hash"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Language</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Lnguage"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Size</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Sz"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Title</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Ttl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImageUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Image.Url</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Image_Url"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsImprint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Imprint</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Imprint"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsNominalVolumeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.NominalVolume.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_NominalVolume_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsNominalVolumeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.NominalVolume.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_NominalVolume_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsNominalVolumeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.NominalVolume.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_NominalVolume_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsNominalVolumeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.NominalVolume.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_NominalVolume_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsNominalVolumeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.NominalVolume.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_NominalVolume_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsScoringTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Scoring.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Scoring_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsShape" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Shape</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Shape"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWghtCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Weight.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Wght_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWghtCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Weight.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Wght_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWghtSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Weight.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Wght_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWghtUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Weight.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Wght_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWghtVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Weight.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Wght_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWidthCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Width.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Width_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWidthCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Width.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Width_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWidthSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Width.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Width_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWidthUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Width.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Width_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmPhysclCrctrstcsWidthVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.PhysicalCharacteristics.Width.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_PhysclCrctrstcs_Width_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Quantity.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Qnty_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Quantity.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Qnty_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Quantity.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Qnty_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Quantity.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Qnty_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Quantity.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Qnty_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Use"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgPrdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Period.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Prd_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgPrdCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Period.Comparator</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Prd_Cmprtr"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgPrdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Period.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Prd_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Period.Unit</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Prd_Unt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgPrdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Period.Value</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Prd_Vl"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgSpclPrctnsFrStrgTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.SpecialPrecautionsForStorage.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_SpclPrctnsFrStrg_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmShlfLfStrgTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.ShelfLifeStorage.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_ShlfLfStrg_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctPckgedPckgItmTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.PackageItem.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctPckged_PckgItm_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctPckgedSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductPackaged.Subject</meta>
             <column length="65535" name="MdcnlPrdctPckged_Sbjct"/>
         </property>
     </class>

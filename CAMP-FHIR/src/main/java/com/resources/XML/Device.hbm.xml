@@ -7,427 +7,427 @@
             <generator class="identity"/>
         </id>
         <property name="dvcCntctPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.Period.End</meta>
             <column length="65535" name="Dvc_Cntct_Prd_End"/>
         </property>
         <property name="dvcCntctPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.Period.Start</meta>
             <column length="65535" name="Dvc_Cntct_Prd_Strt"/>
         </property>
         <property name="dvcCntctRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.Rank</meta>
             <column length="65535" name="Dvc_Cntct_Rnk"/>
         </property>
         <property name="dvcCntctSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.System</meta>
             <column length="65535" name="Dvc_Cntct_Sys"/>
         </property>
         <property name="dvcCntctUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.Use</meta>
             <column length="65535" name="Dvc_Cntct_Use"/>
         </property>
         <property name="dvcCntctVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Contact.Value</meta>
             <column length="65535" name="Dvc_Cntct_Vl"/>
         </property>
         <property name="dvcDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Definition</meta>
             <column length="65535" name="Dvc_Dfn"/>
         </property>
         <property name="dvcDvcNmNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.DeviceName.Name</meta>
             <column length="65535" name="Dvc_DvcNm_Nm"/>
         </property>
         <property name="dvcDvcNmTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.DeviceName.Type</meta>
             <column length="65535" name="Dvc_DvcNm_Typ"/>
         </property>
         <property name="dvcDistinctId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.DistinctIdentifier</meta>
             <column length="65535" name="Dvc_DistinctId"/>
         </property>
         <property name="dvcExpirationDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.ExpirationDate</meta>
             <column length="65535" name="Dvc_ExpirationDt"/>
         </property>
         <property name="dvcIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Assigner</meta>
             <column length="65535" name="Dvc_Id_Assigner"/>
         </property>
         <property name="dvcIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Period.End</meta>
             <column length="65535" name="Dvc_Id_Prd_End"/>
         </property>
         <property name="dvcIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Period.Start</meta>
             <column length="65535" name="Dvc_Id_Prd_Strt"/>
         </property>
         <property name="dvcIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.System</meta>
             <column length="65535" name="Dvc_Id_Sys"/>
         </property>
         <property name="dvcIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Dvc_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Dvc_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Dvc_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Dvc_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Type.Text</meta>
             <column length="65535" name="Dvc_Id_Typ_Txt"/>
         </property>
         <property name="dvcIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Use</meta>
             <column length="65535" name="Dvc_Id_Use"/>
         </property>
         <property name="dvcIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Identifier.Value</meta>
             <column length="65535" name="Dvc_Id_Vl"/>
         </property>
         <property name="dvcLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Location</meta>
             <column length="65535" name="Dvc_Lctn"/>
         </property>
         <property name="dvcLotNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.LotNumber</meta>
             <column length="65535" name="Dvc_LotNmbr"/>
         </property>
         <property name="dvcManufactureDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.ManufactureDate</meta>
             <column length="65535" name="Dvc_ManufactureDt"/>
         </property>
         <property name="dvcManufacturer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Manufacturer</meta>
             <column length="65535" name="Dvc_Manufacturer"/>
         </property>
         <property name="dvcModelNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.ModelNumber</meta>
             <column length="65535" name="Dvc_ModelNmbr"/>
         </property>
         <property name="dvcNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Note.AuthorReference</meta>
             <column length="65535" name="Dvc_Nt_AthrRfrnc"/>
         </property>
         <property name="dvcNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Note.AuthorStringType</meta>
             <column length="65535" name="Dvc_Nt_AthrStrgTyp"/>
         </property>
         <property name="dvcNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Note.Text</meta>
             <column length="65535" name="Dvc_Nt_Txt"/>
         </property>
         <property name="dvcNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Note.Time</meta>
             <column length="65535" name="Dvc_Nt_Time"/>
         </property>
         <property name="dvcOwner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Owner</meta>
             <column length="65535" name="Dvc_Owner"/>
         </property>
         <property name="dvcParent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Parent</meta>
             <column length="65535" name="Dvc_Parent"/>
         </property>
         <property name="dvcPartNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.PartNumber</meta>
             <column length="65535" name="Dvc_PartNmbr"/>
         </property>
         <property name="dvcPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Patient</meta>
             <column length="65535" name="Dvc_Pnt"/>
         </property>
         <property name="dvcPrptyTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Coding.Code</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcPrptyTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Coding.Display</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcPrptyTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Coding.System</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcPrptyTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcPrptyTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Coding.Version</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcPrptyTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.Type.Text</meta>
             <column length="65535" name="Dvc_Prpty_Typ_Txt"/>
         </property>
         <property name="dvcPrptyVlCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Coding.Code</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Cdg_Cd"/>
         </property>
         <property name="dvcPrptyVlCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Coding.Display</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Cdg_Dsply"/>
         </property>
         <property name="dvcPrptyVlCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Coding.System</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Cdg_Sys"/>
         </property>
         <property name="dvcPrptyVlCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Cdg_UsrSltd"/>
         </property>
         <property name="dvcPrptyVlCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Coding.Version</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Cdg_Vrsn"/>
         </property>
         <property name="dvcPrptyVlCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueCode.Text</meta>
             <column length="65535" name="Dvc_Prpty_VlCd_Txt"/>
         </property>
         <property name="dvcPrptyVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueQuantity.Code</meta>
             <column length="65535" name="Dvc_Prpty_VlQnty_Cd"/>
         </property>
         <property name="dvcPrptyVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueQuantity.Comparator</meta>
             <column length="65535" name="Dvc_Prpty_VlQnty_Cmprtr"/>
         </property>
         <property name="dvcPrptyVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueQuantity.System</meta>
             <column length="65535" name="Dvc_Prpty_VlQnty_Sys"/>
         </property>
         <property name="dvcPrptyVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueQuantity.Unit</meta>
             <column length="65535" name="Dvc_Prpty_VlQnty_Unt"/>
         </property>
         <property name="dvcPrptyVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Property.ValueQuantity.Value</meta>
             <column length="65535" name="Dvc_Prpty_VlQnty_Vl"/>
         </property>
         <property name="dvcSafetyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Coding.Code</meta>
             <column length="65535" name="Dvc_Safety_Cdg_Cd"/>
         </property>
         <property name="dvcSafetyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Coding.Display</meta>
             <column length="65535" name="Dvc_Safety_Cdg_Dsply"/>
         </property>
         <property name="dvcSafetyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Coding.System</meta>
             <column length="65535" name="Dvc_Safety_Cdg_Sys"/>
         </property>
         <property name="dvcSafetyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Safety_Cdg_UsrSltd"/>
         </property>
         <property name="dvcSafetyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Coding.Version</meta>
             <column length="65535" name="Dvc_Safety_Cdg_Vrsn"/>
         </property>
         <property name="dvcSafetyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Safety.Text</meta>
             <column length="65535" name="Dvc_Safety_Txt"/>
         </property>
         <property name="dvcSerialNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.SerialNumber</meta>
             <column length="65535" name="Dvc_SerialNmbr"/>
         </property>
         <property name="dvcSpclizationSysTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Coding.Code</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Cdg_Cd"/>
         </property>
         <property name="dvcSpclizationSysTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Coding.Display</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Cdg_Dsply"/>
         </property>
         <property name="dvcSpclizationSysTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Coding.System</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Cdg_Sys"/>
         </property>
         <property name="dvcSpclizationSysTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Cdg_UsrSltd"/>
         </property>
         <property name="dvcSpclizationSysTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Coding.Version</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Cdg_Vrsn"/>
         </property>
         <property name="dvcSpclizationSysTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.SystemType.Text</meta>
             <column length="65535" name="Dvc_Spclization_SysTyp_Txt"/>
         </property>
         <property name="dvcSpclizationVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Specialization.Version</meta>
             <column length="65535" name="Dvc_Spclization_Vrsn"/>
         </property>
         <property name="dvcSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Status</meta>
             <column length="65535" name="Dvc_Sts"/>
         </property>
         <property name="dvcStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Coding.Code</meta>
             <column length="65535" name="Dvc_StsRsn_Cdg_Cd"/>
         </property>
         <property name="dvcStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Coding.Display</meta>
             <column length="65535" name="Dvc_StsRsn_Cdg_Dsply"/>
         </property>
         <property name="dvcStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Coding.System</meta>
             <column length="65535" name="Dvc_StsRsn_Cdg_Sys"/>
         </property>
         <property name="dvcStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_StsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="dvcStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Coding.Version</meta>
             <column length="65535" name="Dvc_StsRsn_Cdg_Vrsn"/>
         </property>
         <property name="dvcStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.StatusReason.Text</meta>
             <column length="65535" name="Dvc_StsRsn_Txt"/>
         </property>
         <property name="dvcTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Coding.Code</meta>
             <column length="65535" name="Dvc_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Coding.Display</meta>
             <column length="65535" name="Dvc_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Coding.System</meta>
             <column length="65535" name="Dvc_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Coding.Version</meta>
             <column length="65535" name="Dvc_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Type.Text</meta>
             <column length="65535" name="Dvc_Typ_Txt"/>
         </property>
         <property name="dvcUdiCarrierCarrierAidc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.CarrierAIDC</meta>
             <column length="65535" name="Dvc_UdiCarrier_CarrierAidc"/>
         </property>
         <property name="dvcUdiCarrierCarrierHrf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.CarrierHRF</meta>
             <column length="65535" name="Dvc_UdiCarrier_CarrierHrf"/>
         </property>
         <property name="dvcUdiCarrierDvcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.DeviceIdentifier</meta>
             <column length="65535" name="Dvc_UdiCarrier_DvcId"/>
         </property>
         <property name="dvcUdiCarrierEntryTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.EntryType</meta>
             <column length="65535" name="Dvc_UdiCarrier_EntryTyp"/>
         </property>
         <property name="dvcUdiCarrierIssuer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.Issuer</meta>
             <column length="65535" name="Dvc_UdiCarrier_Issuer"/>
         </property>
         <property name="dvcUdiCarrierJrsdctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.UdiCarrier.Jurisdiction</meta>
             <column length="65535" name="Dvc_UdiCarrier_Jrsdctn"/>
         </property>
         <property name="dvcUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Url</meta>
             <column length="65535" name="Dvc_Url"/>
         </property>
         <property name="dvcVrsnCmpntAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Assigner</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Assigner"/>
         </property>
         <property name="dvcVrsnCmpntPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Period.End</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Prd_End"/>
         </property>
         <property name="dvcVrsnCmpntPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Period.Start</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Prd_Strt"/>
         </property>
         <property name="dvcVrsnCmpntSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.System</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Sys"/>
         </property>
         <property name="dvcVrsnCmpntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Coding.Code</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcVrsnCmpntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Coding.Display</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcVrsnCmpntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Coding.System</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcVrsnCmpntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcVrsnCmpntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Coding.Version</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcVrsnCmpntTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Type.Text</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Typ_Txt"/>
         </property>
         <property name="dvcVrsnCmpntUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Use</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Use"/>
         </property>
         <property name="dvcVrsnCmpntVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Component.Value</meta>
             <column length="65535" name="Dvc_Vrsn_Cmpnt_Vl"/>
         </property>
         <property name="dvcVrsnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Coding.Code</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcVrsnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Coding.Display</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcVrsnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Coding.System</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcVrsnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Coding.UserSelected</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcVrsnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Coding.Version</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcVrsnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Type.Text</meta>
             <column length="65535" name="Dvc_Vrsn_Typ_Txt"/>
         </property>
         <property name="dvcVrsnVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Device.Version.Value</meta>
             <column length="65535" name="Dvc_Vrsn_Vl"/>
         </property>
     </class>

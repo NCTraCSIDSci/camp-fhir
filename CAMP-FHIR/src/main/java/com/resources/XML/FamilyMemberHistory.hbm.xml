@@ -7,487 +7,487 @@
             <generator class="identity"/>
         </id>
         <property name="fmlyMmbrHisAgeAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeAge.Code</meta>
             <column length="65535" name="FmlyMmbrHis_AgeAge_Cd"/>
         </property>
         <property name="fmlyMmbrHisAgeAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeAge.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_AgeAge_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisAgeAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeAge.System</meta>
             <column length="65535" name="FmlyMmbrHis_AgeAge_Sys"/>
         </property>
         <property name="fmlyMmbrHisAgeAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeAge.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_AgeAge_Unt"/>
         </property>
         <property name="fmlyMmbrHisAgeAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeAge.Value</meta>
             <column length="65535" name="FmlyMmbrHis_AgeAge_Vl"/>
         </property>
         <property name="fmlyMmbrHisAgeRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.High.Code</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Cd"/>
         </property>
         <property name="fmlyMmbrHisAgeRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.High.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisAgeRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.High.System</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Sys"/>
         </property>
         <property name="fmlyMmbrHisAgeRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.High.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Unt"/>
         </property>
         <property name="fmlyMmbrHisAgeRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.High.Value</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Vl"/>
         </property>
         <property name="fmlyMmbrHisAgeRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.Low.Code</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Cd"/>
         </property>
         <property name="fmlyMmbrHisAgeRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.Low.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisAgeRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.Low.System</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Sys"/>
         </property>
         <property name="fmlyMmbrHisAgeRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.Low.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Unt"/>
         </property>
         <property name="fmlyMmbrHisAgeRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeRange.Low.Value</meta>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Vl"/>
         </property>
         <property name="fmlyMmbrHisAgeStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.AgeStringType</meta>
             <column length="65535" name="FmlyMmbrHis_AgeStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisBornDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.BornDateType</meta>
             <column length="65535" name="FmlyMmbrHis_BornDtTyp"/>
         </property>
         <property name="fmlyMmbrHisBornPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.BornPeriod.End</meta>
             <column length="65535" name="FmlyMmbrHis_BornPrd_End"/>
         </property>
         <property name="fmlyMmbrHisBornPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.BornPeriod.Start</meta>
             <column length="65535" name="FmlyMmbrHis_BornPrd_Strt"/>
         </property>
         <property name="fmlyMmbrHisBornStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.BornStringType</meta>
             <column length="65535" name="FmlyMmbrHis_BornStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisCndtnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Code.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Txt"/>
         </property>
         <property name="fmlyMmbrHisCndtnContributedToDeath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.ContributedToDeath</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_ContributedToDeath"/>
         </property>
         <property name="fmlyMmbrHisCndtnNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Note.AuthorReference</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_AthrRfrnc"/>
         </property>
         <property name="fmlyMmbrHisCndtnNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Note.AuthorStringType</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_AthrStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisCndtnNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Note.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_Txt"/>
         </property>
         <property name="fmlyMmbrHisCndtnNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Note.Time</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_Time"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnAge.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Cd"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnAge.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnAge.System</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Sys"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnAge.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Unt"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnAge.Value</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Vl"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnPeriod.End</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnPrd_End"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnPeriod.Start</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnPrd_Strt"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.High.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Cd"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.High.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.High.System</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Sys"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.High.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Unt"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.High.Value</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Vl"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.Low.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Cd"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.Low.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.Low.System</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Sys"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.Low.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Unt"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnRange.Low.Value</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Vl"/>
         </property>
         <property name="fmlyMmbrHisCndtnOnStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.OnStringType</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisCndtnOutcomeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Condition.Outcome.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Txt"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisDataAbsentRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DataAbsentReason.Text</meta>
             <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Txt"/>
         </property>
         <property name="fmlyMmbrHisDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Date</meta>
             <column length="65535" name="FmlyMmbrHis_Dt"/>
         </property>
         <property name="fmlyMmbrHisDeceasedAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedAge.Code</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedAge_Cd"/>
         </property>
         <property name="fmlyMmbrHisDeceasedAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedAge.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedAge_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisDeceasedAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedAge.System</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedAge_Sys"/>
         </property>
         <property name="fmlyMmbrHisDeceasedAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedAge.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedAge_Unt"/>
         </property>
         <property name="fmlyMmbrHisDeceasedAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedAge.Value</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedAge_Vl"/>
         </property>
         <property name="fmlyMmbrHisDeceasedBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedBooleanType</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedBooleanTyp"/>
         </property>
         <property name="fmlyMmbrHisDeceasedDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedDateType</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedDtTyp"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.High.Code</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Cd"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.High.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.High.System</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Sys"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.High.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Unt"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.High.Value</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Vl"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.Low.Code</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Cd"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.Low.Comparator</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Cmprtr"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.Low.System</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Sys"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.Low.Unit</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Unt"/>
         </property>
         <property name="fmlyMmbrHisDeceasedRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedRange.Low.Value</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Vl"/>
         </property>
         <property name="fmlyMmbrHisDeceasedStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.DeceasedStringType</meta>
             <column length="65535" name="FmlyMmbrHis_DeceasedStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisEstmtdAge" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.EstimatedAge</meta>
             <column length="65535" name="FmlyMmbrHis_EstmtdAge"/>
         </property>
         <property name="fmlyMmbrHisIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Assigner</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Assigner"/>
         </property>
         <property name="fmlyMmbrHisIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Period.End</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Prd_End"/>
         </property>
         <property name="fmlyMmbrHisIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Period.Start</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Prd_Strt"/>
         </property>
         <property name="fmlyMmbrHisIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.System</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Sys"/>
         </property>
         <property name="fmlyMmbrHisIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Type.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Typ_Txt"/>
         </property>
         <property name="fmlyMmbrHisIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Use</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Use"/>
         </property>
         <property name="fmlyMmbrHisIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Identifier.Value</meta>
             <column length="65535" name="FmlyMmbrHis_Id_Vl"/>
         </property>
         <property name="fmlyMmbrHisInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.InstantiatesCanonical</meta>
             <column length="65535" name="FmlyMmbrHis_InstantiatesCanonical"/>
         </property>
         <property name="fmlyMmbrHisInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.InstantiatesUri</meta>
             <column length="65535" name="FmlyMmbrHis_InstantiatesUri"/>
         </property>
         <property name="fmlyMmbrHisNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Name</meta>
             <column length="65535" name="FmlyMmbrHis_Nm"/>
         </property>
         <property name="fmlyMmbrHisNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Note.AuthorReference</meta>
             <column length="65535" name="FmlyMmbrHis_Nt_AthrRfrnc"/>
         </property>
         <property name="fmlyMmbrHisNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Note.AuthorStringType</meta>
             <column length="65535" name="FmlyMmbrHis_Nt_AthrStrgTyp"/>
         </property>
         <property name="fmlyMmbrHisNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Note.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Nt_Txt"/>
         </property>
         <property name="fmlyMmbrHisNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Note.Time</meta>
             <column length="65535" name="FmlyMmbrHis_Nt_Time"/>
         </property>
         <property name="fmlyMmbrHisPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Patient</meta>
             <column length="65535" name="FmlyMmbrHis_Pnt"/>
         </property>
         <property name="fmlyMmbrHisRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonCode.Text</meta>
             <column length="65535" name="FmlyMmbrHis_RsnCd_Txt"/>
         </property>
         <property name="fmlyMmbrHisRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.ReasonReference</meta>
             <column length="65535" name="FmlyMmbrHis_RsnRfrnc"/>
         </property>
         <property name="fmlyMmbrHisRltnshipCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisRltnshipCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisRltnshipCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisRltnshipCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisRltnshipCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisRltnshipTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Relationship.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Rltnship_Txt"/>
         </property>
         <property name="fmlyMmbrHisSexCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Coding.Code</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Cd"/>
         </property>
         <property name="fmlyMmbrHisSexCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Coding.Display</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Dsply"/>
         </property>
         <property name="fmlyMmbrHisSexCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Coding.System</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Sys"/>
         </property>
         <property name="fmlyMmbrHisSexCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Coding.UserSelected</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Cdg_UsrSltd"/>
         </property>
         <property name="fmlyMmbrHisSexCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Coding.Version</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Vrsn"/>
         </property>
         <property name="fmlyMmbrHisSexTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Sex.Text</meta>
             <column length="65535" name="FmlyMmbrHis_Sex_Txt"/>
         </property>
         <property name="fmlyMmbrHisSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">FamilyMemberHistory.Status</meta>
             <column length="65535" name="FmlyMmbrHis_Sts"/>
         </property>
     </class>

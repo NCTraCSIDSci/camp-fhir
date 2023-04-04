@@ -7,243 +7,243 @@
             <generator class="identity"/>
         </id>
         <property name="grpActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Active</meta>
             <column length="65535" name="Grp_Active"/>
         </property>
         <property name="grpActual" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Actual</meta>
             <column length="65535" name="Grp_Actual"/>
         </property>
         <property name="grpCrctrstcCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Coding.Code</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Cd"/>
         </property>
         <property name="grpCrctrstcCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Coding.Display</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Dsply"/>
         </property>
         <property name="grpCrctrstcCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Coding.System</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Sys"/>
         </property>
         <property name="grpCrctrstcCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Coding.UserSelected</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="grpCrctrstcCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Coding.Version</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Vrsn"/>
         </property>
         <property name="grpCrctrstcCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Code.Text</meta>
             <column length="65535" name="Grp_Crctrstc_Cd_Txt"/>
         </property>
         <property name="grpCrctrstcExclude" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Exclude</meta>
             <column length="65535" name="Grp_Crctrstc_Exclude"/>
         </property>
         <property name="grpCrctrstcPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Period.End</meta>
             <column length="65535" name="Grp_Crctrstc_Prd_End"/>
         </property>
         <property name="grpCrctrstcPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.Period.Start</meta>
             <column length="65535" name="Grp_Crctrstc_Prd_Strt"/>
         </property>
         <property name="grpCrctrstcVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueBooleanType</meta>
             <column length="65535" name="Grp_Crctrstc_VlBooleanTyp"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="grpCrctrstcVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueCodeableConcept.Text</meta>
             <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Txt"/>
         </property>
         <property name="grpCrctrstcVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueQuantity.Code</meta>
             <column length="65535" name="Grp_Crctrstc_VlQnty_Cd"/>
         </property>
         <property name="grpCrctrstcVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueQuantity.Comparator</meta>
             <column length="65535" name="Grp_Crctrstc_VlQnty_Cmprtr"/>
         </property>
         <property name="grpCrctrstcVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueQuantity.System</meta>
             <column length="65535" name="Grp_Crctrstc_VlQnty_Sys"/>
         </property>
         <property name="grpCrctrstcVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueQuantity.Unit</meta>
             <column length="65535" name="Grp_Crctrstc_VlQnty_Unt"/>
         </property>
         <property name="grpCrctrstcVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueQuantity.Value</meta>
             <column length="65535" name="Grp_Crctrstc_VlQnty_Vl"/>
         </property>
         <property name="grpCrctrstcVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.High.Code</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Cd"/>
         </property>
         <property name="grpCrctrstcVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.High.Comparator</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="grpCrctrstcVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.High.System</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Sys"/>
         </property>
         <property name="grpCrctrstcVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.High.Unit</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Unt"/>
         </property>
         <property name="grpCrctrstcVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.High.Value</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Vl"/>
         </property>
         <property name="grpCrctrstcVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.Low.Code</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Cd"/>
         </property>
         <property name="grpCrctrstcVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.Low.Comparator</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="grpCrctrstcVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.Low.System</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Sys"/>
         </property>
         <property name="grpCrctrstcVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.Low.Unit</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Unt"/>
         </property>
         <property name="grpCrctrstcVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueRange.Low.Value</meta>
             <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Vl"/>
         </property>
         <property name="grpCrctrstcVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Characteristic.ValueReference</meta>
             <column length="65535" name="Grp_Crctrstc_VlRfrnc"/>
         </property>
         <property name="grpCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Coding.Code</meta>
             <column length="65535" name="Grp_Cd_Cdg_Cd"/>
         </property>
         <property name="grpCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Coding.Display</meta>
             <column length="65535" name="Grp_Cd_Cdg_Dsply"/>
         </property>
         <property name="grpCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Coding.System</meta>
             <column length="65535" name="Grp_Cd_Cdg_Sys"/>
         </property>
         <property name="grpCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Coding.UserSelected</meta>
             <column length="65535" name="Grp_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="grpCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Coding.Version</meta>
             <column length="65535" name="Grp_Cd_Cdg_Vrsn"/>
         </property>
         <property name="grpCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Code.Text</meta>
             <column length="65535" name="Grp_Cd_Txt"/>
         </property>
         <property name="grpIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Assigner</meta>
             <column length="65535" name="Grp_Id_Assigner"/>
         </property>
         <property name="grpIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Period.End</meta>
             <column length="65535" name="Grp_Id_Prd_End"/>
         </property>
         <property name="grpIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Period.Start</meta>
             <column length="65535" name="Grp_Id_Prd_Strt"/>
         </property>
         <property name="grpIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.System</meta>
             <column length="65535" name="Grp_Id_Sys"/>
         </property>
         <property name="grpIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Grp_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="grpIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Grp_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="grpIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Grp_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="grpIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Grp_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="grpIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Grp_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="grpIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Type.Text</meta>
             <column length="65535" name="Grp_Id_Typ_Txt"/>
         </property>
         <property name="grpIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Use</meta>
             <column length="65535" name="Grp_Id_Use"/>
         </property>
         <property name="grpIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Identifier.Value</meta>
             <column length="65535" name="Grp_Id_Vl"/>
         </property>
         <property name="grpManagingEntity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.ManagingEntity</meta>
             <column length="65535" name="Grp_ManagingEntity"/>
         </property>
         <property name="grpMmbrEntity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Member.Entity</meta>
             <column length="65535" name="Grp_Mmbr_Entity"/>
         </property>
         <property name="grpMmbrInactive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Member.Inactive</meta>
             <column length="65535" name="Grp_Mmbr_Inactive"/>
         </property>
         <property name="grpMmbrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Member.Period.End</meta>
             <column length="65535" name="Grp_Mmbr_Prd_End"/>
         </property>
         <property name="grpMmbrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Member.Period.Start</meta>
             <column length="65535" name="Grp_Mmbr_Prd_Strt"/>
         </property>
         <property name="grpNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Name</meta>
             <column length="65535" name="Grp_Nm"/>
         </property>
         <property name="grpQnty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Quantity</meta>
             <column length="65535" name="Grp_Qnty"/>
         </property>
         <property name="grpTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Group.Type</meta>
             <column length="65535" name="Grp_Typ"/>
         </property>
     </class>

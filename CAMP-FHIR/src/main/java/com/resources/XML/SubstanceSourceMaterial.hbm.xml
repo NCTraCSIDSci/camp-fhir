@@ -7,571 +7,571 @@
             <generator class="identity"/>
         </id>
         <property name="sbstncSrcMtrlCntryOfOriginCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlCntryOfOriginCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlCntryOfOriginCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlCntryOfOriginCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlCntryOfOriginCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlCntryOfOriginTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.CountryOfOrigin.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_CntryOfOrigin_Txt"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlDevelopmentStageTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.DevelopmentStage.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_DevelopmentStage_Txt"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnFraction" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.Fraction</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_Fraction"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlFractionDscrptnMtrlTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.FractionDescription.MaterialType.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_FractionDscrptn_MtrlTyp_Txt"/>
         </property>
         <property name="sbstncSrcMtrlGeographicalLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.GeographicalLocation</meta>
             <column length="65535" name="SbstncSrcMtrl_GeographicalLctn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorDescription</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrDscrptn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmAthrAthrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Author.AuthorType.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Athr_AthrTyp_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmFmlyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Family.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Fmly_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmGenusTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Genus.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Genus_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridHybridTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.HybridType.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_HybridTyp_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridMaternalOrgnsmId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.MaternalOrganismId</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_MaternalOrgnsmId"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridMaternalOrgnsmNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.MaternalOrganismName</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_MaternalOrgnsmNm"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridPaternalOrgnsmId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.PaternalOrganismId</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_PaternalOrgnsmId"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmHybridPaternalOrgnsmNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Hybrid.PaternalOrganismName</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Hybrid_PaternalOrgnsmNm"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificDescription</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificDscrptn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIntraspecificTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.IntraspecificType.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_IntraspecificTyp_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralClsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Class_.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Cls__Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralKingdomTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Kingdom.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Kingdom_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralOrdrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Order.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Ordr_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmOrgnsmGeneralPhylumTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.OrganismGeneral.Phylum.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_OrgnsmGeneral_Phylum_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmSpcsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.Organism.Species.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_Orgnsm_Spcs_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Assigner</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Assigner"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Period.End</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Prd_End"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Period.Start</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Prd_Strt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.System</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Type.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Typ_Txt"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Use</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Use"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismId.Value</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmId_Vl"/>
         </property>
         <property name="sbstncSrcMtrlOrgnsmNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.OrganismName</meta>
             <column length="65535" name="SbstncSrcMtrl_OrgnsmNm"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Assigner</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Assigner"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Period.End</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Prd_End"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Period.Start</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Prd_Strt"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.System</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Sys"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Type.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Typ_Txt"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Use</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Use"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceId.Value</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncId_Vl"/>
         </property>
         <property name="sbstncSrcMtrlParentSbstncNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.ParentSubstanceName</meta>
             <column length="65535" name="SbstncSrcMtrl_ParentSbstncNm"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.Part.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_Part_Txt"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlPartDscrptnPartLctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.PartDescription.PartLocation.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_PartDscrptn_PartLctn_Txt"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlClsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialClass.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlCls_Txt"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlStateTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialState.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlState_Txt"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Coding.Code</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Coding.Display</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Coding.System</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Coding.Version</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncSrcMtrlSrcMtrlTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceSourceMaterial.SourceMaterialType.Text</meta>
             <column length="65535" name="SbstncSrcMtrl_SrcMtrlTyp_Txt"/>
         </property>
     </class>

@@ -7,303 +7,303 @@
             <generator class="identity"/>
         </id>
         <property name="oprtnDfnAffectsState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.AffectsState</meta>
             <column length="65535" name="OprtnDfn_AffectsState"/>
         </property>
         <property name="oprtnDfnBase" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Base</meta>
             <column length="65535" name="OprtnDfn_Base"/>
         </property>
         <property name="oprtnDfnCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Code</meta>
             <column length="65535" name="OprtnDfn_Cd"/>
         </property>
         <property name="oprtnDfnComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Comment</meta>
             <column length="65535" name="OprtnDfn_Comment"/>
         </property>
         <property name="oprtnDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Name</meta>
             <column length="65535" name="OprtnDfn_Cntct_Nm"/>
         </property>
         <property name="oprtnDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="oprtnDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="oprtnDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="oprtnDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="oprtnDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="oprtnDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="OprtnDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="oprtnDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Date</meta>
             <column length="65535" name="OprtnDfn_Dt"/>
         </property>
         <property name="oprtnDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Description</meta>
             <column length="65535" name="OprtnDfn_Dscrptn"/>
         </property>
         <property name="oprtnDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Experimental</meta>
             <column length="65535" name="OprtnDfn_Exprmtl"/>
         </property>
         <property name="oprtnDfnInputProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.InputProfile</meta>
             <column length="65535" name="OprtnDfn_InputProfile"/>
         </property>
         <property name="oprtnDfnInstance" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Instance</meta>
             <column length="65535" name="OprtnDfn_Instance"/>
         </property>
         <property name="oprtnDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="oprtnDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="oprtnDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="oprtnDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="oprtnDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="oprtnDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="OprtnDfn_Jrsdctn_Txt"/>
         </property>
         <property name="oprtnDfnKind" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Kind</meta>
             <column length="65535" name="OprtnDfn_Kind"/>
         </property>
         <property name="oprtnDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Name</meta>
             <column length="65535" name="OprtnDfn_Nm"/>
         </property>
         <property name="oprtnDfnOutputProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.OutputProfile</meta>
             <column length="65535" name="OprtnDfn_OutputProfile"/>
         </property>
         <property name="oprtnDfnOverloadComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Overload.Comment</meta>
             <column length="65535" name="OprtnDfn_Overload_Comment"/>
         </property>
         <property name="oprtnDfnOverloadPrmtrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Overload.ParameterName</meta>
             <column length="65535" name="OprtnDfn_Overload_PrmtrNm"/>
         </property>
         <property name="oprtnDfnPrmtrBindingStr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Binding.Strength</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Binding_Str"/>
         </property>
         <property name="oprtnDfnPrmtrBindingVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Binding.ValueSet</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Binding_VlSt"/>
         </property>
         <property name="oprtnDfnPrmtrDocation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Documentation</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Docation"/>
         </property>
         <property name="oprtnDfnPrmtrMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Max</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Mx"/>
         </property>
         <property name="oprtnDfnPrmtrMin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Min</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Min"/>
         </property>
         <property name="oprtnDfnPrmtrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Name</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Nm"/>
         </property>
         <property name="oprtnDfnPrmtrRfrncdFromSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.ReferencedFrom.Source</meta>
             <column length="65535" name="OprtnDfn_Prmtr_RfrncdFrom_Src"/>
         </property>
         <property name="oprtnDfnPrmtrRfrncdFromSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.ReferencedFrom.SourceId</meta>
             <column length="65535" name="OprtnDfn_Prmtr_RfrncdFrom_SrcId"/>
         </property>
         <property name="oprtnDfnPrmtrSrchTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.SearchType</meta>
             <column length="65535" name="OprtnDfn_Prmtr_SrchTyp"/>
         </property>
         <property name="oprtnDfnPrmtrTarProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.TarProfile</meta>
             <column length="65535" name="OprtnDfn_Prmtr_TarProfile"/>
         </property>
         <property name="oprtnDfnPrmtrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Type</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Typ"/>
         </property>
         <property name="oprtnDfnPrmtrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Parameter.Use</meta>
             <column length="65535" name="OprtnDfn_Prmtr_Use"/>
         </property>
         <property name="oprtnDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Publisher</meta>
             <column length="65535" name="OprtnDfn_Pblshr"/>
         </property>
         <property name="oprtnDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Purpose</meta>
             <column length="65535" name="OprtnDfn_Prpse"/>
         </property>
         <property name="oprtnDfnRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Resource</meta>
             <column length="65535" name="OprtnDfn_Rsrc"/>
         </property>
         <property name="oprtnDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Status</meta>
             <column length="65535" name="OprtnDfn_Sts"/>
         </property>
         <property name="oprtnDfnSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.System</meta>
             <column length="65535" name="OprtnDfn_Sys"/>
         </property>
         <property name="oprtnDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Title</meta>
             <column length="65535" name="OprtnDfn_Ttl"/>
         </property>
         <property name="oprtnDfnTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Type</meta>
             <column length="65535" name="OprtnDfn_Typ"/>
         </property>
         <property name="oprtnDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Url</meta>
             <column length="65535" name="OprtnDfn_Url"/>
         </property>
         <property name="oprtnDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="oprtnDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="oprtnDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.Code.System</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="oprtnDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="oprtnDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="oprtnDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="oprtnDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="oprtnDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="oprtnDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="oprtnDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="oprtnDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="oprtnDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="OprtnDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="oprtnDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">OperationDefinition.Version</meta>
             <column length="65535" name="OprtnDfn_Vrsn"/>
         </property>
     </class>

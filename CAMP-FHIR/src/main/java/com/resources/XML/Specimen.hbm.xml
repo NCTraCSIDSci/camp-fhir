@@ -7,519 +7,519 @@
             <generator class="identity"/>
         </id>
         <property name="spcmnAccessionIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Assigner</meta>
             <column length="65535" name="Spcmn_AccessionId_Assigner"/>
         </property>
         <property name="spcmnAccessionIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Period.End</meta>
             <column length="65535" name="Spcmn_AccessionId_Prd_End"/>
         </property>
         <property name="spcmnAccessionIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Period.Start</meta>
             <column length="65535" name="Spcmn_AccessionId_Prd_Strt"/>
         </property>
         <property name="spcmnAccessionIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.System</meta>
             <column length="65535" name="Spcmn_AccessionId_Sys"/>
         </property>
         <property name="spcmnAccessionIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Coding.Code</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Cd"/>
         </property>
         <property name="spcmnAccessionIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Coding.Display</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Dsply"/>
         </property>
         <property name="spcmnAccessionIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Coding.System</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Sys"/>
         </property>
         <property name="spcmnAccessionIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnAccessionIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Coding.Version</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spcmnAccessionIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Type.Text</meta>
             <column length="65535" name="Spcmn_AccessionId_Typ_Txt"/>
         </property>
         <property name="spcmnAccessionIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Use</meta>
             <column length="65535" name="Spcmn_AccessionId_Use"/>
         </property>
         <property name="spcmnAccessionIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.AccessionIdentifier.Value</meta>
             <column length="65535" name="Spcmn_AccessionId_Vl"/>
         </property>
         <property name="spcmnCollectionBodySiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Coding.Code</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Cd"/>
         </property>
         <property name="spcmnCollectionBodySiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Coding.Display</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Dsply"/>
         </property>
         <property name="spcmnCollectionBodySiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Coding.System</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Sys"/>
         </property>
         <property name="spcmnCollectionBodySiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCollectionBodySiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Coding.Version</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCollectionBodySiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.BodySite.Text</meta>
             <column length="65535" name="Spcmn_Collection_BodySite_Txt"/>
         </property>
         <property name="spcmnCollectionCollectedDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.CollectedDateTimeType</meta>
             <column length="65535" name="Spcmn_Collection_CollectedDtTimeTyp"/>
         </property>
         <property name="spcmnCollectionCollectedPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.CollectedPeriod.End</meta>
             <column length="65535" name="Spcmn_Collection_CollectedPrd_End"/>
         </property>
         <property name="spcmnCollectionCollectedPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.CollectedPeriod.Start</meta>
             <column length="65535" name="Spcmn_Collection_CollectedPrd_Strt"/>
         </property>
         <property name="spcmnCollectionCollector" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Collector</meta>
             <column length="65535" name="Spcmn_Collection_Collector"/>
         </property>
         <property name="spcmnCollectionDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Duration.Code</meta>
             <column length="65535" name="Spcmn_Collection_Duration_Cd"/>
         </property>
         <property name="spcmnCollectionDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Duration.Comparator</meta>
             <column length="65535" name="Spcmn_Collection_Duration_Cmprtr"/>
         </property>
         <property name="spcmnCollectionDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Duration.System</meta>
             <column length="65535" name="Spcmn_Collection_Duration_Sys"/>
         </property>
         <property name="spcmnCollectionDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Duration.Unit</meta>
             <column length="65535" name="Spcmn_Collection_Duration_Unt"/>
         </property>
         <property name="spcmnCollectionDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Duration.Value</meta>
             <column length="65535" name="Spcmn_Collection_Duration_Vl"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Coding.System</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCollectionFastingStsCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusCodeableConcept.Text</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Txt"/>
         </property>
         <property name="spcmnCollectionFastingStsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusDuration.Code</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsDuration_Cd"/>
         </property>
         <property name="spcmnCollectionFastingStsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusDuration.Comparator</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsDuration_Cmprtr"/>
         </property>
         <property name="spcmnCollectionFastingStsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusDuration.System</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsDuration_Sys"/>
         </property>
         <property name="spcmnCollectionFastingStsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusDuration.Unit</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsDuration_Unt"/>
         </property>
         <property name="spcmnCollectionFastingStsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.FastingStatusDuration.Value</meta>
             <column length="65535" name="Spcmn_Collection_FastingStsDuration_Vl"/>
         </property>
         <property name="spcmnCollectionMthdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Coding.Code</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Cd"/>
         </property>
         <property name="spcmnCollectionMthdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Coding.Display</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Dsply"/>
         </property>
         <property name="spcmnCollectionMthdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Coding.System</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Sys"/>
         </property>
         <property name="spcmnCollectionMthdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCollectionMthdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Coding.Version</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCollectionMthdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Method.Text</meta>
             <column length="65535" name="Spcmn_Collection_Mthd_Txt"/>
         </property>
         <property name="spcmnCollectionQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Quantity.Code</meta>
             <column length="65535" name="Spcmn_Collection_Qnty_Cd"/>
         </property>
         <property name="spcmnCollectionQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Quantity.Comparator</meta>
             <column length="65535" name="Spcmn_Collection_Qnty_Cmprtr"/>
         </property>
         <property name="spcmnCollectionQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Quantity.System</meta>
             <column length="65535" name="Spcmn_Collection_Qnty_Sys"/>
         </property>
         <property name="spcmnCollectionQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Quantity.Unit</meta>
             <column length="65535" name="Spcmn_Collection_Qnty_Unt"/>
         </property>
         <property name="spcmnCollectionQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Collection.Quantity.Value</meta>
             <column length="65535" name="Spcmn_Collection_Qnty_Vl"/>
         </property>
         <property name="spcmnCndtnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Coding.Code</meta>
             <column length="65535" name="Spcmn_Cndtn_Cdg_Cd"/>
         </property>
         <property name="spcmnCndtnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Coding.Display</meta>
             <column length="65535" name="Spcmn_Cndtn_Cdg_Dsply"/>
         </property>
         <property name="spcmnCndtnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Coding.System</meta>
             <column length="65535" name="Spcmn_Cndtn_Cdg_Sys"/>
         </property>
         <property name="spcmnCndtnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Cndtn_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCndtnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Coding.Version</meta>
             <column length="65535" name="Spcmn_Cndtn_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCndtnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Condition.Text</meta>
             <column length="65535" name="Spcmn_Cndtn_Txt"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Coding.System</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCntainerAddtvCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveCodeableConcept.Text</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Txt"/>
         </property>
         <property name="spcmnCntainerAddtvRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.AdditiveReference</meta>
             <column length="65535" name="Spcmn_Cntainer_AddtvRfrnc"/>
         </property>
         <property name="spcmnCntainerCapacityCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Capacity.Code</meta>
             <column length="65535" name="Spcmn_Cntainer_Capacity_Cd"/>
         </property>
         <property name="spcmnCntainerCapacityCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Capacity.Comparator</meta>
             <column length="65535" name="Spcmn_Cntainer_Capacity_Cmprtr"/>
         </property>
         <property name="spcmnCntainerCapacitySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Capacity.System</meta>
             <column length="65535" name="Spcmn_Cntainer_Capacity_Sys"/>
         </property>
         <property name="spcmnCntainerCapacityUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Capacity.Unit</meta>
             <column length="65535" name="Spcmn_Cntainer_Capacity_Unt"/>
         </property>
         <property name="spcmnCntainerCapacityVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Capacity.Value</meta>
             <column length="65535" name="Spcmn_Cntainer_Capacity_Vl"/>
         </property>
         <property name="spcmnCntainerDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Description</meta>
             <column length="65535" name="Spcmn_Cntainer_Dscrptn"/>
         </property>
         <property name="spcmnCntainerIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Assigner</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Assigner"/>
         </property>
         <property name="spcmnCntainerIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Period.End</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Prd_End"/>
         </property>
         <property name="spcmnCntainerIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Period.Start</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Prd_Strt"/>
         </property>
         <property name="spcmnCntainerIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.System</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Sys"/>
         </property>
         <property name="spcmnCntainerIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="spcmnCntainerIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="spcmnCntainerIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="spcmnCntainerIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCntainerIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCntainerIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Type.Text</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Typ_Txt"/>
         </property>
         <property name="spcmnCntainerIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Use</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Use"/>
         </property>
         <property name="spcmnCntainerIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Identifier.Value</meta>
             <column length="65535" name="Spcmn_Cntainer_Id_Vl"/>
         </property>
         <property name="spcmnCntainerSpcmnQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.SpecimenQuantity.Code</meta>
             <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Cd"/>
         </property>
         <property name="spcmnCntainerSpcmnQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.SpecimenQuantity.Comparator</meta>
             <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Cmprtr"/>
         </property>
         <property name="spcmnCntainerSpcmnQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.SpecimenQuantity.System</meta>
             <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Sys"/>
         </property>
         <property name="spcmnCntainerSpcmnQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.SpecimenQuantity.Unit</meta>
             <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Unt"/>
         </property>
         <property name="spcmnCntainerSpcmnQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.SpecimenQuantity.Value</meta>
             <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Vl"/>
         </property>
         <property name="spcmnCntainerTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Coding.Code</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Cd"/>
         </property>
         <property name="spcmnCntainerTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Coding.Display</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Dsply"/>
         </property>
         <property name="spcmnCntainerTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Coding.System</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Sys"/>
         </property>
         <property name="spcmnCntainerTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnCntainerTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Coding.Version</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spcmnCntainerTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Container.Type.Text</meta>
             <column length="65535" name="Spcmn_Cntainer_Typ_Txt"/>
         </property>
         <property name="spcmnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Assigner</meta>
             <column length="65535" name="Spcmn_Id_Assigner"/>
         </property>
         <property name="spcmnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Period.End</meta>
             <column length="65535" name="Spcmn_Id_Prd_End"/>
         </property>
         <property name="spcmnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Period.Start</meta>
             <column length="65535" name="Spcmn_Id_Prd_Strt"/>
         </property>
         <property name="spcmnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.System</meta>
             <column length="65535" name="Spcmn_Id_Sys"/>
         </property>
         <property name="spcmnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Spcmn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="spcmnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Spcmn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="spcmnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Spcmn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="spcmnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Spcmn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spcmnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Type.Text</meta>
             <column length="65535" name="Spcmn_Id_Typ_Txt"/>
         </property>
         <property name="spcmnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Use</meta>
             <column length="65535" name="Spcmn_Id_Use"/>
         </property>
         <property name="spcmnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Identifier.Value</meta>
             <column length="65535" name="Spcmn_Id_Vl"/>
         </property>
         <property name="spcmnNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Note.AuthorReference</meta>
             <column length="65535" name="Spcmn_Nt_AthrRfrnc"/>
         </property>
         <property name="spcmnNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Note.AuthorStringType</meta>
             <column length="65535" name="Spcmn_Nt_AthrStrgTyp"/>
         </property>
         <property name="spcmnNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Note.Text</meta>
             <column length="65535" name="Spcmn_Nt_Txt"/>
         </property>
         <property name="spcmnNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Note.Time</meta>
             <column length="65535" name="Spcmn_Nt_Time"/>
         </property>
         <property name="spcmnParent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Parent</meta>
             <column length="65535" name="Spcmn_Parent"/>
         </property>
         <property name="spcmnProcessingAddtv" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Additive</meta>
             <column length="65535" name="Spcmn_Processing_Addtv"/>
         </property>
         <property name="spcmnProcessingDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Description</meta>
             <column length="65535" name="Spcmn_Processing_Dscrptn"/>
         </property>
         <property name="spcmnProcessingPrcdrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Coding.Code</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Cd"/>
         </property>
         <property name="spcmnProcessingPrcdrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Coding.Display</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Dsply"/>
         </property>
         <property name="spcmnProcessingPrcdrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Coding.System</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Sys"/>
         </property>
         <property name="spcmnProcessingPrcdrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnProcessingPrcdrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Coding.Version</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Vrsn"/>
         </property>
         <property name="spcmnProcessingPrcdrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.Procedure.Text</meta>
             <column length="65535" name="Spcmn_Processing_Prcdr_Txt"/>
         </property>
         <property name="spcmnProcessingTimeDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.TimeDateTimeType</meta>
             <column length="65535" name="Spcmn_Processing_TimeDtTimeTyp"/>
         </property>
         <property name="spcmnProcessingTimePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.TimePeriod.End</meta>
             <column length="65535" name="Spcmn_Processing_TimePrd_End"/>
         </property>
         <property name="spcmnProcessingTimePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Processing.TimePeriod.Start</meta>
             <column length="65535" name="Spcmn_Processing_TimePrd_Strt"/>
         </property>
         <property name="spcmnReceivedTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.ReceivedTime</meta>
             <column length="65535" name="Spcmn_ReceivedTime"/>
         </property>
         <property name="spcmnRqst" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Request</meta>
             <column length="65535" name="Spcmn_Rqst"/>
         </property>
         <property name="spcmnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Status</meta>
             <column length="65535" name="Spcmn_Sts"/>
         </property>
         <property name="spcmnSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Subject</meta>
             <column length="65535" name="Spcmn_Sbjct"/>
         </property>
         <property name="spcmnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Coding.Code</meta>
             <column length="65535" name="Spcmn_Typ_Cdg_Cd"/>
         </property>
         <property name="spcmnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Coding.Display</meta>
             <column length="65535" name="Spcmn_Typ_Cdg_Dsply"/>
         </property>
         <property name="spcmnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Coding.System</meta>
             <column length="65535" name="Spcmn_Typ_Cdg_Sys"/>
         </property>
         <property name="spcmnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Coding.UserSelected</meta>
             <column length="65535" name="Spcmn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spcmnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Coding.Version</meta>
             <column length="65535" name="Spcmn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spcmnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Specimen.Type.Text</meta>
             <column length="65535" name="Spcmn_Typ_Txt"/>
         </property>
     </class>

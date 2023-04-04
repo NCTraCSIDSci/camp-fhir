@@ -7,767 +7,759 @@
             <generator class="identity"/>
         </id>
         <property name="mdctnStmntBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.BasedOn</meta>
             <column length="65535" name="MdctnStmnt_BasedOn"/>
         </property>
         <property name="mdctnStmntCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Category.Text</meta>
             <column length="65535" name="MdctnStmnt_Ctgry_Txt"/>
         </property>
         <property name="mdctnStmntCntxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Context</meta>
             <column length="65535" name="MdctnStmnt_Cntxt"/>
         </property>
         <property name="mdctnStmntDtAsserted" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.DateAsserted</meta>
             <column length="65535" name="MdctnStmnt_DtAsserted"/>
         </property>
         <property name="mdctnStmntDerivedFrom" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.DerivedFrom</meta>
             <column length="65535" name="MdctnStmnt_DerivedFrom"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgAddtnlInstrctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AdditionalInstruction.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AddtnlInstrctn_Txt"/>
         </property>
         <property name="mdctnStmntDsgAsNdBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededBooleanType</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdBooleanTyp"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgAsNdCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.AsNeededCodeableConcept.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_AsNdCdbleCncpt_Txt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseQuantity.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseQnty_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseQuantity.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseQnty_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseQuantity.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseQnty_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseQuantity.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseQnty_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseQuantity.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseQnty_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.High.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Hi_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.High.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Hi_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.High.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Hi_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.High.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Hi_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.High.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Hi_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.Low.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Lw_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.Low.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Lw_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.Low.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Lw_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.Low.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Lw_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtDoseRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.DoseRange.Low.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_DoseRng_Lw_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateQuantity.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtQnty_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateQuantity.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtQnty_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateQuantity.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtQnty_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateQuantity.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtQnty_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateQuantity.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtQnty_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.High.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Hi_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.High.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Hi_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.High.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Hi_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.High.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Hi_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.High.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Hi_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.Low.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Lw_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.Low.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Lw_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.Low.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Lw_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.Low.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Lw_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRange.Low.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRng_Lw_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioDnmntrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Denominator.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Dnmntr_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioDnmntrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Denominator.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Dnmntr_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioDnmntrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Denominator.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Dnmntr_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioDnmntrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Denominator.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Dnmntr_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioDnmntrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Denominator.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Dnmntr_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioNmrtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Numerator.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Nmrtr_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioNmrtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Numerator.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Nmrtr_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioNmrtrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Numerator.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Nmrtr_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioNmrtrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Numerator.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Nmrtr_Unt"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtRtRtioNmrtrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.RateRatio.Numerator.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_RtRtio_Nmrtr_Vl"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgDoseAndRtTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.DoseAndRate.Type.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_DoseAndRt_Typ_Txt"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerAdmnstnCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerAdministration.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerAdmnstn_Cd"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerAdmnstnCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerAdministration.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerAdmnstn_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerAdmnstnSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerAdministration.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerAdmnstn_Sys"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerAdmnstnUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerAdministration.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerAdmnstn_Unt"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerAdmnstnVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerAdministration.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerAdmnstn_Vl"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerLifetimeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerLifetime.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerLifetime_Cd"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerLifetimeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerLifetime.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerLifetime_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerLifetimeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerLifetime.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerLifetime_Sys"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerLifetimeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerLifetime.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerLifetime_Unt"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerLifetimeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerLifetime.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerLifetime_Vl"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdDnmntrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Denominator.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Dnmntr_Cd"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdDnmntrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Denominator.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Dnmntr_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdDnmntrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Denominator.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Dnmntr_Sys"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdDnmntrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Denominator.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Dnmntr_Unt"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdDnmntrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Denominator.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Dnmntr_Vl"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdNmrtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Numerator.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Nmrtr_Cd"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdNmrtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Numerator.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Nmrtr_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdNmrtrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Numerator.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Nmrtr_Sys"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdNmrtrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Numerator.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Nmrtr_Unt"/>
         </property>
         <property name="mdctnStmntDsgMxDosePerPrdNmrtrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.MaxDosePerPeriod.Numerator.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_MxDosePerPrd_Nmrtr_Vl"/>
         </property>
         <property name="mdctnStmntDsgMthdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgMthdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgMthdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgMthdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgMthdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgMthdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Method.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Mthd_Txt"/>
         </property>
         <property name="mdctnStmntDsgPntInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.PatientInstruction</meta>
             <column length="65535" name="MdctnStmnt_Dsg_PntInstrctn"/>
         </property>
         <property name="mdctnStmntDsgRouteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgRouteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgRouteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgRouteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgRouteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgRouteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Route.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Route_Txt"/>
         </property>
         <property name="mdctnStmntDsgSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Sequence</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Sqnc"/>
         </property>
         <property name="mdctnStmntDsgSiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgSiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgSiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgSiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgSiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgSiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Site.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Site_Txt"/>
         </property>
         <property name="mdctnStmntDsgTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Txt"/>
         </property>
         <property name="mdctnStmntDsgTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntDsgTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntDsgTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntDsgTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntDsgTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntDsgTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Code.Text</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Cd_Txt"/>
         </property>
         <property name="mdctnStmntDsgTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Event</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Evnt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="mdctnStmntDsgTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.Count</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_Cnt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.CountMax</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_CntMx"/>
         </property>
-        <property name="mdctnStmntDsgTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="mdctnStmntDsgTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.Duration</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_Duration"/>
         </property>
         <property name="mdctnStmntDsgTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.DurationMax</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_DurationMx"/>
         </property>
         <property name="mdctnStmntDsgTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.DurationUnit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_DurationUnt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.Frequency</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_Frqncy"/>
         </property>
         <property name="mdctnStmntDsgTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.FrequencyMax</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_FrqncyMx"/>
         </property>
         <property name="mdctnStmntDsgTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.Offset</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_Off"/>
         </property>
         <property name="mdctnStmntDsgTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.Period</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_Prd"/>
         </property>
         <property name="mdctnStmntDsgTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.PeriodMax</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_PrdMx"/>
         </property>
         <property name="mdctnStmntDsgTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.PeriodUnit</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_PrdUnt"/>
         </property>
         <property name="mdctnStmntDsgTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Dosage.Timing.Repeat.TimeOfDay</meta>
             <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="mdctnStmntDsgTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="MdctnStmnt_Dsg_Tmg_Rpt_When"/>
-        </property>
         <property name="mdctnStmntEfctiveDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.EffectiveDateTimeType</meta>
             <column length="65535" name="MdctnStmnt_EfctiveDtTimeTyp"/>
         </property>
         <property name="mdctnStmntEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.EffectivePeriod.End</meta>
             <column length="65535" name="MdctnStmnt_EfctivePrd_End"/>
         </property>
         <property name="mdctnStmntEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.EffectivePeriod.Start</meta>
             <column length="65535" name="MdctnStmnt_EfctivePrd_Strt"/>
         </property>
         <property name="mdctnStmntIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Assigner</meta>
             <column length="65535" name="MdctnStmnt_Id_Assigner"/>
         </property>
         <property name="mdctnStmntIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Period.End</meta>
             <column length="65535" name="MdctnStmnt_Id_Prd_End"/>
         </property>
         <property name="mdctnStmntIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Period.Start</meta>
             <column length="65535" name="MdctnStmnt_Id_Prd_Strt"/>
         </property>
         <property name="mdctnStmntIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.System</meta>
             <column length="65535" name="MdctnStmnt_Id_Sys"/>
         </property>
         <property name="mdctnStmntIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Type.Text</meta>
             <column length="65535" name="MdctnStmnt_Id_Typ_Txt"/>
         </property>
         <property name="mdctnStmntIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Use</meta>
             <column length="65535" name="MdctnStmnt_Id_Use"/>
         </property>
         <property name="mdctnStmntIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Identifier.Value</meta>
             <column length="65535" name="MdctnStmnt_Id_Vl"/>
         </property>
         <property name="mdctnStmntInfoSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.InformationSource</meta>
             <column length="65535" name="MdctnStmnt_InfoSrc"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntMdctnCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationCodeableConcept.Text</meta>
             <column length="65535" name="MdctnStmnt_MdctnCdbleCncpt_Txt"/>
         </property>
         <property name="mdctnStmntMdctnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.MedicationReference</meta>
             <column length="65535" name="MdctnStmnt_MdctnRfrnc"/>
         </property>
         <property name="mdctnStmntNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Note.AuthorReference</meta>
             <column length="65535" name="MdctnStmnt_Nt_AthrRfrnc"/>
         </property>
         <property name="mdctnStmntNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Note.AuthorStringType</meta>
             <column length="65535" name="MdctnStmnt_Nt_AthrStrgTyp"/>
         </property>
         <property name="mdctnStmntNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Note.Text</meta>
             <column length="65535" name="MdctnStmnt_Nt_Txt"/>
         </property>
         <property name="mdctnStmntNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Note.Time</meta>
             <column length="65535" name="MdctnStmnt_Nt_Time"/>
         </property>
         <property name="mdctnStmntPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.PartOf</meta>
             <column length="65535" name="MdctnStmnt_PartOf"/>
         </property>
         <property name="mdctnStmntRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonCode.Text</meta>
             <column length="65535" name="MdctnStmnt_RsnCd_Txt"/>
         </property>
         <property name="mdctnStmntRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.ReasonReference</meta>
             <column length="65535" name="MdctnStmnt_RsnRfrnc"/>
         </property>
         <property name="mdctnStmntSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Status</meta>
             <column length="65535" name="MdctnStmnt_Sts"/>
         </property>
         <property name="mdctnStmntStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Coding.Code</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Cdg_Cd"/>
         </property>
         <property name="mdctnStmntStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Coding.Display</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Cdg_Dsply"/>
         </property>
         <property name="mdctnStmntStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Coding.System</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Cdg_Sys"/>
         </property>
         <property name="mdctnStmntStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Coding.UserSelected</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="mdctnStmntStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Coding.Version</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Cdg_Vrsn"/>
         </property>
         <property name="mdctnStmntStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.StatusReason.Text</meta>
             <column length="65535" name="MdctnStmnt_StsRsn_Txt"/>
         </property>
         <property name="mdctnStmntSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicationStatement.Subject</meta>
             <column length="65535" name="MdctnStmnt_Sbjct"/>
         </property>
     </class>

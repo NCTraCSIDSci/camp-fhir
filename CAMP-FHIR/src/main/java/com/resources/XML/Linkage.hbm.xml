@@ -7,19 +7,19 @@
             <generator class="identity"/>
         </id>
         <property name="linkageActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Linkage.Active</meta>
             <column length="65535" name="Linkage_Active"/>
         </property>
         <property name="linkageAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Linkage.Author</meta>
             <column length="65535" name="Linkage_Athr"/>
         </property>
         <property name="linkageItmRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Linkage.Item.Resource</meta>
             <column length="65535" name="Linkage_Itm_Rsrc"/>
         </property>
         <property name="linkageItmTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Linkage.Item.Type</meta>
             <column length="65535" name="Linkage_Itm_Typ"/>
         </property>
     </class>

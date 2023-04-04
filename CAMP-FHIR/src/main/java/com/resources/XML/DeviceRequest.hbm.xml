@@ -7,531 +7,523 @@
             <generator class="identity"/>
         </id>
         <property name="dvcRqstAthredOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.AuthoredOn</meta>
             <column length="65535" name="DvcRqst_AthredOn"/>
         </property>
         <property name="dvcRqstBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.BasedOn</meta>
             <column length="65535" name="DvcRqst_BasedOn"/>
         </property>
         <property name="dvcRqstCdCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Coding.Code</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="dvcRqstCdCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Coding.Display</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstCdCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Coding.System</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="dvcRqstCdCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstCdCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Coding.Version</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstCdCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeCodeableConcept.Text</meta>
             <column length="65535" name="DvcRqst_CdCdbleCncpt_Txt"/>
         </property>
         <property name="dvcRqstCdRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.CodeReference</meta>
             <column length="65535" name="DvcRqst_CdRfrnc"/>
         </property>
         <property name="dvcRqstEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Encounter</meta>
             <column length="65535" name="DvcRqst_Enc"/>
         </property>
         <property name="dvcRqstGrpIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Assigner</meta>
             <column length="65535" name="DvcRqst_GrpId_Assigner"/>
         </property>
         <property name="dvcRqstGrpIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Period.End</meta>
             <column length="65535" name="DvcRqst_GrpId_Prd_End"/>
         </property>
         <property name="dvcRqstGrpIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Period.Start</meta>
             <column length="65535" name="DvcRqst_GrpId_Prd_Strt"/>
         </property>
         <property name="dvcRqstGrpIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.System</meta>
             <column length="65535" name="DvcRqst_GrpId_Sys"/>
         </property>
         <property name="dvcRqstGrpIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Coding.Code</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcRqstGrpIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Coding.Display</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstGrpIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Coding.System</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcRqstGrpIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstGrpIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Coding.Version</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstGrpIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Type.Text</meta>
             <column length="65535" name="DvcRqst_GrpId_Typ_Txt"/>
         </property>
         <property name="dvcRqstGrpIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Use</meta>
             <column length="65535" name="DvcRqst_GrpId_Use"/>
         </property>
         <property name="dvcRqstGrpIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.GroupIdentifier.Value</meta>
             <column length="65535" name="DvcRqst_GrpId_Vl"/>
         </property>
         <property name="dvcRqstIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Assigner</meta>
             <column length="65535" name="DvcRqst_Id_Assigner"/>
         </property>
         <property name="dvcRqstIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Period.End</meta>
             <column length="65535" name="DvcRqst_Id_Prd_End"/>
         </property>
         <property name="dvcRqstIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Period.Start</meta>
             <column length="65535" name="DvcRqst_Id_Prd_Strt"/>
         </property>
         <property name="dvcRqstIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.System</meta>
             <column length="65535" name="DvcRqst_Id_Sys"/>
         </property>
         <property name="dvcRqstIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcRqstIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Coding.System</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcRqstIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Type.Text</meta>
             <column length="65535" name="DvcRqst_Id_Typ_Txt"/>
         </property>
         <property name="dvcRqstIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Use</meta>
             <column length="65535" name="DvcRqst_Id_Use"/>
         </property>
         <property name="dvcRqstIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Identifier.Value</meta>
             <column length="65535" name="DvcRqst_Id_Vl"/>
         </property>
         <property name="dvcRqstInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.InstantiatesCanonical</meta>
             <column length="65535" name="DvcRqst_InstantiatesCanonical"/>
         </property>
         <property name="dvcRqstInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.InstantiatesUri</meta>
             <column length="65535" name="DvcRqst_InstantiatesUri"/>
         </property>
         <property name="dvcRqstInsrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Insurance</meta>
             <column length="65535" name="DvcRqst_Insrnc"/>
         </property>
         <property name="dvcRqstIntent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Intent</meta>
             <column length="65535" name="DvcRqst_Intent"/>
         </property>
         <property name="dvcRqstNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Note.AuthorReference</meta>
             <column length="65535" name="DvcRqst_Nt_AthrRfrnc"/>
         </property>
         <property name="dvcRqstNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Note.AuthorStringType</meta>
             <column length="65535" name="DvcRqst_Nt_AthrStrgTyp"/>
         </property>
         <property name="dvcRqstNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Note.Text</meta>
             <column length="65535" name="DvcRqst_Nt_Txt"/>
         </property>
         <property name="dvcRqstNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Note.Time</meta>
             <column length="65535" name="DvcRqst_Nt_Time"/>
         </property>
         <property name="dvcRqstOccrnceDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceDateTimeType</meta>
             <column length="65535" name="DvcRqst_OccrnceDtTimeTyp"/>
         </property>
         <property name="dvcRqstOccrncePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrencePeriod.End</meta>
             <column length="65535" name="DvcRqst_OccrncePrd_End"/>
         </property>
         <property name="dvcRqstOccrncePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrencePeriod.Start</meta>
             <column length="65535" name="DvcRqst_OccrncePrd_Strt"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Coding.Code</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Coding.Display</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Coding.System</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Coding.Version</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstOccrnceTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Code.Text</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Cd_Txt"/>
         </property>
         <property name="dvcRqstOccrnceTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Event</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Evnt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.Count</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_Cnt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.CountMax</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_CntMx"/>
         </property>
-        <property name="dvcRqstOccrnceTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="dvcRqstOccrnceTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.Duration</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_Duration"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.DurationMax</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_DurationMx"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_DurationUnt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.Frequency</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_Frqncy"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.Offset</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_Off"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.Period</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_Prd"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_PrdMx"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_PrdUnt"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.OccurrenceTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="dvcRqstOccrnceTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_When"/>
-        </property>
         <property name="dvcRqstPrmtrCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Coding.Code</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Cdg_Cd"/>
         </property>
         <property name="dvcRqstPrmtrCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Coding.Display</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstPrmtrCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Coding.System</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Cdg_Sys"/>
         </property>
         <property name="dvcRqstPrmtrCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstPrmtrCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Coding.Version</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstPrmtrCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.Code.Text</meta>
             <column length="65535" name="DvcRqst_Prmtr_Cd_Txt"/>
         </property>
         <property name="dvcRqstPrmtrVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueBooleanType</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlBooleanTyp"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstPrmtrVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueCodeableConcept.Text</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlCdbleCncpt_Txt"/>
         </property>
         <property name="dvcRqstPrmtrVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueQuantity.Code</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlQnty_Cd"/>
         </property>
         <property name="dvcRqstPrmtrVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueQuantity.Comparator</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlQnty_Cmprtr"/>
         </property>
         <property name="dvcRqstPrmtrVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueQuantity.System</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlQnty_Sys"/>
         </property>
         <property name="dvcRqstPrmtrVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueQuantity.Unit</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlQnty_Unt"/>
         </property>
         <property name="dvcRqstPrmtrVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueQuantity.Value</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlQnty_Vl"/>
         </property>
         <property name="dvcRqstPrmtrVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.High.Code</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Hi_Cd"/>
         </property>
         <property name="dvcRqstPrmtrVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.High.Comparator</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="dvcRqstPrmtrVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.High.System</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Hi_Sys"/>
         </property>
         <property name="dvcRqstPrmtrVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.High.Unit</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Hi_Unt"/>
         </property>
         <property name="dvcRqstPrmtrVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.High.Value</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Hi_Vl"/>
         </property>
         <property name="dvcRqstPrmtrVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.Low.Code</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Lw_Cd"/>
         </property>
         <property name="dvcRqstPrmtrVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.Low.Comparator</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="dvcRqstPrmtrVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.Low.System</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Lw_Sys"/>
         </property>
         <property name="dvcRqstPrmtrVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.Low.Unit</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Lw_Unt"/>
         </property>
         <property name="dvcRqstPrmtrVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Parameter.ValueRange.Low.Value</meta>
             <column length="65535" name="DvcRqst_Prmtr_VlRng_Lw_Vl"/>
         </property>
         <property name="dvcRqstPrfrmr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Performer</meta>
             <column length="65535" name="DvcRqst_Prfrmr"/>
         </property>
         <property name="dvcRqstPrfrmrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Coding.Code</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Cdg_Cd"/>
         </property>
         <property name="dvcRqstPrfrmrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Coding.Display</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstPrfrmrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Coding.System</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Cdg_Sys"/>
         </property>
         <property name="dvcRqstPrfrmrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstPrfrmrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Coding.Version</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstPrfrmrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PerformerType.Text</meta>
             <column length="65535" name="DvcRqst_PrfrmrTyp_Txt"/>
         </property>
         <property name="dvcRqstPriorRqst" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.PriorRequest</meta>
             <column length="65535" name="DvcRqst_PriorRqst"/>
         </property>
         <property name="dvcRqstPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Priority</meta>
             <column length="65535" name="DvcRqst_Priority"/>
         </property>
         <property name="dvcRqstRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Coding.Code</meta>
             <column length="65535" name="DvcRqst_RsnCd_Cdg_Cd"/>
         </property>
         <property name="dvcRqstRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Coding.Display</meta>
             <column length="65535" name="DvcRqst_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="dvcRqstRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Coding.System</meta>
             <column length="65535" name="DvcRqst_RsnCd_Cdg_Sys"/>
         </property>
         <property name="dvcRqstRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="DvcRqst_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="dvcRqstRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Coding.Version</meta>
             <column length="65535" name="DvcRqst_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="dvcRqstRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonCode.Text</meta>
             <column length="65535" name="DvcRqst_RsnCd_Txt"/>
         </property>
         <property name="dvcRqstRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.ReasonReference</meta>
             <column length="65535" name="DvcRqst_RsnRfrnc"/>
         </property>
         <property name="dvcRqstRelevantHis" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.RelevantHistory</meta>
             <column length="65535" name="DvcRqst_RelevantHis"/>
         </property>
         <property name="dvcRqstRqster" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Requester</meta>
             <column length="65535" name="DvcRqst_Rqster"/>
         </property>
         <property name="dvcRqstSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Status</meta>
             <column length="65535" name="DvcRqst_Sts"/>
         </property>
         <property name="dvcRqstSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.Subject</meta>
             <column length="65535" name="DvcRqst_Sbjct"/>
         </property>
         <property name="dvcRqstSprtingInfo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceRequest.SupportingInfo</meta>
             <column length="65535" name="DvcRqst_SprtingInfo"/>
         </property>
     </class>

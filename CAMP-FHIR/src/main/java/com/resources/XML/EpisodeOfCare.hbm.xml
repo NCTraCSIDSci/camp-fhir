@@ -7,155 +7,155 @@
             <generator class="identity"/>
         </id>
         <property name="episodeOfCareAccount" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Account</meta>
             <column length="65535" name="EpisodeOfCare_Account"/>
         </property>
         <property name="episodeOfCareCareManager" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.CareManager</meta>
             <column length="65535" name="EpisodeOfCare_CareManager"/>
         </property>
         <property name="episodeOfCareDgnsisCndtn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Condition</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Cndtn"/>
         </property>
         <property name="episodeOfCareDgnsisRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Rank</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Rnk"/>
         </property>
         <property name="episodeOfCareDgnsisRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Coding.Code</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Cd"/>
         </property>
         <property name="episodeOfCareDgnsisRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Coding.Display</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Dsply"/>
         </property>
         <property name="episodeOfCareDgnsisRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Coding.System</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Sys"/>
         </property>
         <property name="episodeOfCareDgnsisRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Coding.UserSelected</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_UsrSltd"/>
         </property>
         <property name="episodeOfCareDgnsisRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Coding.Version</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Vrsn"/>
         </property>
         <property name="episodeOfCareDgnsisRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Diagnosis.Role.Text</meta>
             <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Txt"/>
         </property>
         <property name="episodeOfCareIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Assigner</meta>
             <column length="65535" name="EpisodeOfCare_Id_Assigner"/>
         </property>
         <property name="episodeOfCareIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Period.End</meta>
             <column length="65535" name="EpisodeOfCare_Id_Prd_End"/>
         </property>
         <property name="episodeOfCareIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Period.Start</meta>
             <column length="65535" name="EpisodeOfCare_Id_Prd_Strt"/>
         </property>
         <property name="episodeOfCareIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.System</meta>
             <column length="65535" name="EpisodeOfCare_Id_Sys"/>
         </property>
         <property name="episodeOfCareIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="episodeOfCareIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="episodeOfCareIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Coding.System</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="episodeOfCareIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="episodeOfCareIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="episodeOfCareIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Type.Text</meta>
             <column length="65535" name="EpisodeOfCare_Id_Typ_Txt"/>
         </property>
         <property name="episodeOfCareIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Use</meta>
             <column length="65535" name="EpisodeOfCare_Id_Use"/>
         </property>
         <property name="episodeOfCareIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Identifier.Value</meta>
             <column length="65535" name="EpisodeOfCare_Id_Vl"/>
         </property>
         <property name="episodeOfCareManagingOrgnztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.ManagingOrganization</meta>
             <column length="65535" name="EpisodeOfCare_ManagingOrgnztn"/>
         </property>
         <property name="episodeOfCarePnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Patient</meta>
             <column length="65535" name="EpisodeOfCare_Pnt"/>
         </property>
         <property name="episodeOfCarePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Period.End</meta>
             <column length="65535" name="EpisodeOfCare_Prd_End"/>
         </property>
         <property name="episodeOfCarePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Period.Start</meta>
             <column length="65535" name="EpisodeOfCare_Prd_Strt"/>
         </property>
         <property name="episodeOfCareReferralRqst" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.ReferralRequest</meta>
             <column length="65535" name="EpisodeOfCare_ReferralRqst"/>
         </property>
         <property name="episodeOfCareSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Status</meta>
             <column length="65535" name="EpisodeOfCare_Sts"/>
         </property>
         <property name="episodeOfCareStsHisPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.StatusHistory.Period.End</meta>
             <column length="65535" name="EpisodeOfCare_StsHis_Prd_End"/>
         </property>
         <property name="episodeOfCareStsHisPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.StatusHistory.Period.Start</meta>
             <column length="65535" name="EpisodeOfCare_StsHis_Prd_Strt"/>
         </property>
         <property name="episodeOfCareStsHisSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.StatusHistory.Status</meta>
             <column length="65535" name="EpisodeOfCare_StsHis_Sts"/>
         </property>
         <property name="episodeOfCareTeam" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Team</meta>
             <column length="65535" name="EpisodeOfCare_Team"/>
         </property>
         <property name="episodeOfCareTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Coding.Code</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Cdg_Cd"/>
         </property>
         <property name="episodeOfCareTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Coding.Display</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Cdg_Dsply"/>
         </property>
         <property name="episodeOfCareTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Coding.System</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Cdg_Sys"/>
         </property>
         <property name="episodeOfCareTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Coding.UserSelected</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="episodeOfCareTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Coding.Version</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Cdg_Vrsn"/>
         </property>
         <property name="episodeOfCareTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EpisodeOfCare.Type.Text</meta>
             <column length="65535" name="EpisodeOfCare_Typ_Txt"/>
         </property>
     </class>

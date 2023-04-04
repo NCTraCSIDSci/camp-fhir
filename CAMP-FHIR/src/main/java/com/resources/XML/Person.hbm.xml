@@ -7,203 +7,203 @@
             <generator class="identity"/>
         </id>
         <property name="prsnActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Active</meta>
             <column length="65535" name="Prsn_Active"/>
         </property>
         <property name="prsnAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.City</meta>
             <column length="65535" name="Prsn_Addr_City"/>
         </property>
         <property name="prsnAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Country</meta>
             <column length="65535" name="Prsn_Addr_Cntry"/>
         </property>
         <property name="prsnAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.District</meta>
             <column length="65535" name="Prsn_Addr_District"/>
         </property>
         <property name="prsnAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Line</meta>
             <column length="65535" name="Prsn_Addr_Line"/>
         </property>
         <property name="prsnAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Period.End</meta>
             <column length="65535" name="Prsn_Addr_Prd_End"/>
         </property>
         <property name="prsnAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Period.Start</meta>
             <column length="65535" name="Prsn_Addr_Prd_Strt"/>
         </property>
         <property name="prsnAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.PostalCode</meta>
             <column length="65535" name="Prsn_Addr_PostalCd"/>
         </property>
         <property name="prsnAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.State</meta>
             <column length="65535" name="Prsn_Addr_State"/>
         </property>
         <property name="prsnAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Text</meta>
             <column length="65535" name="Prsn_Addr_Txt"/>
         </property>
         <property name="prsnAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Type</meta>
             <column length="65535" name="Prsn_Addr_Typ"/>
         </property>
         <property name="prsnAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Address.Use</meta>
             <column length="65535" name="Prsn_Addr_Use"/>
         </property>
         <property name="prsnBirthDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.BirthDate</meta>
             <column length="65535" name="Prsn_BirthDt"/>
         </property>
         <property name="prsnGender" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Gender</meta>
             <column length="65535" name="Prsn_Gender"/>
         </property>
         <property name="prsnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Assigner</meta>
             <column length="65535" name="Prsn_Id_Assigner"/>
         </property>
         <property name="prsnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Period.End</meta>
             <column length="65535" name="Prsn_Id_Prd_End"/>
         </property>
         <property name="prsnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Period.Start</meta>
             <column length="65535" name="Prsn_Id_Prd_Strt"/>
         </property>
         <property name="prsnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.System</meta>
             <column length="65535" name="Prsn_Id_Sys"/>
         </property>
         <property name="prsnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Prsn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="prsnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Prsn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="prsnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Prsn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="prsnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Prsn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="prsnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Prsn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="prsnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Type.Text</meta>
             <column length="65535" name="Prsn_Id_Typ_Txt"/>
         </property>
         <property name="prsnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Use</meta>
             <column length="65535" name="Prsn_Id_Use"/>
         </property>
         <property name="prsnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Identifier.Value</meta>
             <column length="65535" name="Prsn_Id_Vl"/>
         </property>
         <property name="prsnLinkAssurance" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Link.Assurance</meta>
             <column length="65535" name="Prsn_Link_Assurance"/>
         </property>
         <property name="prsnManagingOrgnztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.ManagingOrganization</meta>
             <column length="65535" name="Prsn_ManagingOrgnztn"/>
         </property>
         <property name="prsnNmFmly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Family</meta>
             <column length="65535" name="Prsn_Nm_Fmly"/>
         </property>
         <property name="prsnNmGiven" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Given</meta>
             <column length="65535" name="Prsn_Nm_Given"/>
         </property>
         <property name="prsnNmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Period.End</meta>
             <column length="65535" name="Prsn_Nm_Prd_End"/>
         </property>
         <property name="prsnNmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Period.Start</meta>
             <column length="65535" name="Prsn_Nm_Prd_Strt"/>
         </property>
         <property name="prsnNmPrefix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Prefix</meta>
             <column length="65535" name="Prsn_Nm_Prefix"/>
         </property>
         <property name="prsnNmSuffix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Suffix</meta>
             <column length="65535" name="Prsn_Nm_Suffix"/>
         </property>
         <property name="prsnNmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Text</meta>
             <column length="65535" name="Prsn_Nm_Txt"/>
         </property>
         <property name="prsnNmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Name.Use</meta>
             <column length="65535" name="Prsn_Nm_Use"/>
         </property>
         <property name="prsnPhotoCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.ContentType</meta>
             <column length="65535" name="Prsn_Photo_CntntTyp"/>
         </property>
         <property name="prsnPhotoCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Creation</meta>
             <column length="65535" name="Prsn_Photo_Creation"/>
         </property>
         <property name="prsnPhotoData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Data</meta>
             <column length="65535" name="Prsn_Photo_Data"/>
         </property>
         <property name="prsnPhotoHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Hash</meta>
             <column length="65535" name="Prsn_Photo_Hash"/>
         </property>
         <property name="prsnPhotoLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Language</meta>
             <column length="65535" name="Prsn_Photo_Lnguage"/>
         </property>
         <property name="prsnPhotoSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Size</meta>
             <column length="65535" name="Prsn_Photo_Sz"/>
         </property>
         <property name="prsnPhotoTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Title</meta>
             <column length="65535" name="Prsn_Photo_Ttl"/>
         </property>
         <property name="prsnPhotoUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Photo.Url</meta>
             <column length="65535" name="Prsn_Photo_Url"/>
         </property>
         <property name="prsnTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.Period.End</meta>
             <column length="65535" name="Prsn_Tlcm_Prd_End"/>
         </property>
         <property name="prsnTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.Period.Start</meta>
             <column length="65535" name="Prsn_Tlcm_Prd_Strt"/>
         </property>
         <property name="prsnTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.Rank</meta>
             <column length="65535" name="Prsn_Tlcm_Rnk"/>
         </property>
         <property name="prsnTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.System</meta>
             <column length="65535" name="Prsn_Tlcm_Sys"/>
         </property>
         <property name="prsnTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.Use</meta>
             <column length="65535" name="Prsn_Tlcm_Use"/>
         </property>
         <property name="prsnTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Person.Telecom.Value</meta>
             <column length="65535" name="Prsn_Tlcm_Vl"/>
         </property>
     </class>

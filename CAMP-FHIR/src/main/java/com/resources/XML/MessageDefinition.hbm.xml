@@ -7,327 +7,327 @@
             <generator class="identity"/>
         </id>
         <property name="msgDfnAllowedRspsMsg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.AllowedResponse.Message</meta>
             <column length="65535" name="MsgDfn_AllowedRsps_Msg"/>
         </property>
         <property name="msgDfnAllowedRspsSituation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.AllowedResponse.Situation</meta>
             <column length="65535" name="MsgDfn_AllowedRsps_Situation"/>
         </property>
         <property name="msgDfnBase" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Base</meta>
             <column length="65535" name="MsgDfn_Base"/>
         </property>
         <property name="msgDfnCtgry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Category</meta>
             <column length="65535" name="MsgDfn_Ctgry"/>
         </property>
         <property name="msgDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Name</meta>
             <column length="65535" name="MsgDfn_Cntct_Nm"/>
         </property>
         <property name="msgDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="msgDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="msgDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="msgDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="msgDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="msgDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="MsgDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="msgDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Copyright</meta>
             <column length="65535" name="MsgDfn_Copyright"/>
         </property>
         <property name="msgDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Date</meta>
             <column length="65535" name="MsgDfn_Dt"/>
         </property>
         <property name="msgDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Description</meta>
             <column length="65535" name="MsgDfn_Dscrptn"/>
         </property>
         <property name="msgDfnEvntCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventCoding.Code</meta>
             <column length="65535" name="MsgDfn_EvntCdg_Cd"/>
         </property>
         <property name="msgDfnEvntCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventCoding.Display</meta>
             <column length="65535" name="MsgDfn_EvntCdg_Dsply"/>
         </property>
         <property name="msgDfnEvntCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventCoding.System</meta>
             <column length="65535" name="MsgDfn_EvntCdg_Sys"/>
         </property>
         <property name="msgDfnEvntCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventCoding.UserSelected</meta>
             <column length="65535" name="MsgDfn_EvntCdg_UsrSltd"/>
         </property>
         <property name="msgDfnEvntCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventCoding.Version</meta>
             <column length="65535" name="MsgDfn_EvntCdg_Vrsn"/>
         </property>
         <property name="msgDfnEvntUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.EventUriType</meta>
             <column length="65535" name="MsgDfn_EvntUriTyp"/>
         </property>
         <property name="msgDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Experimental</meta>
             <column length="65535" name="MsgDfn_Exprmtl"/>
         </property>
         <property name="msgDfnFocusCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Focus.Code</meta>
             <column length="65535" name="MsgDfn_Focus_Cd"/>
         </property>
         <property name="msgDfnFocusMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Focus.Max</meta>
             <column length="65535" name="MsgDfn_Focus_Mx"/>
         </property>
         <property name="msgDfnFocusMin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Focus.Min</meta>
             <column length="65535" name="MsgDfn_Focus_Min"/>
         </property>
         <property name="msgDfnFocusProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Focus.Profile</meta>
             <column length="65535" name="MsgDfn_Focus_Profile"/>
         </property>
         <property name="msgDfnGraph" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Graph</meta>
             <column length="65535" name="MsgDfn_Graph"/>
         </property>
         <property name="msgDfnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Assigner</meta>
             <column length="65535" name="MsgDfn_Id_Assigner"/>
         </property>
         <property name="msgDfnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Period.End</meta>
             <column length="65535" name="MsgDfn_Id_Prd_End"/>
         </property>
         <property name="msgDfnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Period.Start</meta>
             <column length="65535" name="MsgDfn_Id_Prd_Strt"/>
         </property>
         <property name="msgDfnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.System</meta>
             <column length="65535" name="MsgDfn_Id_Sys"/>
         </property>
         <property name="msgDfnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="msgDfnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="msgDfnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="msgDfnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="msgDfnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="msgDfnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Type.Text</meta>
             <column length="65535" name="MsgDfn_Id_Typ_Txt"/>
         </property>
         <property name="msgDfnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Use</meta>
             <column length="65535" name="MsgDfn_Id_Use"/>
         </property>
         <property name="msgDfnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Identifier.Value</meta>
             <column length="65535" name="MsgDfn_Id_Vl"/>
         </property>
         <property name="msgDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="msgDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="msgDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="msgDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="msgDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="msgDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="MsgDfn_Jrsdctn_Txt"/>
         </property>
         <property name="msgDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Name</meta>
             <column length="65535" name="MsgDfn_Nm"/>
         </property>
         <property name="msgDfnParent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Parent</meta>
             <column length="65535" name="MsgDfn_Parent"/>
         </property>
         <property name="msgDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Publisher</meta>
             <column length="65535" name="MsgDfn_Pblshr"/>
         </property>
         <property name="msgDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Purpose</meta>
             <column length="65535" name="MsgDfn_Prpse"/>
         </property>
         <property name="msgDfnReplaces" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Replaces</meta>
             <column length="65535" name="MsgDfn_Replaces"/>
         </property>
         <property name="msgDfnRspsRequired" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.ResponseRequired</meta>
             <column length="65535" name="MsgDfn_RspsRequired"/>
         </property>
         <property name="msgDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Status</meta>
             <column length="65535" name="MsgDfn_Sts"/>
         </property>
         <property name="msgDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Title</meta>
             <column length="65535" name="MsgDfn_Ttl"/>
         </property>
         <property name="msgDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Url</meta>
             <column length="65535" name="MsgDfn_Url"/>
         </property>
         <property name="msgDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="MsgDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="msgDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="MsgDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="msgDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.Code.System</meta>
             <column length="65535" name="MsgDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="msgDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="MsgDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="msgDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="MsgDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="msgDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="msgDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="msgDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="msgDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="msgDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="msgDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="msgDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="msgDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="msgDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="msgDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="msgDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="msgDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="msgDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="msgDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="msgDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="msgDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="msgDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="MsgDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="msgDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageDefinition.Version</meta>
             <column length="65535" name="MsgDfn_Vrsn"/>
         </property>
     </class>

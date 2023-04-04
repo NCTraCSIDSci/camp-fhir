@@ -7,195 +7,195 @@
             <generator class="identity"/>
         </id>
         <property name="cmprtmntDfnCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Code</meta>
             <column length="65535" name="CmprtmntDfn_Cd"/>
         </property>
         <property name="cmprtmntDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Name</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Nm"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="cmprtmntDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="CmprtmntDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="cmprtmntDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Date</meta>
             <column length="65535" name="CmprtmntDfn_Dt"/>
         </property>
         <property name="cmprtmntDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Description</meta>
             <column length="65535" name="CmprtmntDfn_Dscrptn"/>
         </property>
         <property name="cmprtmntDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Experimental</meta>
             <column length="65535" name="CmprtmntDfn_Exprmtl"/>
         </property>
         <property name="cmprtmntDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Name</meta>
             <column length="65535" name="CmprtmntDfn_Nm"/>
         </property>
         <property name="cmprtmntDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Publisher</meta>
             <column length="65535" name="CmprtmntDfn_Pblshr"/>
         </property>
         <property name="cmprtmntDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Purpose</meta>
             <column length="65535" name="CmprtmntDfn_Prpse"/>
         </property>
         <property name="cmprtmntDfnRsrcCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Resource.Code</meta>
             <column length="65535" name="CmprtmntDfn_Rsrc_Cd"/>
         </property>
         <property name="cmprtmntDfnRsrcDocation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Resource.Documentation</meta>
             <column length="65535" name="CmprtmntDfn_Rsrc_Docation"/>
         </property>
         <property name="cmprtmntDfnRsrcParam" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Resource.Param</meta>
             <column length="65535" name="CmprtmntDfn_Rsrc_Param"/>
         </property>
         <property name="cmprtmntDfnSrch" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Search</meta>
             <column length="65535" name="CmprtmntDfn_Srch"/>
         </property>
         <property name="cmprtmntDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Status</meta>
             <column length="65535" name="CmprtmntDfn_Sts"/>
         </property>
         <property name="cmprtmntDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Url</meta>
             <column length="65535" name="CmprtmntDfn_Url"/>
         </property>
         <property name="cmprtmntDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="cmprtmntDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.Code.System</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="cmprtmntDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="cmprtmntDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="CmprtmntDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="cmprtmntDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CompartmentDefinition.Version</meta>
             <column length="65535" name="CmprtmntDfn_Vrsn"/>
         </property>
     </class>

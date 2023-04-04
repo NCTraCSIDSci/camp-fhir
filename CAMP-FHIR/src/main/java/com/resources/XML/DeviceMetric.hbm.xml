@@ -7,283 +7,275 @@
             <generator class="identity"/>
         </id>
         <property name="dvcMetricCalibrationState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Calibration.State</meta>
             <column length="65535" name="DvcMetric_Calibration_State"/>
         </property>
         <property name="dvcMetricCalibrationTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Calibration.Time</meta>
             <column length="65535" name="DvcMetric_Calibration_Time"/>
         </property>
         <property name="dvcMetricCalibrationTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Calibration.Type</meta>
             <column length="65535" name="DvcMetric_Calibration_Typ"/>
         </property>
         <property name="dvcMetricCtgry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Category</meta>
             <column length="65535" name="DvcMetric_Ctgry"/>
         </property>
         <property name="dvcMetricColor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Color</meta>
             <column length="65535" name="DvcMetric_Color"/>
         </property>
         <property name="dvcMetricIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Assigner</meta>
             <column length="65535" name="DvcMetric_Id_Assigner"/>
         </property>
         <property name="dvcMetricIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Period.End</meta>
             <column length="65535" name="DvcMetric_Id_Prd_End"/>
         </property>
         <property name="dvcMetricIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Period.Start</meta>
             <column length="65535" name="DvcMetric_Id_Prd_Strt"/>
         </property>
         <property name="dvcMetricIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.System</meta>
             <column length="65535" name="DvcMetric_Id_Sys"/>
         </property>
         <property name="dvcMetricIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcMetricIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcMetricIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Coding.System</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcMetricIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcMetricIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcMetricIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Type.Text</meta>
             <column length="65535" name="DvcMetric_Id_Typ_Txt"/>
         </property>
         <property name="dvcMetricIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Use</meta>
             <column length="65535" name="DvcMetric_Id_Use"/>
         </property>
         <property name="dvcMetricIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Identifier.Value</meta>
             <column length="65535" name="DvcMetric_Id_Vl"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Coding.Code</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Cdg_Cd"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Coding.Display</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Cdg_Dsply"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Coding.System</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Cdg_Sys"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Coding.UserSelected</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Coding.Version</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Cdg_Vrsn"/>
         </property>
         <property name="dvcMetricMsrmentPrdCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Code.Text</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Cd_Txt"/>
         </property>
         <property name="dvcMetricMsrmentPrdEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Event</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Evnt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsPrd_End"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.Count</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_Cnt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.CountMax</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_CntMx"/>
         </property>
-        <property name="dvcMetricMsrmentPrdRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_DayOfWeek"/>
-        </property>
         <property name="dvcMetricMsrmentPrdRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.Duration</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_Duration"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.DurationMax</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_DurationMx"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.DurationUnit</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_DurationUnt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.Frequency</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_Frqncy"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.FrequencyMax</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_FrqncyMx"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.Offset</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_Off"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.Period</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_Prd"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.PeriodMax</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_PrdMx"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.PeriodUnit</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_PrdUnt"/>
         </property>
         <property name="dvcMetricMsrmentPrdRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.MeasurementPeriod.Repeat.TimeOfDay</meta>
             <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_TimeOfDay"/>
         </property>
-        <property name="dvcMetricMsrmentPrdRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="DvcMetric_MsrmentPrd_Rpt_When"/>
-        </property>
         <property name="dvcMetricOprtnalSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.OperationalStatus</meta>
             <column length="65535" name="DvcMetric_OprtnalSts"/>
         </property>
         <property name="dvcMetricParent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Parent</meta>
             <column length="65535" name="DvcMetric_Parent"/>
         </property>
         <property name="dvcMetricSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Source</meta>
             <column length="65535" name="DvcMetric_Src"/>
         </property>
         <property name="dvcMetricTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Coding.Code</meta>
             <column length="65535" name="DvcMetric_Typ_Cdg_Cd"/>
         </property>
         <property name="dvcMetricTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Coding.Display</meta>
             <column length="65535" name="DvcMetric_Typ_Cdg_Dsply"/>
         </property>
         <property name="dvcMetricTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Coding.System</meta>
             <column length="65535" name="DvcMetric_Typ_Cdg_Sys"/>
         </property>
         <property name="dvcMetricTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Coding.UserSelected</meta>
             <column length="65535" name="DvcMetric_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="dvcMetricTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Coding.Version</meta>
             <column length="65535" name="DvcMetric_Typ_Cdg_Vrsn"/>
         </property>
         <property name="dvcMetricTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Type.Text</meta>
             <column length="65535" name="DvcMetric_Typ_Txt"/>
         </property>
         <property name="dvcMetricUntCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Coding.Code</meta>
             <column length="65535" name="DvcMetric_Unt_Cdg_Cd"/>
         </property>
         <property name="dvcMetricUntCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Coding.Display</meta>
             <column length="65535" name="DvcMetric_Unt_Cdg_Dsply"/>
         </property>
         <property name="dvcMetricUntCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Coding.System</meta>
             <column length="65535" name="DvcMetric_Unt_Cdg_Sys"/>
         </property>
         <property name="dvcMetricUntCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Coding.UserSelected</meta>
             <column length="65535" name="DvcMetric_Unt_Cdg_UsrSltd"/>
         </property>
         <property name="dvcMetricUntCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Coding.Version</meta>
             <column length="65535" name="DvcMetric_Unt_Cdg_Vrsn"/>
         </property>
         <property name="dvcMetricUntTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DeviceMetric.Unit.Text</meta>
             <column length="65535" name="DvcMetric_Unt_Txt"/>
         </property>
     </class>

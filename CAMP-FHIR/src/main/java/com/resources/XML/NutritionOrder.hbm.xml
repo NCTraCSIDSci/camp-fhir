@@ -7,1011 +7,987 @@
             <generator class="identity"/>
         </id>
         <property name="ntritnOrdrAlrgyIntolerance" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.AllergyIntolerance</meta>
             <column length="65535" name="NtritnOrdr_AlrgyIntolerance"/>
         </property>
         <property name="ntritnOrdrDtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.DateTime</meta>
             <column length="65535" name="NtritnOrdr_DtTime"/>
         </property>
         <property name="ntritnOrdrEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Encounter</meta>
             <column length="65535" name="NtritnOrdr_Enc"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvPrdctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveProductName</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvPrdctNm"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAddtvTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdditiveType.Text</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AddtvTyp_Txt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Quantity.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Quantity.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Quantity.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Quantity.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Quantity.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateQuantity.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateQuantity.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateQuantity.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateQuantity.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateQuantity.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Denominator.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Denominator.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Denominator.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Denominator.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Denominator.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Numerator.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Numerator.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Numerator.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Numerator.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.RateRatio.Numerator.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Code.Text</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Txt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Event</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evnt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_End"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.Count</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Cnt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.CountMax</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_CntMx"/>
         </property>
-        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_DayOfWeek"/>
-        </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.Duration</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Duration"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.DurationMax</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_DurationMx"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.DurationUnit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_DurationUnt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.Frequency</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Frqncy"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.FrequencyMax</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_FrqncyMx"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.Offset</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Off"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.Period</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Prd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.PeriodMax</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_PrdMx"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.PeriodUnit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_PrdUnt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.Administration.Schedule.Repeat.TimeOfDay</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_TimeOfDay"/>
         </property>
-        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_When"/>
-        </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.AdministrationInstruction</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_AdmnstnInstrctn"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaPrdctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaProductName</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaPrdctNm"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaBaseFrmulaTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.BaseFormulaType.Text</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Txt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaCaloricDensityCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.CaloricDensity.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_CaloricDensity_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaCaloricDensityCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.CaloricDensity.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_CaloricDensity_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaCaloricDensitySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.CaloricDensity.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_CaloricDensity_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaCaloricDensityUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.CaloricDensity.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_CaloricDensity_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaCaloricDensityVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.CaloricDensity.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_CaloricDensity_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaMxVolumeToDeliverCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.MaxVolumeToDeliver.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.MaxVolumeToDeliver.Comparator</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Cmprtr"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaMxVolumeToDeliverSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.MaxVolumeToDeliver.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaMxVolumeToDeliverUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.MaxVolumeToDeliver.Unit</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Unt"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaMxVolumeToDeliverVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.MaxVolumeToDeliver.Value</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaRouteofAdmnstnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.EnteralFormula.RouteofAdministration.Text</meta>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Txt"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrExcludeFoodMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.ExcludeFoodModifier.Text</meta>
             <column length="65535" name="NtritnOrdr_ExcludeFoodMdfr_Txt"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrFoodPreferenceMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.FoodPreferenceModifier.Text</meta>
             <column length="65535" name="NtritnOrdr_FoodPreferenceMdfr_Txt"/>
         </property>
         <property name="ntritnOrdrIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Assigner</meta>
             <column length="65535" name="NtritnOrdr_Id_Assigner"/>
         </property>
         <property name="ntritnOrdrIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Period.End</meta>
             <column length="65535" name="NtritnOrdr_Id_Prd_End"/>
         </property>
         <property name="ntritnOrdrIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Period.Start</meta>
             <column length="65535" name="NtritnOrdr_Id_Prd_Strt"/>
         </property>
         <property name="ntritnOrdrIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.System</meta>
             <column length="65535" name="NtritnOrdr_Id_Sys"/>
         </property>
         <property name="ntritnOrdrIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Type.Text</meta>
             <column length="65535" name="NtritnOrdr_Id_Typ_Txt"/>
         </property>
         <property name="ntritnOrdrIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Use</meta>
             <column length="65535" name="NtritnOrdr_Id_Use"/>
         </property>
         <property name="ntritnOrdrIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Identifier.Value</meta>
             <column length="65535" name="NtritnOrdr_Id_Vl"/>
         </property>
         <property name="ntritnOrdrInstantiates" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Instantiates</meta>
             <column length="65535" name="NtritnOrdr_Instantiates"/>
         </property>
         <property name="ntritnOrdrInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.InstantiatesCanonical</meta>
             <column length="65535" name="NtritnOrdr_InstantiatesCanonical"/>
         </property>
         <property name="ntritnOrdrInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.InstantiatesUri</meta>
             <column length="65535" name="NtritnOrdr_InstantiatesUri"/>
         </property>
         <property name="ntritnOrdrIntent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Intent</meta>
             <column length="65535" name="NtritnOrdr_Intent"/>
         </property>
         <property name="ntritnOrdrNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Note.AuthorReference</meta>
             <column length="65535" name="NtritnOrdr_Nt_AthrRfrnc"/>
         </property>
         <property name="ntritnOrdrNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Note.AuthorStringType</meta>
             <column length="65535" name="NtritnOrdr_Nt_AthrStrgTyp"/>
         </property>
         <property name="ntritnOrdrNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Note.Text</meta>
             <column length="65535" name="NtritnOrdr_Nt_Txt"/>
         </property>
         <property name="ntritnOrdrNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Note.Time</meta>
             <column length="65535" name="NtritnOrdr_Nt_Time"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietFluidConsistencyTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.FluidConsistencyType.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_FluidConsistencyTyp_Txt"/>
         </property>
         <property name="ntritnOrdrOralDietInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Instruction</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Instrctn"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientAmntCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Amount.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Amnt_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientAmntCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Amount.Comparator</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Amnt_Cmprtr"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientAmntSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Amount.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Amnt_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientAmntUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Amount.Unit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Amnt_Unt"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientAmntVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Amount.Value</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Amnt_Vl"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietNutrientMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Nutrient.Modifier.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Nutrient_Mdfr_Txt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Code.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Cd_Txt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Event</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Evnt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_End"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.Count</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_Cnt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.CountMax</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_CntMx"/>
         </property>
-        <property name="ntritnOrdrOralDietSchdlRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_DayOfWeek"/>
-        </property>
         <property name="ntritnOrdrOralDietSchdlRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.Duration</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_Duration"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.DurationMax</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_DurationMx"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.DurationUnit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_DurationUnt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.Frequency</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_Frqncy"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.FrequencyMax</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_FrqncyMx"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.Offset</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_Off"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.Period</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_Prd"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.PeriodMax</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_PrdMx"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.PeriodUnit</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_PrdUnt"/>
         </property>
         <property name="ntritnOrdrOralDietSchdlRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Schedule.Repeat.TimeOfDay</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_TimeOfDay"/>
         </property>
-        <property name="ntritnOrdrOralDietSchdlRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_When"/>
-        </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureFoodTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.FoodType.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_FoodTyp_Txt"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietTxtureMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Texture.Modifier.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Txture_Mdfr_Txt"/>
         </property>
         <property name="ntritnOrdrOralDietTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrOralDietTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrOralDietTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrOralDietTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrOralDietTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrOralDietTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.OralDiet.Type.Text</meta>
             <column length="65535" name="NtritnOrdr_OralDiet_Typ_Txt"/>
         </property>
         <property name="ntritnOrdrOrdrer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Orderer</meta>
             <column length="65535" name="NtritnOrdr_Ordrer"/>
         </property>
         <property name="ntritnOrdrPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Patient</meta>
             <column length="65535" name="NtritnOrdr_Pnt"/>
         </property>
         <property name="ntritnOrdrSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Status</meta>
             <column length="65535" name="NtritnOrdr_Sts"/>
         </property>
         <property name="ntritnOrdrSupplementInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Instruction</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Instrctn"/>
         </property>
         <property name="ntritnOrdrSupplementPrdctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.ProductName</meta>
             <column length="65535" name="NtritnOrdr_Supplement_PrdctNm"/>
         </property>
         <property name="ntritnOrdrSupplementQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Quantity.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Qnty_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Quantity.Comparator</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Qnty_Cmprtr"/>
         </property>
         <property name="ntritnOrdrSupplementQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Quantity.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Qnty_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Quantity.Unit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Qnty_Unt"/>
         </property>
         <property name="ntritnOrdrSupplementQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Quantity.Value</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Qnty_Vl"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Code.Text</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Cd_Txt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Event</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Evnt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_End"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.Count</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_Cnt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.CountMax</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_CntMx"/>
         </property>
-        <property name="ntritnOrdrSupplementSchdlRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_DayOfWeek"/>
-        </property>
         <property name="ntritnOrdrSupplementSchdlRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.Duration</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_Duration"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.DurationMax</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_DurationMx"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.DurationUnit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_DurationUnt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.Frequency</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_Frqncy"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.FrequencyMax</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_FrqncyMx"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.Offset</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_Off"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.Period</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_Prd"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.PeriodMax</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_PrdMx"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.PeriodUnit</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_PrdUnt"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Schedule.Repeat.TimeOfDay</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_TimeOfDay"/>
         </property>
-        <property name="ntritnOrdrSupplementSchdlRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_When"/>
-        </property>
         <property name="ntritnOrdrSupplementTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Coding.Code</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Cdg_Cd"/>
         </property>
         <property name="ntritnOrdrSupplementTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Coding.Display</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Cdg_Dsply"/>
         </property>
         <property name="ntritnOrdrSupplementTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Coding.System</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Cdg_Sys"/>
         </property>
         <property name="ntritnOrdrSupplementTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Coding.UserSelected</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="ntritnOrdrSupplementTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Coding.Version</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Cdg_Vrsn"/>
         </property>
         <property name="ntritnOrdrSupplementTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">NutritionOrder.Supplement.Type.Text</meta>
             <column length="65535" name="NtritnOrdr_Supplement_Typ_Txt"/>
         </property>
     </class>

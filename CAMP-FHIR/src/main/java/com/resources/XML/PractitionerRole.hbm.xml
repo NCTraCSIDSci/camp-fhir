@@ -7,187 +7,183 @@
             <generator class="identity"/>
         </id>
         <property name="prctitnrRoleActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Active</meta>
             <column length="65535" name="PrctitnrRole_Active"/>
         </property>
         <property name="prctitnrRoleAvailabilityExceptions" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.AvailabilityExceptions</meta>
             <column length="65535" name="PrctitnrRole_AvailabilityExceptions"/>
         </property>
         <property name="prctitnrRoleAvailableTimeAllDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.AvailableTime.AllDay</meta>
             <column length="65535" name="PrctitnrRole_AvailableTime_AllDay"/>
         </property>
         <property name="prctitnrRoleAvailableTimeAvailableEndTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.AvailableTime.AvailableEndTime</meta>
             <column length="65535" name="PrctitnrRole_AvailableTime_AvailableEndTime"/>
         </property>
         <property name="prctitnrRoleAvailableTimeAvailableStrtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.AvailableTime.AvailableStartTime</meta>
             <column length="65535" name="PrctitnrRole_AvailableTime_AvailableStrtTime"/>
         </property>
-        <property name="prctitnrRoleAvailableTimeDaysOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="PrctitnrRole_AvailableTime_DaysOfWeek"/>
-        </property>
         <property name="prctitnrRoleCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Coding.Code</meta>
             <column length="65535" name="PrctitnrRole_Cd_Cdg_Cd"/>
         </property>
         <property name="prctitnrRoleCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Coding.Display</meta>
             <column length="65535" name="PrctitnrRole_Cd_Cdg_Dsply"/>
         </property>
         <property name="prctitnrRoleCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Coding.System</meta>
             <column length="65535" name="PrctitnrRole_Cd_Cdg_Sys"/>
         </property>
         <property name="prctitnrRoleCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Coding.UserSelected</meta>
             <column length="65535" name="PrctitnrRole_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrRoleCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Coding.Version</meta>
             <column length="65535" name="PrctitnrRole_Cd_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrRoleCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Code.Text</meta>
             <column length="65535" name="PrctitnrRole_Cd_Txt"/>
         </property>
         <property name="prctitnrRoleEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Endpoint</meta>
             <column length="65535" name="PrctitnrRole_Endpoint"/>
         </property>
         <property name="prctitnrRoleHlthcrSrv" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.HealthcareService</meta>
             <column length="65535" name="PrctitnrRole_HlthcrSrv"/>
         </property>
         <property name="prctitnrRoleIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Assigner</meta>
             <column length="65535" name="PrctitnrRole_Id_Assigner"/>
         </property>
         <property name="prctitnrRoleIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Period.End</meta>
             <column length="65535" name="PrctitnrRole_Id_Prd_End"/>
         </property>
         <property name="prctitnrRoleIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Period.Start</meta>
             <column length="65535" name="PrctitnrRole_Id_Prd_Strt"/>
         </property>
         <property name="prctitnrRoleIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.System</meta>
             <column length="65535" name="PrctitnrRole_Id_Sys"/>
         </property>
         <property name="prctitnrRoleIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="prctitnrRoleIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="prctitnrRoleIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Coding.System</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="prctitnrRoleIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrRoleIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrRoleIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Type.Text</meta>
             <column length="65535" name="PrctitnrRole_Id_Typ_Txt"/>
         </property>
         <property name="prctitnrRoleIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Use</meta>
             <column length="65535" name="PrctitnrRole_Id_Use"/>
         </property>
         <property name="prctitnrRoleIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Identifier.Value</meta>
             <column length="65535" name="PrctitnrRole_Id_Vl"/>
         </property>
         <property name="prctitnrRoleLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Location</meta>
             <column length="65535" name="PrctitnrRole_Lctn"/>
         </property>
         <property name="prctitnrRoleNotAvailableDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.NotAvailable.Description</meta>
             <column length="65535" name="PrctitnrRole_NotAvailable_Dscrptn"/>
         </property>
         <property name="prctitnrRoleNotAvailableDuringEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.NotAvailable.During.End</meta>
             <column length="65535" name="PrctitnrRole_NotAvailable_During_End"/>
         </property>
         <property name="prctitnrRoleNotAvailableDuringStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.NotAvailable.During.Start</meta>
             <column length="65535" name="PrctitnrRole_NotAvailable_During_Strt"/>
         </property>
         <property name="prctitnrRoleOrgnztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Organization</meta>
             <column length="65535" name="PrctitnrRole_Orgnztn"/>
         </property>
         <property name="prctitnrRolePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Period.End</meta>
             <column length="65535" name="PrctitnrRole_Prd_End"/>
         </property>
         <property name="prctitnrRolePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Period.Start</meta>
             <column length="65535" name="PrctitnrRole_Prd_Strt"/>
         </property>
         <property name="prctitnrRolePrctitnr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Practitioner</meta>
             <column length="65535" name="PrctitnrRole_Prctitnr"/>
         </property>
         <property name="prctitnrRoleSpcltyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Coding.Code</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Cdg_Cd"/>
         </property>
         <property name="prctitnrRoleSpcltyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Coding.Display</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Cdg_Dsply"/>
         </property>
         <property name="prctitnrRoleSpcltyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Coding.System</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Cdg_Sys"/>
         </property>
         <property name="prctitnrRoleSpcltyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Coding.UserSelected</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrRoleSpcltyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Coding.Version</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrRoleSpcltyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Specialty.Text</meta>
             <column length="65535" name="PrctitnrRole_Spclty_Txt"/>
         </property>
         <property name="prctitnrRoleTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.Period.End</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Prd_End"/>
         </property>
         <property name="prctitnrRoleTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.Period.Start</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Prd_Strt"/>
         </property>
         <property name="prctitnrRoleTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.Rank</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Rnk"/>
         </property>
         <property name="prctitnrRoleTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.System</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Sys"/>
         </property>
         <property name="prctitnrRoleTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.Use</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Use"/>
         </property>
         <property name="prctitnrRoleTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PractitionerRole.Telecom.Value</meta>
             <column length="65535" name="PrctitnrRole_Tlcm_Vl"/>
         </property>
     </class>

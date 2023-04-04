@@ -7,287 +7,283 @@
             <generator class="identity"/>
         </id>
         <property name="cvgElgbltyRqstCreated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Created</meta>
             <column length="65535" name="CvgElgbltyRqst_Created"/>
         </property>
         <property name="cvgElgbltyRqstEnterer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Enterer</meta>
             <column length="65535" name="CvgElgbltyRqst_Enterer"/>
         </property>
         <property name="cvgElgbltyRqstFacility" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Facility</meta>
             <column length="65535" name="CvgElgbltyRqst_Facility"/>
         </property>
         <property name="cvgElgbltyRqstIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Assigner</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Assigner"/>
         </property>
         <property name="cvgElgbltyRqstIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Period.End</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Prd_End"/>
         </property>
         <property name="cvgElgbltyRqstIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Period.Start</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Prd_Strt"/>
         </property>
         <property name="cvgElgbltyRqstIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Sys"/>
         </property>
         <property name="cvgElgbltyRqstIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Type.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Typ_Txt"/>
         </property>
         <property name="cvgElgbltyRqstIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Use</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Use"/>
         </property>
         <property name="cvgElgbltyRqstIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Identifier.Value</meta>
             <column length="65535" name="CvgElgbltyRqst_Id_Vl"/>
         </property>
         <property name="cvgElgbltyRqstInsrncBusinessArrangement" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Insurance.BusinessArrangement</meta>
             <column length="65535" name="CvgElgbltyRqst_Insrnc_BusinessArrangement"/>
         </property>
         <property name="cvgElgbltyRqstInsrncCvg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Insurance.Coverage</meta>
             <column length="65535" name="CvgElgbltyRqst_Insrnc_Cvg"/>
         </property>
         <property name="cvgElgbltyRqstInsrncFocal" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Insurance.Focal</meta>
             <column length="65535" name="CvgElgbltyRqst_Insrnc_Focal"/>
         </property>
         <property name="cvgElgbltyRqstInsurer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Insurer</meta>
             <column length="65535" name="CvgElgbltyRqst_Insurer"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstItmCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Category.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Ctgry_Txt"/>
         </property>
         <property name="cvgElgbltyRqstItmDtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Detail</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dtl"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisCodeableConcept.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisCdbleCncpt_Txt"/>
         </property>
         <property name="cvgElgbltyRqstItmDgnsisDgnsisRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Diagnosis.DiagnosisReference</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Dgnsis_DgnsisRfrnc"/>
         </property>
         <property name="cvgElgbltyRqstItmFacility" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Facility</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Facility"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstItmMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Modifier.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Mdfr_Txt"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstItmPrdctOrSrvTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.ProductOrService.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_PrdctOrSrv_Txt"/>
         </property>
         <property name="cvgElgbltyRqstItmProvider" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Provider</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Provider"/>
         </property>
         <property name="cvgElgbltyRqstItmQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Quantity.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Qnty_Cd"/>
         </property>
         <property name="cvgElgbltyRqstItmQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Quantity.Comparator</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Qnty_Cmprtr"/>
         </property>
         <property name="cvgElgbltyRqstItmQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Quantity.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Qnty_Sys"/>
         </property>
         <property name="cvgElgbltyRqstItmQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Quantity.Unit</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Qnty_Unt"/>
         </property>
         <property name="cvgElgbltyRqstItmQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.Quantity.Value</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_Qnty_Vl"/>
         </property>
         <property name="cvgElgbltyRqstItmSprtingInfoSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.SupportingInfoSequence</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_SprtingInfoSqnc"/>
         </property>
         <property name="cvgElgbltyRqstItmUntPriceCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.UnitPrice.Currency</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_UntPrice_Crncy"/>
         </property>
         <property name="cvgElgbltyRqstItmUntPriceVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Item.UnitPrice.Value</meta>
             <column length="65535" name="CvgElgbltyRqst_Itm_UntPrice_Vl"/>
         </property>
         <property name="cvgElgbltyRqstPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Patient</meta>
             <column length="65535" name="CvgElgbltyRqst_Pnt"/>
         </property>
         <property name="cvgElgbltyRqstPriorityCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Coding.Code</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Cdg_Cd"/>
         </property>
         <property name="cvgElgbltyRqstPriorityCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Coding.Display</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Cdg_Dsply"/>
         </property>
         <property name="cvgElgbltyRqstPriorityCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Coding.System</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Cdg_Sys"/>
         </property>
         <property name="cvgElgbltyRqstPriorityCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Coding.UserSelected</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Cdg_UsrSltd"/>
         </property>
         <property name="cvgElgbltyRqstPriorityCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Coding.Version</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Cdg_Vrsn"/>
         </property>
         <property name="cvgElgbltyRqstPriorityTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Priority.Text</meta>
             <column length="65535" name="CvgElgbltyRqst_Priority_Txt"/>
         </property>
         <property name="cvgElgbltyRqstProvider" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Provider</meta>
             <column length="65535" name="CvgElgbltyRqst_Provider"/>
         </property>
-        <property name="cvgElgbltyRqstPrpse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="CvgElgbltyRqst_Prpse"/>
-        </property>
         <property name="cvgElgbltyRqstSrvdDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.ServicedDateType</meta>
             <column length="65535" name="CvgElgbltyRqst_SrvdDtTyp"/>
         </property>
         <property name="cvgElgbltyRqstSrvdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.ServicedPeriod.End</meta>
             <column length="65535" name="CvgElgbltyRqst_SrvdPrd_End"/>
         </property>
         <property name="cvgElgbltyRqstSrvdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.ServicedPeriod.Start</meta>
             <column length="65535" name="CvgElgbltyRqst_SrvdPrd_Strt"/>
         </property>
         <property name="cvgElgbltyRqstSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.Status</meta>
             <column length="65535" name="CvgElgbltyRqst_Sts"/>
         </property>
         <property name="cvgElgbltyRqstSprtingInfoAppliesToAll" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.SupportingInfo.AppliesToAll</meta>
             <column length="65535" name="CvgElgbltyRqst_SprtingInfo_AppliesToAll"/>
         </property>
         <property name="cvgElgbltyRqstSprtingInfoInfo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.SupportingInfo.Information</meta>
             <column length="65535" name="CvgElgbltyRqst_SprtingInfo_Info"/>
         </property>
         <property name="cvgElgbltyRqstSprtingInfoSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CoverageEligibilityRequest.SupportingInfo.Sequence</meta>
             <column length="65535" name="CvgElgbltyRqst_SprtingInfo_Sqnc"/>
         </property>
     </class>

@@ -7,967 +7,327 @@
             <generator class="identity"/>
         </id>
         <property name="strctrDfnAbstract" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Abstract</meta>
             <column length="65535" name="StrctrDfn_Abstract"/>
         </property>
         <property name="strctrDfnBaseDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.BaseDefinition</meta>
             <column length="65535" name="StrctrDfn_BaseDfn"/>
         </property>
         <property name="strctrDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Name</meta>
             <column length="65535" name="StrctrDfn_Cntct_Nm"/>
         </property>
         <property name="strctrDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="strctrDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="strctrDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="strctrDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="strctrDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="strctrDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="StrctrDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="strctrDfnCntxtExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Context.Expression</meta>
             <column length="65535" name="StrctrDfn_Cntxt_Exprsn"/>
         </property>
         <property name="strctrDfnCntxtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Context.Type</meta>
             <column length="65535" name="StrctrDfn_Cntxt_Typ"/>
         </property>
         <property name="strctrDfnCntxtInvariant" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.ContextInvariant</meta>
             <column length="65535" name="StrctrDfn_CntxtInvariant"/>
         </property>
         <property name="strctrDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Copyright</meta>
             <column length="65535" name="StrctrDfn_Copyright"/>
         </property>
         <property name="strctrDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Date</meta>
             <column length="65535" name="StrctrDfn_Dt"/>
         </property>
         <property name="strctrDfnDerivation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Derivation</meta>
             <column length="65535" name="StrctrDfn_Derivation"/>
         </property>
         <property name="strctrDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Description</meta>
             <column length="65535" name="StrctrDfn_Dscrptn"/>
         </property>
-        <property name="strctrDfnDffntialElmntAlias" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Alias"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBaseMx" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Base_Mx"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBaseMin" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Base_Min"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBasePath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Base_Path"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBindingDscrptn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Binding_Dscrptn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBindingStr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Binding_Str"/>
-        </property>
-        <property name="strctrDfnDffntialElmntBindingVlSt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Binding_VlSt"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCdCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cd_Cd"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCdDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cd_Dsply"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCdSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cd_Sys"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cd_UsrSltd"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCdVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cd_Vrsn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntComment" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Comment"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCndtn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Cndtn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintExprsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Exprsn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintHuman" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Human"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintKey" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Key"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintRqrments" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Rqrments"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintSeverity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Severity"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintSrc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Src"/>
-        </property>
-        <property name="strctrDfnDffntialElmntConstraintXpath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Constraint_Xpath"/>
-        </property>
-        <property name="strctrDfnDffntialElmntCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_CntntRfrnc"/>
-        </property>
-        <property name="strctrDfnDffntialElmntDfn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Dfn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntExampleLbl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Example_Lbl"/>
-        </property>
-        <property name="strctrDfnDffntialElmntIsMdfr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_IsMdfr"/>
-        </property>
-        <property name="strctrDfnDffntialElmntIsMdfrRsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_IsMdfrRsn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntIsSummary" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_IsSummary"/>
-        </property>
-        <property name="strctrDfnDffntialElmntLbl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Lbl"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMappingComment" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Mapping_Comment"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMappingIdentity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Mapping_Identity"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMappingLnguage" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Mapping_Lnguage"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMappingMap" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Mapping_Map"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMx" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Mx"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxLength" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxLength"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlDtTimeTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlDtTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlDecimalTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlInstantTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlInstantTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlIntegerTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlPositiveIntTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlQnty_Cd"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlQnty_Cmprtr"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlQnty_Sys"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlQnty_Unt"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlQnty_Vl"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlTimeTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMxVlUnsignedIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MxVlUnsignedIntTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMeaningWhenMissing" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MeaningWhenMissing"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMin" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Min"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlDtTimeTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlDtTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlDecimalTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlInstantTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlInstantTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlIntegerTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlPositiveIntTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlQnty_Cd"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlQnty_Cmprtr"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlQnty_Sys"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlQnty_Unt"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlQnty_Vl"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlTimeTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMinVlUnsignedIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MinVlUnsignedIntTyp"/>
-        </property>
-        <property name="strctrDfnDffntialElmntMustSupport" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_MustSupport"/>
-        </property>
-        <property name="strctrDfnDffntialElmntOrdrMeaning" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_OrdrMeaning"/>
-        </property>
-        <property name="strctrDfnDffntialElmntPath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Path"/>
-        </property>
-        <property name="strctrDfnDffntialElmntRepresentation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Representation"/>
-        </property>
-        <property name="strctrDfnDffntialElmntRqrments" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Rqrments"/>
-        </property>
-        <property name="strctrDfnDffntialElmntShort" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Short"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSliceIsConstraining" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_SliceIsConstraining"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSliceNm" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_SliceNm"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSlicingDscrptn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Slicing_Dscrptn"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSlicingDiscriminatorPath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Slicing_Discriminator_Path"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSlicingDiscriminatorTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Slicing_Discriminator_Typ"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSlicingOrdred" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Slicing_Ordred"/>
-        </property>
-        <property name="strctrDfnDffntialElmntSlicingRules" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Slicing_Rules"/>
-        </property>
-        <property name="strctrDfnDffntialElmntTypAggregation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Typ_Aggregation"/>
-        </property>
-        <property name="strctrDfnDffntialElmntTypCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Typ_Cd"/>
-        </property>
-        <property name="strctrDfnDffntialElmntTypProfile" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Typ_Profile"/>
-        </property>
-        <property name="strctrDfnDffntialElmntTypTarProfile" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Typ_TarProfile"/>
-        </property>
-        <property name="strctrDfnDffntialElmntTypVrsning" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Dffntial_Elmnt_Typ_Vrsning"/>
-        </property>
         <property name="strctrDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Experimental</meta>
             <column length="65535" name="StrctrDfn_Exprmtl"/>
         </property>
         <property name="strctrDfnFhirVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.FhirVersion</meta>
             <column length="65535" name="StrctrDfn_FhirVrsn"/>
         </property>
         <property name="strctrDfnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Assigner</meta>
             <column length="65535" name="StrctrDfn_Id_Assigner"/>
         </property>
         <property name="strctrDfnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Period.End</meta>
             <column length="65535" name="StrctrDfn_Id_Prd_End"/>
         </property>
         <property name="strctrDfnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Period.Start</meta>
             <column length="65535" name="StrctrDfn_Id_Prd_Strt"/>
         </property>
         <property name="strctrDfnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.System</meta>
             <column length="65535" name="StrctrDfn_Id_Sys"/>
         </property>
         <property name="strctrDfnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="strctrDfnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="strctrDfnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Coding.System</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="strctrDfnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="strctrDfnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="strctrDfnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Type.Text</meta>
             <column length="65535" name="StrctrDfn_Id_Typ_Txt"/>
         </property>
         <property name="strctrDfnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Use</meta>
             <column length="65535" name="StrctrDfn_Id_Use"/>
         </property>
         <property name="strctrDfnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Identifier.Value</meta>
             <column length="65535" name="StrctrDfn_Id_Vl"/>
         </property>
         <property name="strctrDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="strctrDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="strctrDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="strctrDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="strctrDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="strctrDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="StrctrDfn_Jrsdctn_Txt"/>
         </property>
         <property name="strctrDfnKeywordCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Keyword.Code</meta>
             <column length="65535" name="StrctrDfn_Keyword_Cd"/>
         </property>
         <property name="strctrDfnKeywordDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Keyword.Display</meta>
             <column length="65535" name="StrctrDfn_Keyword_Dsply"/>
         </property>
         <property name="strctrDfnKeywordSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Keyword.System</meta>
             <column length="65535" name="StrctrDfn_Keyword_Sys"/>
         </property>
         <property name="strctrDfnKeywordUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Keyword.UserSelected</meta>
             <column length="65535" name="StrctrDfn_Keyword_UsrSltd"/>
         </property>
         <property name="strctrDfnKeywordVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Keyword.Version</meta>
             <column length="65535" name="StrctrDfn_Keyword_Vrsn"/>
         </property>
         <property name="strctrDfnKind" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Kind</meta>
             <column length="65535" name="StrctrDfn_Kind"/>
         </property>
         <property name="strctrDfnMappingComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Mapping.Comment</meta>
             <column length="65535" name="StrctrDfn_Mapping_Comment"/>
         </property>
         <property name="strctrDfnMappingIdentity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Mapping.Identity</meta>
             <column length="65535" name="StrctrDfn_Mapping_Identity"/>
         </property>
         <property name="strctrDfnMappingNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Mapping.Name</meta>
             <column length="65535" name="StrctrDfn_Mapping_Nm"/>
         </property>
         <property name="strctrDfnMappingUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Mapping.Uri</meta>
             <column length="65535" name="StrctrDfn_Mapping_Uri"/>
         </property>
         <property name="strctrDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Name</meta>
             <column length="65535" name="StrctrDfn_Nm"/>
         </property>
         <property name="strctrDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Publisher</meta>
             <column length="65535" name="StrctrDfn_Pblshr"/>
         </property>
         <property name="strctrDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Purpose</meta>
             <column length="65535" name="StrctrDfn_Prpse"/>
         </property>
-        <property name="strctrDfnSnpshtElmntAlias" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Alias"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBaseMx" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Base_Mx"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBaseMin" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Base_Min"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBasePath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Base_Path"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBindingDscrptn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Binding_Dscrptn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBindingStr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Binding_Str"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntBindingVlSt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Binding_VlSt"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCdCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cd_Cd"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCdDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cd_Dsply"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCdSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cd_Sys"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cd_UsrSltd"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCdVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cd_Vrsn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntComment" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Comment"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCndtn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Cndtn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintExprsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Exprsn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintHuman" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Human"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintKey" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Key"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintRqrments" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Rqrments"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintSeverity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Severity"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintSrc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Src"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntConstraintXpath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Constraint_Xpath"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_CntntRfrnc"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntDfn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Dfn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntExampleLbl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Example_Lbl"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntIsMdfr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_IsMdfr"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntIsMdfrRsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_IsMdfrRsn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntIsSummary" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_IsSummary"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntLbl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Lbl"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMappingComment" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Mapping_Comment"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMappingIdentity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Mapping_Identity"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMappingLnguage" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Mapping_Lnguage"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMappingMap" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Mapping_Map"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMx" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Mx"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxLength" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxLength"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlDtTimeTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlDtTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlDecimalTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlInstantTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlInstantTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlIntegerTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlPositiveIntTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlQnty_Cd"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlQnty_Cmprtr"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlQnty_Sys"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlQnty_Unt"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlQnty_Vl"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlTimeTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMxVlUnsignedIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MxVlUnsignedIntTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMeaningWhenMissing" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MeaningWhenMissing"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMin" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Min"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlDtTimeTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlDtTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlDecimalTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlInstantTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlInstantTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlIntegerTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlPositiveIntTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlQnty_Cd"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlQnty_Cmprtr"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlQnty_Sys"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlQnty_Unt"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlQnty_Vl"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlTimeTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMinVlUnsignedIntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MinVlUnsignedIntTyp"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntMustSupport" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_MustSupport"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntOrdrMeaning" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_OrdrMeaning"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntPath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Path"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntRepresentation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Representation"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntRqrments" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Rqrments"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntShort" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Short"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSliceIsConstraining" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_SliceIsConstraining"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSliceNm" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_SliceNm"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSlicingDscrptn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Slicing_Dscrptn"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSlicingDiscriminatorPath" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Slicing_Discriminator_Path"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSlicingDiscriminatorTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Slicing_Discriminator_Typ"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSlicingOrdred" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Slicing_Ordred"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntSlicingRules" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Slicing_Rules"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntTypAggregation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Typ_Aggregation"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntTypCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Typ_Cd"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntTypProfile" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Typ_Profile"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntTypTarProfile" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Typ_TarProfile"/>
-        </property>
-        <property name="strctrDfnSnpshtElmntTypVrsning" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="StrctrDfn_Snpsht_Elmnt_Typ_Vrsning"/>
-        </property>
         <property name="strctrDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Status</meta>
             <column length="65535" name="StrctrDfn_Sts"/>
         </property>
         <property name="strctrDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Title</meta>
             <column length="65535" name="StrctrDfn_Ttl"/>
         </property>
         <property name="strctrDfnTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Type</meta>
             <column length="65535" name="StrctrDfn_Typ"/>
         </property>
         <property name="strctrDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Url</meta>
             <column length="65535" name="StrctrDfn_Url"/>
         </property>
         <property name="strctrDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="strctrDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="strctrDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.Code.System</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="strctrDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="strctrDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="strctrDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="strctrDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="strctrDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="strctrDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="strctrDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="strctrDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="strctrDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="strctrDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="StrctrDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="strctrDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">StructureDefinition.Version</meta>
             <column length="65535" name="StrctrDfn_Vrsn"/>
         </property>
     </class>

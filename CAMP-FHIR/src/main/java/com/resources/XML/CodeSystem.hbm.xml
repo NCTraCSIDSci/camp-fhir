@@ -7,407 +7,403 @@
             <generator class="identity"/>
         </id>
         <property name="cdSysCaseSensitive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.CaseSensitive</meta>
             <column length="65535" name="CdSys_CaseSensitive"/>
         </property>
         <property name="cdSysCmpsitional" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Compositional</meta>
             <column length="65535" name="CdSys_Cmpsitional"/>
         </property>
         <property name="cdSysCncptCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Code</meta>
             <column length="65535" name="CdSys_Cncpt_Cd"/>
         </property>
         <property name="cdSysCncptDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Definition</meta>
             <column length="65535" name="CdSys_Cncpt_Dfn"/>
         </property>
         <property name="cdSysCncptDsgnationLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Language</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Lnguage"/>
         </property>
         <property name="cdSysCncptDsgnationUseCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Use.Code</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Use_Cd"/>
         </property>
         <property name="cdSysCncptDsgnationUseDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Use.Display</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Use_Dsply"/>
         </property>
         <property name="cdSysCncptDsgnationUseSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Use.System</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Use_Sys"/>
         </property>
         <property name="cdSysCncptDsgnationUseUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Use.UserSelected</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Use_UsrSltd"/>
         </property>
         <property name="cdSysCncptDsgnationUseVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Use.Version</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Use_Vrsn"/>
         </property>
         <property name="cdSysCncptDsgnationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Designation.Value</meta>
             <column length="65535" name="CdSys_Cncpt_Dsgnation_Vl"/>
         </property>
         <property name="cdSysCncptDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Display</meta>
             <column length="65535" name="CdSys_Cncpt_Dsply"/>
         </property>
         <property name="cdSysCncptPrptyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.Code</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_Cd"/>
         </property>
         <property name="cdSysCncptPrptyVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueBooleanType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlBooleanTyp"/>
         </property>
         <property name="cdSysCncptPrptyVlCdTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCodeType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdTyp"/>
         </property>
         <property name="cdSysCncptPrptyVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCoding.Code</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdg_Cd"/>
         </property>
         <property name="cdSysCncptPrptyVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCoding.Display</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdg_Dsply"/>
         </property>
         <property name="cdSysCncptPrptyVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCoding.System</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdg_Sys"/>
         </property>
         <property name="cdSysCncptPrptyVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCoding.UserSelected</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdg_UsrSltd"/>
         </property>
         <property name="cdSysCncptPrptyVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueCoding.Version</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlCdg_Vrsn"/>
         </property>
         <property name="cdSysCncptPrptyVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueDateTimeType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlDtTimeTyp"/>
         </property>
         <property name="cdSysCncptPrptyVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueDecimalType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlDecimalTyp"/>
         </property>
         <property name="cdSysCncptPrptyVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueIntegerType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlIntegerTyp"/>
         </property>
         <property name="cdSysCncptPrptyVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Concept.Property.ValueStringType</meta>
             <column length="65535" name="CdSys_Cncpt_Prpty_VlStrgTyp"/>
         </property>
         <property name="cdSysCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Name</meta>
             <column length="65535" name="CdSys_Cntct_Nm"/>
         </property>
         <property name="cdSysCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.Period.End</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="cdSysCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="cdSysCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.Rank</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="cdSysCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.System</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Sys"/>
         </property>
         <property name="cdSysCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.Use</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Use"/>
         </property>
         <property name="cdSysCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Contact.Telecom.Value</meta>
             <column length="65535" name="CdSys_Cntct_Tlcm_Vl"/>
         </property>
         <property name="cdSysCntnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Content</meta>
             <column length="65535" name="CdSys_Cntnt"/>
         </property>
         <property name="cdSysCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Copyright</meta>
             <column length="65535" name="CdSys_Copyright"/>
         </property>
         <property name="cdSysCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Count</meta>
             <column length="65535" name="CdSys_Cnt"/>
         </property>
         <property name="cdSysDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Date</meta>
             <column length="65535" name="CdSys_Dt"/>
         </property>
         <property name="cdSysDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Description</meta>
             <column length="65535" name="CdSys_Dscrptn"/>
         </property>
         <property name="cdSysExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Experimental</meta>
             <column length="65535" name="CdSys_Exprmtl"/>
         </property>
         <property name="cdSysFltrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Filter.Code</meta>
             <column length="65535" name="CdSys_Fltr_Cd"/>
         </property>
         <property name="cdSysFltrDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Filter.Description</meta>
             <column length="65535" name="CdSys_Fltr_Dscrptn"/>
         </property>
-        <property name="cdSysFltrOperator" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="CdSys_Fltr_Operator"/>
-        </property>
         <property name="cdSysFltrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Filter.Value</meta>
             <column length="65535" name="CdSys_Fltr_Vl"/>
         </property>
         <property name="cdSysHierarchyMeaning" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.HierarchyMeaning</meta>
             <column length="65535" name="CdSys_HierarchyMeaning"/>
         </property>
         <property name="cdSysIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Assigner</meta>
             <column length="65535" name="CdSys_Id_Assigner"/>
         </property>
         <property name="cdSysIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Period.End</meta>
             <column length="65535" name="CdSys_Id_Prd_End"/>
         </property>
         <property name="cdSysIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Period.Start</meta>
             <column length="65535" name="CdSys_Id_Prd_Strt"/>
         </property>
         <property name="cdSysIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.System</meta>
             <column length="65535" name="CdSys_Id_Sys"/>
         </property>
         <property name="cdSysIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="CdSys_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cdSysIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="CdSys_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cdSysIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Coding.System</meta>
             <column length="65535" name="CdSys_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cdSysIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="CdSys_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cdSysIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="CdSys_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cdSysIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Type.Text</meta>
             <column length="65535" name="CdSys_Id_Typ_Txt"/>
         </property>
         <property name="cdSysIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Use</meta>
             <column length="65535" name="CdSys_Id_Use"/>
         </property>
         <property name="cdSysIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Identifier.Value</meta>
             <column length="65535" name="CdSys_Id_Vl"/>
         </property>
         <property name="cdSysJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="CdSys_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="cdSysJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="CdSys_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="cdSysJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Coding.System</meta>
             <column length="65535" name="CdSys_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="cdSysJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="CdSys_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="cdSysJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="CdSys_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="cdSysJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Jurisdiction.Text</meta>
             <column length="65535" name="CdSys_Jrsdctn_Txt"/>
         </property>
         <property name="cdSysNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Name</meta>
             <column length="65535" name="CdSys_Nm"/>
         </property>
         <property name="cdSysPrptyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Property.Code</meta>
             <column length="65535" name="CdSys_Prpty_Cd"/>
         </property>
         <property name="cdSysPrptyDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Property.Description</meta>
             <column length="65535" name="CdSys_Prpty_Dscrptn"/>
         </property>
         <property name="cdSysPrptyTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Property.Type</meta>
             <column length="65535" name="CdSys_Prpty_Typ"/>
         </property>
         <property name="cdSysPrptyUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Property.Uri</meta>
             <column length="65535" name="CdSys_Prpty_Uri"/>
         </property>
         <property name="cdSysPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Publisher</meta>
             <column length="65535" name="CdSys_Pblshr"/>
         </property>
         <property name="cdSysPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Purpose</meta>
             <column length="65535" name="CdSys_Prpse"/>
         </property>
         <property name="cdSysSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Status</meta>
             <column length="65535" name="CdSys_Sts"/>
         </property>
         <property name="cdSysSupplements" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Supplements</meta>
             <column length="65535" name="CdSys_Supplements"/>
         </property>
         <property name="cdSysTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Title</meta>
             <column length="65535" name="CdSys_Ttl"/>
         </property>
         <property name="cdSysUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Url</meta>
             <column length="65535" name="CdSys_Url"/>
         </property>
         <property name="cdSysUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.Code.Code</meta>
             <column length="65535" name="CdSys_UseCntxt_Cd_Cd"/>
         </property>
         <property name="cdSysUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.Code.Display</meta>
             <column length="65535" name="CdSys_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="cdSysUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.Code.System</meta>
             <column length="65535" name="CdSys_UseCntxt_Cd_Sys"/>
         </property>
         <property name="cdSysUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.Code.UserSelected</meta>
             <column length="65535" name="CdSys_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="cdSysUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.Code.Version</meta>
             <column length="65535" name="CdSys_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="cdSysUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="CdSys_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="cdSysUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="CdSys_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="cdSysUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="CdSys_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="cdSysUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="CdSys_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="cdSysUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="CdSys_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="cdSysUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="CdSys_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="cdSysUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="cdSysUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="cdSysUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="cdSysUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="cdSysUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="cdSysUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="cdSysUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="cdSysUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="cdSysUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="cdSysUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="cdSysUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.UseContext.ValueReference</meta>
             <column length="65535" name="CdSys_UseCntxt_VlRfrnc"/>
         </property>
         <property name="cdSysVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.ValueSet</meta>
             <column length="65535" name="CdSys_VlSt"/>
         </property>
         <property name="cdSysVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.Version</meta>
             <column length="65535" name="CdSys_Vrsn"/>
         </property>
         <property name="cdSysVrsnNeeded" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">CodeSystem.VersionNeeded</meta>
             <column length="65535" name="CdSys_VrsnNeeded"/>
         </property>
     </class>

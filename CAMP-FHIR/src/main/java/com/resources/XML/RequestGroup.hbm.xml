@@ -7,699 +7,691 @@
             <generator class="identity"/>
         </id>
         <property name="rqstGrpActnCardinalityBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.CardinalityBehavior</meta>
             <column length="65535" name="RqstGrp_Actn_CardinalityBehavior"/>
         </property>
         <property name="rqstGrpActnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Coding.Code</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Cdg_Cd"/>
         </property>
         <property name="rqstGrpActnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Coding.Display</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpActnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Coding.System</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Cdg_Sys"/>
         </property>
         <property name="rqstGrpActnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpActnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Coding.Version</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpActnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Code.Text</meta>
             <column length="65535" name="RqstGrp_Actn_Cd_Txt"/>
         </property>
         <property name="rqstGrpActnCndtnExprsnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Expression.Description</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Exprsn_Dscrptn"/>
         </property>
         <property name="rqstGrpActnCndtnExprsnExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Expression.Expression</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Exprsn_Exprsn"/>
         </property>
         <property name="rqstGrpActnCndtnExprsnLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Expression.Language</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Exprsn_Lnguage"/>
         </property>
         <property name="rqstGrpActnCndtnExprsnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Expression.Name</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Exprsn_Nm"/>
         </property>
         <property name="rqstGrpActnCndtnExprsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Expression.Reference</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Exprsn_Rfrnc"/>
         </property>
         <property name="rqstGrpActnCndtnKind" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Condition.Kind</meta>
             <column length="65535" name="RqstGrp_Actn_Cndtn_Kind"/>
         </property>
         <property name="rqstGrpActnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Description</meta>
             <column length="65535" name="RqstGrp_Actn_Dscrptn"/>
         </property>
         <property name="rqstGrpActnDocationCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Citation</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Citation"/>
         </property>
         <property name="rqstGrpActnDocationDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Display</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Dsply"/>
         </property>
         <property name="rqstGrpActnDocationDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.ContentType</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_CntntTyp"/>
         </property>
         <property name="rqstGrpActnDocationDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Creation</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Creation"/>
         </property>
         <property name="rqstGrpActnDocationDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Data</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Data"/>
         </property>
         <property name="rqstGrpActnDocationDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Hash</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Hash"/>
         </property>
         <property name="rqstGrpActnDocationDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Language</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Lnguage"/>
         </property>
         <property name="rqstGrpActnDocationDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Size</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Sz"/>
         </property>
         <property name="rqstGrpActnDocationDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Title</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Ttl"/>
         </property>
         <property name="rqstGrpActnDocationDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Document.Url</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Doc_Url"/>
         </property>
         <property name="rqstGrpActnDocationLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Label</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Lbl"/>
         </property>
         <property name="rqstGrpActnDocationRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Resource</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Rsrc"/>
         </property>
         <property name="rqstGrpActnDocationTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Type</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Typ"/>
         </property>
         <property name="rqstGrpActnDocationUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Documentation.Url</meta>
             <column length="65535" name="RqstGrp_Actn_Docation_Url"/>
         </property>
         <property name="rqstGrpActnGrpingBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.GroupingBehavior</meta>
             <column length="65535" name="RqstGrp_Actn_GrpingBehavior"/>
         </property>
         <property name="rqstGrpActnPrtcpnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Participant</meta>
             <column length="65535" name="RqstGrp_Actn_Prtcpnt"/>
         </property>
         <property name="rqstGrpActnPrecheckBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.PrecheckBehavior</meta>
             <column length="65535" name="RqstGrp_Actn_PrecheckBehavior"/>
         </property>
         <property name="rqstGrpActnPrefix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Prefix</meta>
             <column length="65535" name="RqstGrp_Actn_Prefix"/>
         </property>
         <property name="rqstGrpActnPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Priority</meta>
             <column length="65535" name="RqstGrp_Actn_Priority"/>
         </property>
         <property name="rqstGrpActnRltedActnActnId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.ActionId</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_ActnId"/>
         </property>
         <property name="rqstGrpActnRltedActnOffDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffDuration.Code</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffDuration_Cd"/>
         </property>
         <property name="rqstGrpActnRltedActnOffDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffDuration.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffDuration_Cmprtr"/>
         </property>
         <property name="rqstGrpActnRltedActnOffDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffDuration.System</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffDuration_Sys"/>
         </property>
         <property name="rqstGrpActnRltedActnOffDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffDuration.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffDuration_Unt"/>
         </property>
         <property name="rqstGrpActnRltedActnOffDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffDuration.Value</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffDuration_Vl"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.High.Code</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Hi_Cd"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.High.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Hi_Cmprtr"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.High.System</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Hi_Sys"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.High.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Hi_Unt"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.High.Value</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Hi_Vl"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.Low.Code</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Lw_Cd"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.Low.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Lw_Cmprtr"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.Low.System</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Lw_Sys"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.Low.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Lw_Unt"/>
         </property>
         <property name="rqstGrpActnRltedActnOffRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.OffRange.Low.Value</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_OffRng_Lw_Vl"/>
         </property>
         <property name="rqstGrpActnRltedActnRltnship" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RelatedAction.Relationship</meta>
             <column length="65535" name="RqstGrp_Actn_RltedActn_Rltnship"/>
         </property>
         <property name="rqstGrpActnRequiredBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.RequiredBehavior</meta>
             <column length="65535" name="RqstGrp_Actn_RequiredBehavior"/>
         </property>
         <property name="rqstGrpActnRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Resource</meta>
             <column length="65535" name="RqstGrp_Actn_Rsrc"/>
         </property>
         <property name="rqstGrpActnSelectionBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.SelectionBehavior</meta>
             <column length="65535" name="RqstGrp_Actn_SelectionBehavior"/>
         </property>
         <property name="rqstGrpActnTxtEquivalent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TextEquivalent</meta>
             <column length="65535" name="RqstGrp_Actn_TxtEquivalent"/>
         </property>
         <property name="rqstGrpActnTmgAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingAge.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgAge_Cd"/>
         </property>
         <property name="rqstGrpActnTmgAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingAge.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgAge_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingAge.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgAge_Sys"/>
         </property>
         <property name="rqstGrpActnTmgAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingAge.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgAge_Unt"/>
         </property>
         <property name="rqstGrpActnTmgAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingAge.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgAge_Vl"/>
         </property>
         <property name="rqstGrpActnTmgDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDateTimeType</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDtTimeTyp"/>
         </property>
         <property name="rqstGrpActnTmgDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDuration.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDuration_Cd"/>
         </property>
         <property name="rqstGrpActnTmgDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDuration.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDuration_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDuration.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDuration_Sys"/>
         </property>
         <property name="rqstGrpActnTmgDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDuration.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDuration_Unt"/>
         </property>
         <property name="rqstGrpActnTmgDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingDuration.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgDuration_Vl"/>
         </property>
         <property name="rqstGrpActnTmgPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingPeriod.End</meta>
             <column length="65535" name="RqstGrp_Actn_TmgPrd_End"/>
         </property>
         <property name="rqstGrpActnTmgPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingPeriod.Start</meta>
             <column length="65535" name="RqstGrp_Actn_TmgPrd_Strt"/>
         </property>
         <property name="rqstGrpActnTmgRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.High.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Hi_Cd"/>
         </property>
         <property name="rqstGrpActnTmgRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.High.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Hi_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.High.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Hi_Sys"/>
         </property>
         <property name="rqstGrpActnTmgRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.High.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Hi_Unt"/>
         </property>
         <property name="rqstGrpActnTmgRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.High.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Hi_Vl"/>
         </property>
         <property name="rqstGrpActnTmgRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.Low.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Lw_Cd"/>
         </property>
         <property name="rqstGrpActnTmgRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.Low.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Lw_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.Low.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Lw_Sys"/>
         </property>
         <property name="rqstGrpActnTmgRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.Low.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Lw_Unt"/>
         </property>
         <property name="rqstGrpActnTmgRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingRange.Low.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgRng_Lw_Vl"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Coding.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Coding.Display</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Coding.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Coding.Version</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpActnTmgTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Code.Text</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Cd_Txt"/>
         </property>
         <property name="rqstGrpActnTmgTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Event</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Evnt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.Count</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_Cnt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.CountMax</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_CntMx"/>
         </property>
-        <property name="rqstGrpActnTmgTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="rqstGrpActnTmgTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.Duration</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_Duration"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.DurationMax</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_DurationMx"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_DurationUnt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.Frequency</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_Frqncy"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.Offset</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_Off"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.Period</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_Prd"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_PrdMx"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_PrdUnt"/>
         </property>
         <property name="rqstGrpActnTmgTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.TimingTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="rqstGrpActnTmgTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="RqstGrp_Actn_TmgTmg_Rpt_When"/>
-        </property>
         <property name="rqstGrpActnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Title</meta>
             <column length="65535" name="RqstGrp_Actn_Ttl"/>
         </property>
         <property name="rqstGrpActnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Coding.Code</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Cdg_Cd"/>
         </property>
         <property name="rqstGrpActnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Coding.Display</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpActnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Coding.System</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Cdg_Sys"/>
         </property>
         <property name="rqstGrpActnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpActnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Coding.Version</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpActnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Action.Type.Text</meta>
             <column length="65535" name="RqstGrp_Actn_Typ_Txt"/>
         </property>
         <property name="rqstGrpAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Author</meta>
             <column length="65535" name="RqstGrp_Athr"/>
         </property>
         <property name="rqstGrpAthredOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.AuthoredOn</meta>
             <column length="65535" name="RqstGrp_AthredOn"/>
         </property>
         <property name="rqstGrpBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.BasedOn</meta>
             <column length="65535" name="RqstGrp_BasedOn"/>
         </property>
         <property name="rqstGrpCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Coding.Code</meta>
             <column length="65535" name="RqstGrp_Cd_Cdg_Cd"/>
         </property>
         <property name="rqstGrpCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Coding.Display</meta>
             <column length="65535" name="RqstGrp_Cd_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Coding.System</meta>
             <column length="65535" name="RqstGrp_Cd_Cdg_Sys"/>
         </property>
         <property name="rqstGrpCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Coding.Version</meta>
             <column length="65535" name="RqstGrp_Cd_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Code.Text</meta>
             <column length="65535" name="RqstGrp_Cd_Txt"/>
         </property>
         <property name="rqstGrpEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Encounter</meta>
             <column length="65535" name="RqstGrp_Enc"/>
         </property>
         <property name="rqstGrpGrpIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Assigner</meta>
             <column length="65535" name="RqstGrp_GrpId_Assigner"/>
         </property>
         <property name="rqstGrpGrpIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Period.End</meta>
             <column length="65535" name="RqstGrp_GrpId_Prd_End"/>
         </property>
         <property name="rqstGrpGrpIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Period.Start</meta>
             <column length="65535" name="RqstGrp_GrpId_Prd_Strt"/>
         </property>
         <property name="rqstGrpGrpIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.System</meta>
             <column length="65535" name="RqstGrp_GrpId_Sys"/>
         </property>
         <property name="rqstGrpGrpIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Coding.Code</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Cdg_Cd"/>
         </property>
         <property name="rqstGrpGrpIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Coding.Display</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpGrpIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Coding.System</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Cdg_Sys"/>
         </property>
         <property name="rqstGrpGrpIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpGrpIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Coding.Version</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpGrpIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Type.Text</meta>
             <column length="65535" name="RqstGrp_GrpId_Typ_Txt"/>
         </property>
         <property name="rqstGrpGrpIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Use</meta>
             <column length="65535" name="RqstGrp_GrpId_Use"/>
         </property>
         <property name="rqstGrpGrpIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.GroupIdentifier.Value</meta>
             <column length="65535" name="RqstGrp_GrpId_Vl"/>
         </property>
         <property name="rqstGrpIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Assigner</meta>
             <column length="65535" name="RqstGrp_Id_Assigner"/>
         </property>
         <property name="rqstGrpIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Period.End</meta>
             <column length="65535" name="RqstGrp_Id_Prd_End"/>
         </property>
         <property name="rqstGrpIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Period.Start</meta>
             <column length="65535" name="RqstGrp_Id_Prd_Strt"/>
         </property>
         <property name="rqstGrpIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.System</meta>
             <column length="65535" name="RqstGrp_Id_Sys"/>
         </property>
         <property name="rqstGrpIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="rqstGrpIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Coding.System</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="rqstGrpIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Type.Text</meta>
             <column length="65535" name="RqstGrp_Id_Typ_Txt"/>
         </property>
         <property name="rqstGrpIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Use</meta>
             <column length="65535" name="RqstGrp_Id_Use"/>
         </property>
         <property name="rqstGrpIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Identifier.Value</meta>
             <column length="65535" name="RqstGrp_Id_Vl"/>
         </property>
         <property name="rqstGrpInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.InstantiatesCanonical</meta>
             <column length="65535" name="RqstGrp_InstantiatesCanonical"/>
         </property>
         <property name="rqstGrpInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.InstantiatesUri</meta>
             <column length="65535" name="RqstGrp_InstantiatesUri"/>
         </property>
         <property name="rqstGrpIntent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Intent</meta>
             <column length="65535" name="RqstGrp_Intent"/>
         </property>
         <property name="rqstGrpNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Note.AuthorReference</meta>
             <column length="65535" name="RqstGrp_Nt_AthrRfrnc"/>
         </property>
         <property name="rqstGrpNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Note.AuthorStringType</meta>
             <column length="65535" name="RqstGrp_Nt_AthrStrgTyp"/>
         </property>
         <property name="rqstGrpNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Note.Text</meta>
             <column length="65535" name="RqstGrp_Nt_Txt"/>
         </property>
         <property name="rqstGrpNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Note.Time</meta>
             <column length="65535" name="RqstGrp_Nt_Time"/>
         </property>
         <property name="rqstGrpPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Priority</meta>
             <column length="65535" name="RqstGrp_Priority"/>
         </property>
         <property name="rqstGrpRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Coding.Code</meta>
             <column length="65535" name="RqstGrp_RsnCd_Cdg_Cd"/>
         </property>
         <property name="rqstGrpRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Coding.Display</meta>
             <column length="65535" name="RqstGrp_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="rqstGrpRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Coding.System</meta>
             <column length="65535" name="RqstGrp_RsnCd_Cdg_Sys"/>
         </property>
         <property name="rqstGrpRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="RqstGrp_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="rqstGrpRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Coding.Version</meta>
             <column length="65535" name="RqstGrp_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="rqstGrpRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonCode.Text</meta>
             <column length="65535" name="RqstGrp_RsnCd_Txt"/>
         </property>
         <property name="rqstGrpRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.ReasonReference</meta>
             <column length="65535" name="RqstGrp_RsnRfrnc"/>
         </property>
         <property name="rqstGrpReplaces" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Replaces</meta>
             <column length="65535" name="RqstGrp_Replaces"/>
         </property>
         <property name="rqstGrpSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Status</meta>
             <column length="65535" name="RqstGrp_Sts"/>
         </property>
         <property name="rqstGrpSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RequestGroup.Subject</meta>
             <column length="65535" name="RqstGrp_Sbjct"/>
         </property>
     </class>

@@ -7,167 +7,167 @@
             <generator class="identity"/>
         </id>
         <property name="immnztnEvaluationAthrity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Authority</meta>
             <column length="65535" name="ImmnztnEvaluation_Athrity"/>
         </property>
         <property name="immnztnEvaluationDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Date</meta>
             <column length="65535" name="ImmnztnEvaluation_Dt"/>
         </property>
         <property name="immnztnEvaluationDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Description</meta>
             <column length="65535" name="ImmnztnEvaluation_Dscrptn"/>
         </property>
         <property name="immnztnEvaluationDoseNmbrPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseNumberPositiveIntType</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseNmbrPositiveIntTyp"/>
         </property>
         <property name="immnztnEvaluationDoseNmbrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseNumberStringType</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseNmbrStrgTyp"/>
         </property>
         <property name="immnztnEvaluationDoseStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Coding.Code</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Cdg_Cd"/>
         </property>
         <property name="immnztnEvaluationDoseStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Coding.Display</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Cdg_Dsply"/>
         </property>
         <property name="immnztnEvaluationDoseStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Coding.System</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Cdg_Sys"/>
         </property>
         <property name="immnztnEvaluationDoseStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Coding.UserSelected</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Cdg_UsrSltd"/>
         </property>
         <property name="immnztnEvaluationDoseStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Coding.Version</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Cdg_Vrsn"/>
         </property>
         <property name="immnztnEvaluationDoseStsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatus.Text</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseSts_Txt"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Coding.Code</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Cdg_Cd"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Coding.Display</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Cdg_Dsply"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Coding.System</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Cdg_Sys"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Coding.UserSelected</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Coding.Version</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Cdg_Vrsn"/>
         </property>
         <property name="immnztnEvaluationDoseStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.DoseStatusReason.Text</meta>
             <column length="65535" name="ImmnztnEvaluation_DoseStsRsn_Txt"/>
         </property>
         <property name="immnztnEvaluationIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Assigner</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Assigner"/>
         </property>
         <property name="immnztnEvaluationIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Period.End</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Prd_End"/>
         </property>
         <property name="immnztnEvaluationIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Period.Start</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Prd_Strt"/>
         </property>
         <property name="immnztnEvaluationIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.System</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Sys"/>
         </property>
         <property name="immnztnEvaluationIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="immnztnEvaluationIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="immnztnEvaluationIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="immnztnEvaluationIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="immnztnEvaluationIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="immnztnEvaluationIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Type.Text</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Typ_Txt"/>
         </property>
         <property name="immnztnEvaluationIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Use</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Use"/>
         </property>
         <property name="immnztnEvaluationIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Identifier.Value</meta>
             <column length="65535" name="ImmnztnEvaluation_Id_Vl"/>
         </property>
         <property name="immnztnEvaluationImmnztnEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.ImmunizationEvent</meta>
             <column length="65535" name="ImmnztnEvaluation_ImmnztnEvnt"/>
         </property>
         <property name="immnztnEvaluationPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Patient</meta>
             <column length="65535" name="ImmnztnEvaluation_Pnt"/>
         </property>
         <property name="immnztnEvaluationSeries" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Series</meta>
             <column length="65535" name="ImmnztnEvaluation_Series"/>
         </property>
         <property name="immnztnEvaluationSeriesDosesPositiveIntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.SeriesDosesPositiveIntType</meta>
             <column length="65535" name="ImmnztnEvaluation_SeriesDosesPositiveIntTyp"/>
         </property>
         <property name="immnztnEvaluationSeriesDosesStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.SeriesDosesStringType</meta>
             <column length="65535" name="ImmnztnEvaluation_SeriesDosesStrgTyp"/>
         </property>
         <property name="immnztnEvaluationSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.Status</meta>
             <column length="65535" name="ImmnztnEvaluation_Sts"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Coding.Code</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Cdg_Cd"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Coding.Display</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Cdg_Dsply"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Coding.System</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Cdg_Sys"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Coding.UserSelected</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Cdg_UsrSltd"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Coding.Version</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Cdg_Vrsn"/>
         </property>
         <property name="immnztnEvaluationTarDiseaseTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImmunizationEvaluation.TarDisease.Text</meta>
             <column length="65535" name="ImmnztnEvaluation_TarDisease_Txt"/>
         </property>
     </class>

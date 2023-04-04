@@ -7,287 +7,287 @@
             <generator class="identity"/>
         </id>
         <property name="orgnztnActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Active</meta>
             <column length="65535" name="Orgnztn_Active"/>
         </property>
         <property name="orgnztnAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.City</meta>
             <column length="65535" name="Orgnztn_Addr_City"/>
         </property>
         <property name="orgnztnAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Country</meta>
             <column length="65535" name="Orgnztn_Addr_Cntry"/>
         </property>
         <property name="orgnztnAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.District</meta>
             <column length="65535" name="Orgnztn_Addr_District"/>
         </property>
         <property name="orgnztnAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Line</meta>
             <column length="65535" name="Orgnztn_Addr_Line"/>
         </property>
         <property name="orgnztnAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Period.End</meta>
             <column length="65535" name="Orgnztn_Addr_Prd_End"/>
         </property>
         <property name="orgnztnAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Period.Start</meta>
             <column length="65535" name="Orgnztn_Addr_Prd_Strt"/>
         </property>
         <property name="orgnztnAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.PostalCode</meta>
             <column length="65535" name="Orgnztn_Addr_PostalCd"/>
         </property>
         <property name="orgnztnAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.State</meta>
             <column length="65535" name="Orgnztn_Addr_State"/>
         </property>
         <property name="orgnztnAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Text</meta>
             <column length="65535" name="Orgnztn_Addr_Txt"/>
         </property>
         <property name="orgnztnAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Type</meta>
             <column length="65535" name="Orgnztn_Addr_Typ"/>
         </property>
         <property name="orgnztnAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Address.Use</meta>
             <column length="65535" name="Orgnztn_Addr_Use"/>
         </property>
         <property name="orgnztnAlias" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Alias</meta>
             <column length="65535" name="Orgnztn_Alias"/>
         </property>
         <property name="orgnztnCntctAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.City</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_City"/>
         </property>
         <property name="orgnztnCntctAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Country</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Cntry"/>
         </property>
         <property name="orgnztnCntctAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.District</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_District"/>
         </property>
         <property name="orgnztnCntctAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Line</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Line"/>
         </property>
         <property name="orgnztnCntctAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Period.End</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Prd_End"/>
         </property>
         <property name="orgnztnCntctAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Period.Start</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Prd_Strt"/>
         </property>
         <property name="orgnztnCntctAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.PostalCode</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_PostalCd"/>
         </property>
         <property name="orgnztnCntctAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.State</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_State"/>
         </property>
         <property name="orgnztnCntctAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Text</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Txt"/>
         </property>
         <property name="orgnztnCntctAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Type</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Typ"/>
         </property>
         <property name="orgnztnCntctAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Address.Use</meta>
             <column length="65535" name="Orgnztn_Cntct_Addr_Use"/>
         </property>
         <property name="orgnztnCntctNmFmly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Family</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Fmly"/>
         </property>
         <property name="orgnztnCntctNmGiven" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Given</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Given"/>
         </property>
         <property name="orgnztnCntctNmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Period.End</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Prd_End"/>
         </property>
         <property name="orgnztnCntctNmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Period.Start</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Prd_Strt"/>
         </property>
         <property name="orgnztnCntctNmPrefix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Prefix</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Prefix"/>
         </property>
         <property name="orgnztnCntctNmSuffix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Suffix</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Suffix"/>
         </property>
         <property name="orgnztnCntctNmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Text</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Txt"/>
         </property>
         <property name="orgnztnCntctNmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Name.Use</meta>
             <column length="65535" name="Orgnztn_Cntct_Nm_Use"/>
         </property>
         <property name="orgnztnCntctPrpseCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Coding.Code</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Cd"/>
         </property>
         <property name="orgnztnCntctPrpseCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Coding.Display</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Dsply"/>
         </property>
         <property name="orgnztnCntctPrpseCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Coding.System</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Sys"/>
         </property>
         <property name="orgnztnCntctPrpseCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Coding.UserSelected</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_UsrSltd"/>
         </property>
         <property name="orgnztnCntctPrpseCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Coding.Version</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Vrsn"/>
         </property>
         <property name="orgnztnCntctPrpseTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Purpose.Text</meta>
             <column length="65535" name="Orgnztn_Cntct_Prpse_Txt"/>
         </property>
         <property name="orgnztnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.Period.End</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="orgnztnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="orgnztnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.Rank</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="orgnztnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.System</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="orgnztnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.Use</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Use"/>
         </property>
         <property name="orgnztnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Contact.Telecom.Value</meta>
             <column length="65535" name="Orgnztn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="orgnztnEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Endpoint</meta>
             <column length="65535" name="Orgnztn_Endpoint"/>
         </property>
         <property name="orgnztnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Assigner</meta>
             <column length="65535" name="Orgnztn_Id_Assigner"/>
         </property>
         <property name="orgnztnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Period.End</meta>
             <column length="65535" name="Orgnztn_Id_Prd_End"/>
         </property>
         <property name="orgnztnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Period.Start</meta>
             <column length="65535" name="Orgnztn_Id_Prd_Strt"/>
         </property>
         <property name="orgnztnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.System</meta>
             <column length="65535" name="Orgnztn_Id_Sys"/>
         </property>
         <property name="orgnztnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="orgnztnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="orgnztnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="orgnztnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="orgnztnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="orgnztnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Type.Text</meta>
             <column length="65535" name="Orgnztn_Id_Typ_Txt"/>
         </property>
         <property name="orgnztnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Use</meta>
             <column length="65535" name="Orgnztn_Id_Use"/>
         </property>
         <property name="orgnztnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Identifier.Value</meta>
             <column length="65535" name="Orgnztn_Id_Vl"/>
         </property>
         <property name="orgnztnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Name</meta>
             <column length="65535" name="Orgnztn_Nm"/>
         </property>
         <property name="orgnztnPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.PartOf</meta>
             <column length="65535" name="Orgnztn_PartOf"/>
         </property>
         <property name="orgnztnTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.Period.End</meta>
             <column length="65535" name="Orgnztn_Tlcm_Prd_End"/>
         </property>
         <property name="orgnztnTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.Period.Start</meta>
             <column length="65535" name="Orgnztn_Tlcm_Prd_Strt"/>
         </property>
         <property name="orgnztnTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.Rank</meta>
             <column length="65535" name="Orgnztn_Tlcm_Rnk"/>
         </property>
         <property name="orgnztnTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.System</meta>
             <column length="65535" name="Orgnztn_Tlcm_Sys"/>
         </property>
         <property name="orgnztnTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.Use</meta>
             <column length="65535" name="Orgnztn_Tlcm_Use"/>
         </property>
         <property name="orgnztnTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Telecom.Value</meta>
             <column length="65535" name="Orgnztn_Tlcm_Vl"/>
         </property>
         <property name="orgnztnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Coding.Code</meta>
             <column length="65535" name="Orgnztn_Typ_Cdg_Cd"/>
         </property>
         <property name="orgnztnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Coding.Display</meta>
             <column length="65535" name="Orgnztn_Typ_Cdg_Dsply"/>
         </property>
         <property name="orgnztnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Coding.System</meta>
             <column length="65535" name="Orgnztn_Typ_Cdg_Sys"/>
         </property>
         <property name="orgnztnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Coding.UserSelected</meta>
             <column length="65535" name="Orgnztn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="orgnztnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Coding.Version</meta>
             <column length="65535" name="Orgnztn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="orgnztnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Organization.Type.Text</meta>
             <column length="65535" name="Orgnztn_Typ_Txt"/>
         </property>
     </class>

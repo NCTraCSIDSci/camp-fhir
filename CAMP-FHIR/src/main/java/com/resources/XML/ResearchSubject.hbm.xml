@@ -7,83 +7,83 @@
             <generator class="identity"/>
         </id>
         <property name="rsrchSbjctActualArm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.ActualArm</meta>
             <column length="65535" name="RsrchSbjct_ActualArm"/>
         </property>
         <property name="rsrchSbjctAssignedArm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.AssignedArm</meta>
             <column length="65535" name="RsrchSbjct_AssignedArm"/>
         </property>
         <property name="rsrchSbjctCnsnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Consent</meta>
             <column length="65535" name="RsrchSbjct_Cnsnt"/>
         </property>
         <property name="rsrchSbjctIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Assigner</meta>
             <column length="65535" name="RsrchSbjct_Id_Assigner"/>
         </property>
         <property name="rsrchSbjctIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Period.End</meta>
             <column length="65535" name="RsrchSbjct_Id_Prd_End"/>
         </property>
         <property name="rsrchSbjctIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Period.Start</meta>
             <column length="65535" name="RsrchSbjct_Id_Prd_Strt"/>
         </property>
         <property name="rsrchSbjctIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.System</meta>
             <column length="65535" name="RsrchSbjct_Id_Sys"/>
         </property>
         <property name="rsrchSbjctIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="rsrchSbjctIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="rsrchSbjctIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Coding.System</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="rsrchSbjctIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchSbjctIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rsrchSbjctIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Type.Text</meta>
             <column length="65535" name="RsrchSbjct_Id_Typ_Txt"/>
         </property>
         <property name="rsrchSbjctIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Use</meta>
             <column length="65535" name="RsrchSbjct_Id_Use"/>
         </property>
         <property name="rsrchSbjctIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Identifier.Value</meta>
             <column length="65535" name="RsrchSbjct_Id_Vl"/>
         </property>
         <property name="rsrchSbjctIndividual" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Individual</meta>
             <column length="65535" name="RsrchSbjct_Individual"/>
         </property>
         <property name="rsrchSbjctPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Period.End</meta>
             <column length="65535" name="RsrchSbjct_Prd_End"/>
         </property>
         <property name="rsrchSbjctPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Period.Start</meta>
             <column length="65535" name="RsrchSbjct_Prd_Strt"/>
         </property>
         <property name="rsrchSbjctSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Status</meta>
             <column length="65535" name="RsrchSbjct_Sts"/>
         </property>
         <property name="rsrchSbjctStdy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchSubject.Study</meta>
             <column length="65535" name="RsrchSbjct_Stdy"/>
         </property>
     </class>

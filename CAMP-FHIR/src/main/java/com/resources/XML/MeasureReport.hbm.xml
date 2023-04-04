@@ -7,335 +7,335 @@
             <generator class="identity"/>
         </id>
         <property name="msrRptDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Date</meta>
             <column length="65535" name="MsrRpt_Dt"/>
         </property>
         <property name="msrRptEvaluatedRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.EvaluatedResource</meta>
             <column length="65535" name="MsrRpt_EvaluatedRsrc"/>
         </property>
         <property name="msrRptGrpCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Code.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Cd_Txt"/>
         </property>
         <property name="msrRptGrpMsrScoreCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.MeasureScore.Code</meta>
             <column length="65535" name="MsrRpt_Grp_MsrScore_Cd"/>
         </property>
         <property name="msrRptGrpMsrScoreCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.MeasureScore.Comparator</meta>
             <column length="65535" name="MsrRpt_Grp_MsrScore_Cmprtr"/>
         </property>
         <property name="msrRptGrpMsrScoreSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.MeasureScore.System</meta>
             <column length="65535" name="MsrRpt_Grp_MsrScore_Sys"/>
         </property>
         <property name="msrRptGrpMsrScoreUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.MeasureScore.Unit</meta>
             <column length="65535" name="MsrRpt_Grp_MsrScore_Unt"/>
         </property>
         <property name="msrRptGrpMsrScoreVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.MeasureScore.Value</meta>
             <column length="65535" name="MsrRpt_Grp_MsrScore_Vl"/>
         </property>
         <property name="msrRptGrpPoplnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpPoplnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpPoplnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpPoplnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpPoplnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpPoplnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Code.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cd_Txt"/>
         </property>
         <property name="msrRptGrpPoplnCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.Count</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_Cnt"/>
         </property>
         <property name="msrRptGrpPoplnSbjctRslts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Population.SubjectResults</meta>
             <column length="65535" name="MsrRpt_Grp_Popln_SbjctRslts"/>
         </property>
         <property name="msrRptGrpStrtfierCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpStrtfierCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpStrtfierCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpStrtfierCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Code.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Cd_Txt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Code.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Cd_Txt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpStrtfierStratumCmpntVlTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Component.Value.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Cmpnt_Vl_Txt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumMsrScoreCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.MeasureScore.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_MsrScore_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumMsrScoreCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.MeasureScore.Comparator</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_MsrScore_Cmprtr"/>
         </property>
         <property name="msrRptGrpStrtfierStratumMsrScoreSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.MeasureScore.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_MsrScore_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierStratumMsrScoreUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.MeasureScore.Unit</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_MsrScore_Unt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumMsrScoreVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.MeasureScore.Value</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_MsrScore_Vl"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Code.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cd_Txt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.Count</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_Cnt"/>
         </property>
         <property name="msrRptGrpStrtfierStratumPoplnSbjctRslts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Population.SubjectResults</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Popln_SbjctRslts"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Cdg_Cd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Cdg_Dsply"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Coding.System</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Cdg_Sys"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Cdg_Vrsn"/>
         </property>
         <property name="msrRptGrpStrtfierStratumVlTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Group.Stratifier.Stratum.Value.Text</meta>
             <column length="65535" name="MsrRpt_Grp_Strtfier_Stratum_Vl_Txt"/>
         </property>
         <property name="msrRptIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Assigner</meta>
             <column length="65535" name="MsrRpt_Id_Assigner"/>
         </property>
         <property name="msrRptIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Period.End</meta>
             <column length="65535" name="MsrRpt_Id_Prd_End"/>
         </property>
         <property name="msrRptIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Period.Start</meta>
             <column length="65535" name="MsrRpt_Id_Prd_Strt"/>
         </property>
         <property name="msrRptIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.System</meta>
             <column length="65535" name="MsrRpt_Id_Sys"/>
         </property>
         <property name="msrRptIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="msrRptIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="msrRptIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="msrRptIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="msrRptIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Type.Text</meta>
             <column length="65535" name="MsrRpt_Id_Typ_Txt"/>
         </property>
         <property name="msrRptIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Use</meta>
             <column length="65535" name="MsrRpt_Id_Use"/>
         </property>
         <property name="msrRptIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Identifier.Value</meta>
             <column length="65535" name="MsrRpt_Id_Vl"/>
         </property>
         <property name="msrRptImprovementNotationCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Coding.Code</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Cdg_Cd"/>
         </property>
         <property name="msrRptImprovementNotationCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Coding.Display</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Cdg_Dsply"/>
         </property>
         <property name="msrRptImprovementNotationCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Coding.System</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Cdg_Sys"/>
         </property>
         <property name="msrRptImprovementNotationCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Coding.UserSelected</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Cdg_UsrSltd"/>
         </property>
         <property name="msrRptImprovementNotationCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Coding.Version</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Cdg_Vrsn"/>
         </property>
         <property name="msrRptImprovementNotationTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.ImprovementNotation.Text</meta>
             <column length="65535" name="MsrRpt_ImprovementNotation_Txt"/>
         </property>
         <property name="msrRptMsr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Measure</meta>
             <column length="65535" name="MsrRpt_Msr"/>
         </property>
         <property name="msrRptPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Period.End</meta>
             <column length="65535" name="MsrRpt_Prd_End"/>
         </property>
         <property name="msrRptPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Period.Start</meta>
             <column length="65535" name="MsrRpt_Prd_Strt"/>
         </property>
         <property name="msrRptRpter" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Reporter</meta>
             <column length="65535" name="MsrRpt_Rpter"/>
         </property>
         <property name="msrRptSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Status</meta>
             <column length="65535" name="MsrRpt_Sts"/>
         </property>
         <property name="msrRptSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Subject</meta>
             <column length="65535" name="MsrRpt_Sbjct"/>
         </property>
         <property name="msrRptTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MeasureReport.Type</meta>
             <column length="65535" name="MsrRpt_Typ"/>
         </property>
     </class>

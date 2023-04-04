@@ -7,131 +7,131 @@
             <generator class="identity"/>
         </id>
         <property name="accountCvgCvg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Coverage.Coverage</meta>
             <column length="65535" name="Account_Cvg_Cvg"/>
         </property>
         <property name="accountCvgPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Coverage.Priority</meta>
             <column length="65535" name="Account_Cvg_Priority"/>
         </property>
         <property name="accountDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Description</meta>
             <column length="65535" name="Account_Dscrptn"/>
         </property>
         <property name="accountGuarantorOnHold" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Guarantor.OnHold</meta>
             <column length="65535" name="Account_Guarantor_OnHold"/>
         </property>
         <property name="accountGuarantorParty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Guarantor.Party</meta>
             <column length="65535" name="Account_Guarantor_Party"/>
         </property>
         <property name="accountGuarantorPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Guarantor.Period.End</meta>
             <column length="65535" name="Account_Guarantor_Prd_End"/>
         </property>
         <property name="accountGuarantorPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Guarantor.Period.Start</meta>
             <column length="65535" name="Account_Guarantor_Prd_Strt"/>
         </property>
         <property name="accountIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Assigner</meta>
             <column length="65535" name="Account_Id_Assigner"/>
         </property>
         <property name="accountIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Period.End</meta>
             <column length="65535" name="Account_Id_Prd_End"/>
         </property>
         <property name="accountIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Period.Start</meta>
             <column length="65535" name="Account_Id_Prd_Strt"/>
         </property>
         <property name="accountIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.System</meta>
             <column length="65535" name="Account_Id_Sys"/>
         </property>
         <property name="accountIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Account_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="accountIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Account_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="accountIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Account_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="accountIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Account_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="accountIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Account_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="accountIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Type.Text</meta>
             <column length="65535" name="Account_Id_Typ_Txt"/>
         </property>
         <property name="accountIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Use</meta>
             <column length="65535" name="Account_Id_Use"/>
         </property>
         <property name="accountIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Identifier.Value</meta>
             <column length="65535" name="Account_Id_Vl"/>
         </property>
         <property name="accountNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Name</meta>
             <column length="65535" name="Account_Nm"/>
         </property>
         <property name="accountOwner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Owner</meta>
             <column length="65535" name="Account_Owner"/>
         </property>
         <property name="accountPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.PartOf</meta>
             <column length="65535" name="Account_PartOf"/>
         </property>
         <property name="accountSrvPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.ServicePeriod.End</meta>
             <column length="65535" name="Account_SrvPrd_End"/>
         </property>
         <property name="accountSrvPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.ServicePeriod.Start</meta>
             <column length="65535" name="Account_SrvPrd_Strt"/>
         </property>
         <property name="accountSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Status</meta>
             <column length="65535" name="Account_Sts"/>
         </property>
         <property name="accountSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Subject</meta>
             <column length="65535" name="Account_Sbjct"/>
         </property>
         <property name="accountTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Coding.Code</meta>
             <column length="65535" name="Account_Typ_Cdg_Cd"/>
         </property>
         <property name="accountTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Coding.Display</meta>
             <column length="65535" name="Account_Typ_Cdg_Dsply"/>
         </property>
         <property name="accountTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Coding.System</meta>
             <column length="65535" name="Account_Typ_Cdg_Sys"/>
         </property>
         <property name="accountTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Coding.UserSelected</meta>
             <column length="65535" name="Account_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="accountTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Coding.Version</meta>
             <column length="65535" name="Account_Typ_Cdg_Vrsn"/>
         </property>
         <property name="accountTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Account.Type.Text</meta>
             <column length="65535" name="Account_Typ_Txt"/>
         </property>
     </class>

@@ -7,815 +7,807 @@
             <generator class="identity"/>
         </id>
         <property name="evntDfnApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.ApprovalDate</meta>
             <column length="65535" name="EvntDfn_ApprovalDt"/>
         </property>
         <property name="evntDfnAthrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Name</meta>
             <column length="65535" name="EvntDfn_Athr_Nm"/>
         </property>
         <property name="evntDfnAthrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.Period.End</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Prd_End"/>
         </property>
         <property name="evntDfnAthrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.Period.Start</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evntDfnAthrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.Rank</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Rnk"/>
         </property>
         <property name="evntDfnAthrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.System</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Sys"/>
         </property>
         <property name="evntDfnAthrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.Use</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Use"/>
         </property>
         <property name="evntDfnAthrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Author.Telecom.Value</meta>
             <column length="65535" name="EvntDfn_Athr_Tlcm_Vl"/>
         </property>
         <property name="evntDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Name</meta>
             <column length="65535" name="EvntDfn_Cntct_Nm"/>
         </property>
         <property name="evntDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="evntDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="evntDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="evntDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="evntDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="evntDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="EvntDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="evntDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Copyright</meta>
             <column length="65535" name="EvntDfn_Copyright"/>
         </property>
         <property name="evntDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Date</meta>
             <column length="65535" name="EvntDfn_Dt"/>
         </property>
         <property name="evntDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Description</meta>
             <column length="65535" name="EvntDfn_Dscrptn"/>
         </property>
         <property name="evntDfnEditorNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Name</meta>
             <column length="65535" name="EvntDfn_Editor_Nm"/>
         </property>
         <property name="evntDfnEditorTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.Period.End</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Prd_End"/>
         </property>
         <property name="evntDfnEditorTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.Period.Start</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Prd_Strt"/>
         </property>
         <property name="evntDfnEditorTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.Rank</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Rnk"/>
         </property>
         <property name="evntDfnEditorTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.System</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Sys"/>
         </property>
         <property name="evntDfnEditorTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.Use</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Use"/>
         </property>
         <property name="evntDfnEditorTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Editor.Telecom.Value</meta>
             <column length="65535" name="EvntDfn_Editor_Tlcm_Vl"/>
         </property>
         <property name="evntDfnEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.EffectivePeriod.End</meta>
             <column length="65535" name="EvntDfn_EfctivePrd_End"/>
         </property>
         <property name="evntDfnEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.EffectivePeriod.Start</meta>
             <column length="65535" name="EvntDfn_EfctivePrd_Strt"/>
         </property>
         <property name="evntDfnEndsrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Name</meta>
             <column length="65535" name="EvntDfn_Endsr_Nm"/>
         </property>
         <property name="evntDfnEndsrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.Period.End</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Prd_End"/>
         </property>
         <property name="evntDfnEndsrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.Period.Start</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evntDfnEndsrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.Rank</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Rnk"/>
         </property>
         <property name="evntDfnEndsrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.System</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Sys"/>
         </property>
         <property name="evntDfnEndsrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.Use</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Use"/>
         </property>
         <property name="evntDfnEndsrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Endorser.Telecom.Value</meta>
             <column length="65535" name="EvntDfn_Endsr_Tlcm_Vl"/>
         </property>
         <property name="evntDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Experimental</meta>
             <column length="65535" name="EvntDfn_Exprmtl"/>
         </property>
         <property name="evntDfnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Assigner</meta>
             <column length="65535" name="EvntDfn_Id_Assigner"/>
         </property>
         <property name="evntDfnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Period.End</meta>
             <column length="65535" name="EvntDfn_Id_Prd_End"/>
         </property>
         <property name="evntDfnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Period.Start</meta>
             <column length="65535" name="EvntDfn_Id_Prd_Strt"/>
         </property>
         <property name="evntDfnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.System</meta>
             <column length="65535" name="EvntDfn_Id_Sys"/>
         </property>
         <property name="evntDfnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="evntDfnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="evntDfnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Coding.System</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="evntDfnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Type.Text</meta>
             <column length="65535" name="EvntDfn_Id_Typ_Txt"/>
         </property>
         <property name="evntDfnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Use</meta>
             <column length="65535" name="EvntDfn_Id_Use"/>
         </property>
         <property name="evntDfnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Identifier.Value</meta>
             <column length="65535" name="EvntDfn_Id_Vl"/>
         </property>
         <property name="evntDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="evntDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="evntDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="evntDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="EvntDfn_Jrsdctn_Txt"/>
         </property>
         <property name="evntDfnLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.LastReviewDate</meta>
             <column length="65535" name="EvntDfn_LastReviewDt"/>
         </property>
         <property name="evntDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Name</meta>
             <column length="65535" name="EvntDfn_Nm"/>
         </property>
         <property name="evntDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Publisher</meta>
             <column length="65535" name="EvntDfn_Pblshr"/>
         </property>
         <property name="evntDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Purpose</meta>
             <column length="65535" name="EvntDfn_Prpse"/>
         </property>
         <property name="evntDfnRltedArtfctCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Citation</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Citation"/>
         </property>
         <property name="evntDfnRltedArtfctDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Display</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Dsply"/>
         </property>
         <property name="evntDfnRltedArtfctDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.ContentType</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_CntntTyp"/>
         </property>
         <property name="evntDfnRltedArtfctDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Creation</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Creation"/>
         </property>
         <property name="evntDfnRltedArtfctDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Data</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Data"/>
         </property>
         <property name="evntDfnRltedArtfctDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Hash</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Hash"/>
         </property>
         <property name="evntDfnRltedArtfctDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Language</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Lnguage"/>
         </property>
         <property name="evntDfnRltedArtfctDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Size</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Sz"/>
         </property>
         <property name="evntDfnRltedArtfctDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Title</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Ttl"/>
         </property>
         <property name="evntDfnRltedArtfctDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Document.Url</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Doc_Url"/>
         </property>
         <property name="evntDfnRltedArtfctLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Label</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Lbl"/>
         </property>
         <property name="evntDfnRltedArtfctRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Resource</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Rsrc"/>
         </property>
         <property name="evntDfnRltedArtfctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Type</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Typ"/>
         </property>
         <property name="evntDfnRltedArtfctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.RelatedArtifact.Url</meta>
             <column length="65535" name="EvntDfn_RltedArtfct_Url"/>
         </property>
         <property name="evntDfnRviewrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Name</meta>
             <column length="65535" name="EvntDfn_Rviewr_Nm"/>
         </property>
         <property name="evntDfnRviewrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.Period.End</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Prd_End"/>
         </property>
         <property name="evntDfnRviewrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.Period.Start</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evntDfnRviewrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.Rank</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Rnk"/>
         </property>
         <property name="evntDfnRviewrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.System</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Sys"/>
         </property>
         <property name="evntDfnRviewrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.Use</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Use"/>
         </property>
         <property name="evntDfnRviewrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Reviewer.Telecom.Value</meta>
             <column length="65535" name="EvntDfn_Rviewr_Tlcm_Vl"/>
         </property>
         <property name="evntDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Status</meta>
             <column length="65535" name="EvntDfn_Sts"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Coding.Code</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Coding.Display</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Coding.System</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Coding.Version</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnSbjctCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectCodeableConcept.Text</meta>
             <column length="65535" name="EvntDfn_SbjctCdbleCncpt_Txt"/>
         </property>
         <property name="evntDfnSbjctRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.SubjectReference</meta>
             <column length="65535" name="EvntDfn_SbjctRfrnc"/>
         </property>
         <property name="evntDfnSubtitle" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Subtitle</meta>
             <column length="65535" name="EvntDfn_Subtitle"/>
         </property>
         <property name="evntDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Title</meta>
             <column length="65535" name="EvntDfn_Ttl"/>
         </property>
         <property name="evntDfnTopicCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Coding.Code</meta>
             <column length="65535" name="EvntDfn_Topic_Cdg_Cd"/>
         </property>
         <property name="evntDfnTopicCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Coding.Display</meta>
             <column length="65535" name="EvntDfn_Topic_Cdg_Dsply"/>
         </property>
         <property name="evntDfnTopicCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Coding.System</meta>
             <column length="65535" name="EvntDfn_Topic_Cdg_Sys"/>
         </property>
         <property name="evntDfnTopicCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_Topic_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnTopicCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Coding.Version</meta>
             <column length="65535" name="EvntDfn_Topic_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnTopicTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Topic.Text</meta>
             <column length="65535" name="EvntDfn_Topic_Txt"/>
         </property>
         <property name="evntDfnTrgrCndtnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Condition.Description</meta>
             <column length="65535" name="EvntDfn_Trgr_Cndtn_Dscrptn"/>
         </property>
         <property name="evntDfnTrgrCndtnExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Condition.Expression</meta>
             <column length="65535" name="EvntDfn_Trgr_Cndtn_Exprsn"/>
         </property>
         <property name="evntDfnTrgrCndtnLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Condition.Language</meta>
             <column length="65535" name="EvntDfn_Trgr_Cndtn_Lnguage"/>
         </property>
         <property name="evntDfnTrgrCndtnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Condition.Name</meta>
             <column length="65535" name="EvntDfn_Trgr_Cndtn_Nm"/>
         </property>
         <property name="evntDfnTrgrCndtnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Condition.Reference</meta>
             <column length="65535" name="EvntDfn_Trgr_Cndtn_Rfrnc"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Code.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Cd_Cd"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Code.Display</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Cd_Dsply"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Code.System</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Cd_Sys"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Code.UserSelected</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Cd_UsrSltd"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Code.Version</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Cd_Vrsn"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.Path</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_Path"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrSrchParam" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.SearchParam</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_SrchParam"/>
         </property>
         <property name="evntDfnTrgrDataCdFltrVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.CodeFilter.ValueSet</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_CdFltr_VlSt"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.Path</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_Path"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrSrchParam" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.SearchParam</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_SrchParam"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDateTimeType</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDtTimeTyp"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDuration.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Cd"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDuration.Comparator</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Cmprtr"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDuration.System</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Sys"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDuration.Unit</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Unt"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValueDuration.Value</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Vl"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValuePeriod.End</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlPrd_End"/>
         </property>
         <property name="evntDfnTrgrDataDtFltrVlPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.DateFilter.ValuePeriod.Start</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlPrd_Strt"/>
         </property>
         <property name="evntDfnTrgrDataLmt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.Limit</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_Lmt"/>
         </property>
         <property name="evntDfnTrgrDataMustSupport" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.MustSupport</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_MustSupport"/>
         </property>
         <property name="evntDfnTrgrDataProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.Profile</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_Profile"/>
         </property>
         <property name="evntDfnTrgrDataSortDirection" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.Sort.Direction</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_Sort_Direction"/>
         </property>
         <property name="evntDfnTrgrDataSortPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.Sort.Path</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_Sort_Path"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Coding.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Coding.Display</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Coding.System</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Coding.Version</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnTrgrDataSbjctCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectCodeableConcept.Text</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctCdbleCncpt_Txt"/>
         </property>
         <property name="evntDfnTrgrDataSbjctRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.SubjectReference</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_SbjctRfrnc"/>
         </property>
         <property name="evntDfnTrgrDataTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Data.Type</meta>
             <column length="65535" name="EvntDfn_Trgr_Data_Typ"/>
         </property>
         <property name="evntDfnTrgrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Name</meta>
             <column length="65535" name="EvntDfn_Trgr_Nm"/>
         </property>
         <property name="evntDfnTrgrTmgDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingDateTimeType</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgDtTimeTyp"/>
         </property>
         <property name="evntDfnTrgrTmgDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingDateType</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgDtTyp"/>
         </property>
         <property name="evntDfnTrgrTmgRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingReference</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgRfrnc"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Coding.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Coding.Display</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Coding.System</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Coding.Version</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnTrgrTmgTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Code.Text</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Cd_Txt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Event</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Evnt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.Count</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_Cnt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.CountMax</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_CntMx"/>
         </property>
-        <property name="evntDfnTrgrTmgTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="evntDfnTrgrTmgTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.Duration</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_Duration"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.DurationMax</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_DurationMx"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_DurationUnt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.Frequency</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_Frqncy"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.Offset</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_Off"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.Period</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_Prd"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_PrdMx"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_PrdUnt"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.TimingTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="evntDfnTrgrTmgTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_When"/>
-        </property>
         <property name="evntDfnTrgrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Trigger.Type</meta>
             <column length="65535" name="EvntDfn_Trgr_Typ"/>
         </property>
         <property name="evntDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Url</meta>
             <column length="65535" name="EvntDfn_Url"/>
         </property>
         <property name="evntDfnUsg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Usage</meta>
             <column length="65535" name="EvntDfn_Usg"/>
         </property>
         <property name="evntDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="EvntDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="evntDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="EvntDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="evntDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.Code.System</meta>
             <column length="65535" name="EvntDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="evntDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="EvntDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="evntDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="EvntDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="evntDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="evntDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="evntDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="evntDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="evntDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="evntDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="evntDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="evntDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="evntDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="evntDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="evntDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="evntDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="evntDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="evntDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="evntDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="evntDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="evntDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="EvntDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="evntDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">EventDefinition.Version</meta>
             <column length="65535" name="EvntDfn_Vrsn"/>
         </property>
     </class>

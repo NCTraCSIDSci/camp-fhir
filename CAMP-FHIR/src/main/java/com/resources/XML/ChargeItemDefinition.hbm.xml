@@ -7,367 +7,367 @@
             <generator class="identity"/>
         </id>
         <property name="chrgItmDfnApplicabilityDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Applicability.Description</meta>
             <column length="65535" name="ChrgItmDfn_Applicability_Dscrptn"/>
         </property>
         <property name="chrgItmDfnApplicabilityExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Applicability.Expression</meta>
             <column length="65535" name="ChrgItmDfn_Applicability_Exprsn"/>
         </property>
         <property name="chrgItmDfnApplicabilityLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Applicability.Language</meta>
             <column length="65535" name="ChrgItmDfn_Applicability_Lnguage"/>
         </property>
         <property name="chrgItmDfnApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.ApprovalDate</meta>
             <column length="65535" name="ChrgItmDfn_ApprovalDt"/>
         </property>
         <property name="chrgItmDfnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Coding.Code</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Cdg_Cd"/>
         </property>
         <property name="chrgItmDfnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Coding.Display</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Cdg_Dsply"/>
         </property>
         <property name="chrgItmDfnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Coding.System</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Cdg_Sys"/>
         </property>
         <property name="chrgItmDfnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Coding.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="chrgItmDfnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Coding.Version</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Cdg_Vrsn"/>
         </property>
         <property name="chrgItmDfnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Code.Text</meta>
             <column length="65535" name="ChrgItmDfn_Cd_Txt"/>
         </property>
         <property name="chrgItmDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Name</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Nm"/>
         </property>
         <property name="chrgItmDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="chrgItmDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="chrgItmDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="chrgItmDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="chrgItmDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="chrgItmDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="ChrgItmDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="chrgItmDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Copyright</meta>
             <column length="65535" name="ChrgItmDfn_Copyright"/>
         </property>
         <property name="chrgItmDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Date</meta>
             <column length="65535" name="ChrgItmDfn_Dt"/>
         </property>
         <property name="chrgItmDfnDerivedFromUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.DerivedFromUri</meta>
             <column length="65535" name="ChrgItmDfn_DerivedFromUri"/>
         </property>
         <property name="chrgItmDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Description</meta>
             <column length="65535" name="ChrgItmDfn_Dscrptn"/>
         </property>
         <property name="chrgItmDfnEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.EffectivePeriod.End</meta>
             <column length="65535" name="ChrgItmDfn_EfctivePrd_End"/>
         </property>
         <property name="chrgItmDfnEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.EffectivePeriod.Start</meta>
             <column length="65535" name="ChrgItmDfn_EfctivePrd_Strt"/>
         </property>
         <property name="chrgItmDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Experimental</meta>
             <column length="65535" name="ChrgItmDfn_Exprmtl"/>
         </property>
         <property name="chrgItmDfnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Assigner</meta>
             <column length="65535" name="ChrgItmDfn_Id_Assigner"/>
         </property>
         <property name="chrgItmDfnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Period.End</meta>
             <column length="65535" name="ChrgItmDfn_Id_Prd_End"/>
         </property>
         <property name="chrgItmDfnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Period.Start</meta>
             <column length="65535" name="ChrgItmDfn_Id_Prd_Strt"/>
         </property>
         <property name="chrgItmDfnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.System</meta>
             <column length="65535" name="ChrgItmDfn_Id_Sys"/>
         </property>
         <property name="chrgItmDfnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="chrgItmDfnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="chrgItmDfnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="chrgItmDfnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="chrgItmDfnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="chrgItmDfnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Type.Text</meta>
             <column length="65535" name="ChrgItmDfn_Id_Typ_Txt"/>
         </property>
         <property name="chrgItmDfnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Use</meta>
             <column length="65535" name="ChrgItmDfn_Id_Use"/>
         </property>
         <property name="chrgItmDfnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Identifier.Value</meta>
             <column length="65535" name="ChrgItmDfn_Id_Vl"/>
         </property>
         <property name="chrgItmDfnInstance" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Instance</meta>
             <column length="65535" name="ChrgItmDfn_Instance"/>
         </property>
         <property name="chrgItmDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="chrgItmDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="chrgItmDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="chrgItmDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="chrgItmDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="chrgItmDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="ChrgItmDfn_Jrsdctn_Txt"/>
         </property>
         <property name="chrgItmDfnLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.LastReviewDate</meta>
             <column length="65535" name="ChrgItmDfn_LastReviewDt"/>
         </property>
         <property name="chrgItmDfnPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PartOf</meta>
             <column length="65535" name="ChrgItmDfn_PartOf"/>
         </property>
         <property name="chrgItmDfnPrptyGrpApplicabilityDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.Applicability.Description</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_Applicability_Dscrptn"/>
         </property>
         <property name="chrgItmDfnPrptyGrpApplicabilityExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.Applicability.Expression</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_Applicability_Exprsn"/>
         </property>
         <property name="chrgItmDfnPrptyGrpApplicabilityLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.Applicability.Language</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_Applicability_Lnguage"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntAmntCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Amount.Currency</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Amnt_Crncy"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntAmntVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Amount.Value</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Amnt_Vl"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Coding.Code</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Cdg_Cd"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Coding.Display</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Cdg_Dsply"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Coding.System</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Cdg_Sys"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Coding.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Coding.Version</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Cdg_Vrsn"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Code.Text</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Cd_Txt"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntFactor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Factor</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Factor"/>
         </property>
         <property name="chrgItmDfnPrptyGrpPriceCmpntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.PropertyGroup.PriceComponent.Type</meta>
             <column length="65535" name="ChrgItmDfn_PrptyGrp_PriceCmpnt_Typ"/>
         </property>
         <property name="chrgItmDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Publisher</meta>
             <column length="65535" name="ChrgItmDfn_Pblshr"/>
         </property>
         <property name="chrgItmDfnReplaces" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Replaces</meta>
             <column length="65535" name="ChrgItmDfn_Replaces"/>
         </property>
         <property name="chrgItmDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Status</meta>
             <column length="65535" name="ChrgItmDfn_Sts"/>
         </property>
         <property name="chrgItmDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Title</meta>
             <column length="65535" name="ChrgItmDfn_Ttl"/>
         </property>
         <property name="chrgItmDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Url</meta>
             <column length="65535" name="ChrgItmDfn_Url"/>
         </property>
         <property name="chrgItmDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="chrgItmDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="chrgItmDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.Code.System</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="chrgItmDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="chrgItmDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="chrgItmDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="ChrgItmDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="chrgItmDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ChargeItemDefinition.Version</meta>
             <column length="65535" name="ChrgItmDfn_Vrsn"/>
         </property>
     </class>

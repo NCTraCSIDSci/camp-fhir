@@ -7,244 +7,240 @@
             <generator class="identity"/>
         </id>
         <property name="provnceActvtyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Coding.Code</meta>
             <column length="65535" name="Provnce_Actvty_Cdg_Cd"/>
         </property>
         <property name="provnceActvtyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Coding.Display</meta>
             <column length="65535" name="Provnce_Actvty_Cdg_Dsply"/>
         </property>
         <property name="provnceActvtyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Coding.System</meta>
             <column length="65535" name="Provnce_Actvty_Cdg_Sys"/>
         </property>
         <property name="provnceActvtyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Actvty_Cdg_UsrSltd"/>
         </property>
         <property name="provnceActvtyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Coding.Version</meta>
             <column length="65535" name="Provnce_Actvty_Cdg_Vrsn"/>
         </property>
         <property name="provnceActvtyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Activity.Text</meta>
             <column length="65535" name="Provnce_Actvty_Txt"/>
         </property>
         <property name="provnceAgntOnBehalfOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.OnBehalfOf</meta>
             <column length="65535" name="Provnce_Agnt_OnBehalfOf"/>
         </property>
         <property name="provnceAgntRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Coding.Code</meta>
             <column length="65535" name="Provnce_Agnt_Role_Cdg_Cd"/>
         </property>
         <property name="provnceAgntRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Coding.Display</meta>
             <column length="65535" name="Provnce_Agnt_Role_Cdg_Dsply"/>
         </property>
         <property name="provnceAgntRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Coding.System</meta>
             <column length="65535" name="Provnce_Agnt_Role_Cdg_Sys"/>
         </property>
         <property name="provnceAgntRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Agnt_Role_Cdg_UsrSltd"/>
         </property>
         <property name="provnceAgntRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Coding.Version</meta>
             <column length="65535" name="Provnce_Agnt_Role_Cdg_Vrsn"/>
         </property>
         <property name="provnceAgntRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Role.Text</meta>
             <column length="65535" name="Provnce_Agnt_Role_Txt"/>
         </property>
         <property name="provnceAgntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Coding.Code</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Cdg_Cd"/>
         </property>
         <property name="provnceAgntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Coding.Display</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Cdg_Dsply"/>
         </property>
         <property name="provnceAgntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Coding.System</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Cdg_Sys"/>
         </property>
         <property name="provnceAgntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="provnceAgntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Coding.Version</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="provnceAgntTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Type.Text</meta>
             <column length="65535" name="Provnce_Agnt_Typ_Txt"/>
         </property>
         <property name="provnceAgntWho" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Agent.Who</meta>
             <column length="65535" name="Provnce_Agnt_Who"/>
         </property>
         <property name="provnceEntityAgntOnBehalfOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.OnBehalfOf</meta>
             <column length="65535" name="Provnce_Entity_Agnt_OnBehalfOf"/>
         </property>
         <property name="provnceEntityAgntRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Coding.Code</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Cdg_Cd"/>
         </property>
         <property name="provnceEntityAgntRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Coding.Display</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Cdg_Dsply"/>
         </property>
         <property name="provnceEntityAgntRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Coding.System</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Cdg_Sys"/>
         </property>
         <property name="provnceEntityAgntRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Cdg_UsrSltd"/>
         </property>
         <property name="provnceEntityAgntRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Coding.Version</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Cdg_Vrsn"/>
         </property>
         <property name="provnceEntityAgntRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Role.Text</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Role_Txt"/>
         </property>
         <property name="provnceEntityAgntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Coding.Code</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Cdg_Cd"/>
         </property>
         <property name="provnceEntityAgntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Coding.Display</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Cdg_Dsply"/>
         </property>
         <property name="provnceEntityAgntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Coding.System</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Cdg_Sys"/>
         </property>
         <property name="provnceEntityAgntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="provnceEntityAgntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Coding.Version</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="provnceEntityAgntTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Type.Text</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Typ_Txt"/>
         </property>
         <property name="provnceEntityAgntWho" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Agent.Who</meta>
             <column length="65535" name="Provnce_Entity_Agnt_Who"/>
         </property>
         <property name="provnceEntityRole" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.Role</meta>
             <column length="65535" name="Provnce_Entity_Role"/>
         </property>
         <property name="provnceEntityWhat" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Entity.What</meta>
             <column length="65535" name="Provnce_Entity_What"/>
         </property>
         <property name="provnceLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Location</meta>
             <column length="65535" name="Provnce_Lctn"/>
         </property>
         <property name="provnceOccurredDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.OccurredDateTimeType</meta>
             <column length="65535" name="Provnce_OccurredDtTimeTyp"/>
         </property>
         <property name="provnceOccurredPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.OccurredPeriod.End</meta>
             <column length="65535" name="Provnce_OccurredPrd_End"/>
         </property>
         <property name="provnceOccurredPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.OccurredPeriod.Start</meta>
             <column length="65535" name="Provnce_OccurredPrd_Strt"/>
         </property>
         <property name="provncePolicy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Policy</meta>
             <column length="65535" name="Provnce_Policy"/>
         </property>
         <property name="provnceRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Coding.Code</meta>
             <column length="65535" name="Provnce_Rsn_Cdg_Cd"/>
         </property>
         <property name="provnceRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Coding.Display</meta>
             <column length="65535" name="Provnce_Rsn_Cdg_Dsply"/>
         </property>
         <property name="provnceRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Coding.System</meta>
             <column length="65535" name="Provnce_Rsn_Cdg_Sys"/>
         </property>
         <property name="provnceRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Coding.UserSelected</meta>
             <column length="65535" name="Provnce_Rsn_Cdg_UsrSltd"/>
         </property>
         <property name="provnceRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Coding.Version</meta>
             <column length="65535" name="Provnce_Rsn_Cdg_Vrsn"/>
         </property>
         <property name="provnceRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Reason.Text</meta>
             <column length="65535" name="Provnce_Rsn_Txt"/>
         </property>
         <property name="provnceRecorded" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Recorded</meta>
             <column length="65535" name="Provnce_Recorded"/>
         </property>
         <property name="provnceSignatureData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Data</meta>
             <column length="65535" name="Provnce_Signature_Data"/>
         </property>
         <property name="provnceSignatureOnBehalfOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.OnBehalfOf</meta>
             <column length="65535" name="Provnce_Signature_OnBehalfOf"/>
         </property>
         <property name="provnceSignatureSigFrmat" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.SigFormat</meta>
             <column length="65535" name="Provnce_Signature_SigFrmat"/>
         </property>
         <property name="provnceSignatureTarFrmat" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.TarFormat</meta>
             <column length="65535" name="Provnce_Signature_TarFrmat"/>
         </property>
         <property name="provnceSignatureTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Type.Code</meta>
             <column length="65535" name="Provnce_Signature_Typ_Cd"/>
         </property>
         <property name="provnceSignatureTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Type.Display</meta>
             <column length="65535" name="Provnce_Signature_Typ_Dsply"/>
         </property>
         <property name="provnceSignatureTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Type.System</meta>
             <column length="65535" name="Provnce_Signature_Typ_Sys"/>
         </property>
         <property name="provnceSignatureTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Type.UserSelected</meta>
             <column length="65535" name="Provnce_Signature_Typ_UsrSltd"/>
         </property>
         <property name="provnceSignatureTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Type.Version</meta>
             <column length="65535" name="Provnce_Signature_Typ_Vrsn"/>
         </property>
         <property name="provnceSignatureWhen" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.When</meta>
             <column length="65535" name="Provnce_Signature_When"/>
         </property>
         <property name="provnceSignatureWho" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Provenance.Signature.Who</meta>
             <column length="65535" name="Provnce_Signature_Who"/>
-        </property>
-        <property name="provnceTar" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Provnce_Tar"/>
         </property>
     </class>
 </hibernate-mapping>

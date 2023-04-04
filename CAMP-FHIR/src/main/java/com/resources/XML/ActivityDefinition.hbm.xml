@@ -7,1487 +7,1471 @@
             <generator class="identity"/>
         </id>
         <property name="actvtyDfnApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ApprovalDate</meta>
             <column length="65535" name="ActvtyDfn_ApprovalDt"/>
         </property>
         <property name="actvtyDfnAthrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Name</meta>
             <column length="65535" name="ActvtyDfn_Athr_Nm"/>
         </property>
         <property name="actvtyDfnAthrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Prd_End"/>
         </property>
         <property name="actvtyDfnAthrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Prd_Strt"/>
         </property>
         <property name="actvtyDfnAthrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.Rank</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Rnk"/>
         </property>
         <property name="actvtyDfnAthrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.System</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Sys"/>
         </property>
         <property name="actvtyDfnAthrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.Use</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Use"/>
         </property>
         <property name="actvtyDfnAthrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Author.Telecom.Value</meta>
             <column length="65535" name="ActvtyDfn_Athr_Tlcm_Vl"/>
         </property>
         <property name="actvtyDfnBodySiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnBodySiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnBodySiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnBodySiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnBodySiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnBodySiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.BodySite.Text</meta>
             <column length="65535" name="ActvtyDfn_BodySite_Txt"/>
         </property>
         <property name="actvtyDfnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Cd_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Cd_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Cd_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Cd_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Code.Text</meta>
             <column length="65535" name="ActvtyDfn_Cd_Txt"/>
         </property>
         <property name="actvtyDfnCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Name</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Nm"/>
         </property>
         <property name="actvtyDfnCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="actvtyDfnCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="actvtyDfnCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.Rank</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="actvtyDfnCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.System</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Sys"/>
         </property>
         <property name="actvtyDfnCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.Use</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Use"/>
         </property>
         <property name="actvtyDfnCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Contact.Telecom.Value</meta>
             <column length="65535" name="ActvtyDfn_Cntct_Tlcm_Vl"/>
         </property>
         <property name="actvtyDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Copyright</meta>
             <column length="65535" name="ActvtyDfn_Copyright"/>
         </property>
         <property name="actvtyDfnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Date</meta>
             <column length="65535" name="ActvtyDfn_Dt"/>
         </property>
         <property name="actvtyDfnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Description</meta>
             <column length="65535" name="ActvtyDfn_Dscrptn"/>
         </property>
         <property name="actvtyDfnDoNotPerform" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DoNotPerform</meta>
             <column length="65535" name="ActvtyDfn_DoNotPerform"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgAddtnlInstrctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AdditionalInstruction.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AddtnlInstrctn_Txt"/>
         </property>
         <property name="actvtyDfnDsgAsNdBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededBooleanType</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdBooleanTyp"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgAsNdCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.AsNeededCodeableConcept.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_AsNdCdbleCncpt_Txt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseQuantity.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseQnty_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseQuantity.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseQnty_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseQuantity.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseQnty_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseQuantity.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseQnty_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseQuantity.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseQnty_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtDoseRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.DoseRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_DoseRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateQuantity.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtQnty_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateQuantity.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtQnty_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateQuantity.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtQnty_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateQuantity.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtQnty_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateQuantity.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtQnty_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioDnmntrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Denominator.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Dnmntr_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioDnmntrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Denominator.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Dnmntr_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioDnmntrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Denominator.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Dnmntr_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioDnmntrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Denominator.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Dnmntr_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioDnmntrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Denominator.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Dnmntr_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioNmrtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Numerator.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Nmrtr_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioNmrtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Numerator.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Nmrtr_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioNmrtrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Numerator.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Nmrtr_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioNmrtrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Numerator.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Nmrtr_Unt"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtRtRtioNmrtrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.RateRatio.Numerator.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_RtRtio_Nmrtr_Vl"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgDoseAndRtTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.DoseAndRate.Type.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_DoseAndRt_Typ_Txt"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerAdmnstnCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerAdministration.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerAdmnstn_Cd"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerAdmnstnCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerAdministration.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerAdmnstn_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerAdmnstnSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerAdministration.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerAdmnstn_Sys"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerAdmnstnUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerAdministration.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerAdmnstn_Unt"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerAdmnstnVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerAdministration.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerAdmnstn_Vl"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerLifetimeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerLifetime.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerLifetime_Cd"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerLifetimeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerLifetime.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerLifetime_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerLifetimeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerLifetime.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerLifetime_Sys"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerLifetimeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerLifetime.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerLifetime_Unt"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerLifetimeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerLifetime.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerLifetime_Vl"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdDnmntrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Denominator.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Dnmntr_Cd"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdDnmntrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Denominator.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Dnmntr_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdDnmntrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Denominator.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Dnmntr_Sys"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdDnmntrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Denominator.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Dnmntr_Unt"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdDnmntrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Denominator.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Dnmntr_Vl"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdNmrtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Numerator.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Nmrtr_Cd"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdNmrtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Numerator.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Nmrtr_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdNmrtrSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Numerator.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Nmrtr_Sys"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdNmrtrUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Numerator.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Nmrtr_Unt"/>
         </property>
         <property name="actvtyDfnDsgMxDosePerPrdNmrtrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.MaxDosePerPeriod.Numerator.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_MxDosePerPrd_Nmrtr_Vl"/>
         </property>
         <property name="actvtyDfnDsgMthdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgMthdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgMthdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgMthdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgMthdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgMthdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Method.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Mthd_Txt"/>
         </property>
         <property name="actvtyDfnDsgPntInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.PatientInstruction</meta>
             <column length="65535" name="ActvtyDfn_Dsg_PntInstrctn"/>
         </property>
         <property name="actvtyDfnDsgRouteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgRouteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgRouteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgRouteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgRouteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgRouteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Route.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Route_Txt"/>
         </property>
         <property name="actvtyDfnDsgSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Sequence</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Sqnc"/>
         </property>
         <property name="actvtyDfnDsgSiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgSiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgSiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgSiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgSiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgSiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Site.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Site_Txt"/>
         </property>
         <property name="actvtyDfnDsgTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Txt"/>
         </property>
         <property name="actvtyDfnDsgTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnDsgTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnDsgTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnDsgTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnDsgTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnDsgTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Code.Text</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Cd_Txt"/>
         </property>
         <property name="actvtyDfnDsgTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Event</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Evnt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnDsgTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.Count</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_Cnt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.CountMax</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_CntMx"/>
         </property>
-        <property name="actvtyDfnDsgTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="actvtyDfnDsgTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.Duration</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_Duration"/>
         </property>
         <property name="actvtyDfnDsgTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.DurationMax</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_DurationMx"/>
         </property>
         <property name="actvtyDfnDsgTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.DurationUnit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_DurationUnt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.Frequency</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_Frqncy"/>
         </property>
         <property name="actvtyDfnDsgTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.FrequencyMax</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_FrqncyMx"/>
         </property>
         <property name="actvtyDfnDsgTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.Offset</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_Off"/>
         </property>
         <property name="actvtyDfnDsgTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.Period</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_Prd"/>
         </property>
         <property name="actvtyDfnDsgTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.PeriodMax</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_PrdMx"/>
         </property>
         <property name="actvtyDfnDsgTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.PeriodUnit</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_PrdUnt"/>
         </property>
         <property name="actvtyDfnDsgTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Dosage.Timing.Repeat.TimeOfDay</meta>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="actvtyDfnDsgTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_When"/>
-        </property>
         <property name="actvtyDfnDynamicVlExprsnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Expression.Description</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Exprsn_Dscrptn"/>
         </property>
         <property name="actvtyDfnDynamicVlExprsnExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Expression.Expression</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Exprsn_Exprsn"/>
         </property>
         <property name="actvtyDfnDynamicVlExprsnLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Expression.Language</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Exprsn_Lnguage"/>
         </property>
         <property name="actvtyDfnDynamicVlExprsnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Expression.Name</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Exprsn_Nm"/>
         </property>
         <property name="actvtyDfnDynamicVlExprsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Expression.Reference</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Exprsn_Rfrnc"/>
         </property>
         <property name="actvtyDfnDynamicVlPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.DynamicValue.Path</meta>
             <column length="65535" name="ActvtyDfn_DynamicVl_Path"/>
         </property>
         <property name="actvtyDfnEditorNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Name</meta>
             <column length="65535" name="ActvtyDfn_Editor_Nm"/>
         </property>
         <property name="actvtyDfnEditorTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Prd_End"/>
         </property>
         <property name="actvtyDfnEditorTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Prd_Strt"/>
         </property>
         <property name="actvtyDfnEditorTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.Rank</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Rnk"/>
         </property>
         <property name="actvtyDfnEditorTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.System</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Sys"/>
         </property>
         <property name="actvtyDfnEditorTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.Use</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Use"/>
         </property>
         <property name="actvtyDfnEditorTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Editor.Telecom.Value</meta>
             <column length="65535" name="ActvtyDfn_Editor_Tlcm_Vl"/>
         </property>
         <property name="actvtyDfnEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.EffectivePeriod.End</meta>
             <column length="65535" name="ActvtyDfn_EfctivePrd_End"/>
         </property>
         <property name="actvtyDfnEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.EffectivePeriod.Start</meta>
             <column length="65535" name="ActvtyDfn_EfctivePrd_Strt"/>
         </property>
         <property name="actvtyDfnEndsrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Name</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Nm"/>
         </property>
         <property name="actvtyDfnEndsrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Prd_End"/>
         </property>
         <property name="actvtyDfnEndsrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Prd_Strt"/>
         </property>
         <property name="actvtyDfnEndsrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.Rank</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Rnk"/>
         </property>
         <property name="actvtyDfnEndsrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.System</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Sys"/>
         </property>
         <property name="actvtyDfnEndsrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.Use</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Use"/>
         </property>
         <property name="actvtyDfnEndsrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Endorser.Telecom.Value</meta>
             <column length="65535" name="ActvtyDfn_Endsr_Tlcm_Vl"/>
         </property>
         <property name="actvtyDfnExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Experimental</meta>
             <column length="65535" name="ActvtyDfn_Exprmtl"/>
         </property>
         <property name="actvtyDfnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Assigner</meta>
             <column length="65535" name="ActvtyDfn_Id_Assigner"/>
         </property>
         <property name="actvtyDfnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Id_Prd_End"/>
         </property>
         <property name="actvtyDfnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Id_Prd_Strt"/>
         </property>
         <property name="actvtyDfnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.System</meta>
             <column length="65535" name="ActvtyDfn_Id_Sys"/>
         </property>
         <property name="actvtyDfnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Type.Text</meta>
             <column length="65535" name="ActvtyDfn_Id_Typ_Txt"/>
         </property>
         <property name="actvtyDfnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Use</meta>
             <column length="65535" name="ActvtyDfn_Id_Use"/>
         </property>
         <property name="actvtyDfnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Identifier.Value</meta>
             <column length="65535" name="ActvtyDfn_Id_Vl"/>
         </property>
         <property name="actvtyDfnIntent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Intent</meta>
             <column length="65535" name="ActvtyDfn_Intent"/>
         </property>
         <property name="actvtyDfnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Jurisdiction.Text</meta>
             <column length="65535" name="ActvtyDfn_Jrsdctn_Txt"/>
         </property>
         <property name="actvtyDfnKind" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Kind</meta>
             <column length="65535" name="ActvtyDfn_Kind"/>
         </property>
         <property name="actvtyDfnLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.LastReviewDate</meta>
             <column length="65535" name="ActvtyDfn_LastReviewDt"/>
         </property>
         <property name="actvtyDfnLibrary" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Library</meta>
             <column length="65535" name="ActvtyDfn_Library"/>
         </property>
         <property name="actvtyDfnLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Location</meta>
             <column length="65535" name="ActvtyDfn_Lctn"/>
         </property>
         <property name="actvtyDfnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Name</meta>
             <column length="65535" name="ActvtyDfn_Nm"/>
         </property>
         <property name="actvtyDfnObsrvtnRqrment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ObservationRequirement</meta>
             <column length="65535" name="ActvtyDfn_ObsrvtnRqrment"/>
         </property>
         <property name="actvtyDfnObsrvtnRsltRqrment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ObservationResultRequirement</meta>
             <column length="65535" name="ActvtyDfn_ObsrvtnRsltRqrment"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnPrtcpntRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Role.Text</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Role_Txt"/>
         </property>
         <property name="actvtyDfnPrtcpntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Participant.Type</meta>
             <column length="65535" name="ActvtyDfn_Prtcpnt_Typ"/>
         </property>
         <property name="actvtyDfnPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Priority</meta>
             <column length="65535" name="ActvtyDfn_Priority"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnPrdctCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductCodeableConcept.Text</meta>
             <column length="65535" name="ActvtyDfn_PrdctCdbleCncpt_Txt"/>
         </property>
         <property name="actvtyDfnPrdctRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.ProductReference</meta>
             <column length="65535" name="ActvtyDfn_PrdctRfrnc"/>
         </property>
         <property name="actvtyDfnProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Profile</meta>
             <column length="65535" name="ActvtyDfn_Profile"/>
         </property>
         <property name="actvtyDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Publisher</meta>
             <column length="65535" name="ActvtyDfn_Pblshr"/>
         </property>
         <property name="actvtyDfnPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Purpose</meta>
             <column length="65535" name="ActvtyDfn_Prpse"/>
         </property>
         <property name="actvtyDfnQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Quantity.Code</meta>
             <column length="65535" name="ActvtyDfn_Qnty_Cd"/>
         </property>
         <property name="actvtyDfnQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Quantity.Comparator</meta>
             <column length="65535" name="ActvtyDfn_Qnty_Cmprtr"/>
         </property>
         <property name="actvtyDfnQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Quantity.System</meta>
             <column length="65535" name="ActvtyDfn_Qnty_Sys"/>
         </property>
         <property name="actvtyDfnQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Quantity.Unit</meta>
             <column length="65535" name="ActvtyDfn_Qnty_Unt"/>
         </property>
         <property name="actvtyDfnQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Quantity.Value</meta>
             <column length="65535" name="ActvtyDfn_Qnty_Vl"/>
         </property>
         <property name="actvtyDfnRltedArtfctCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Citation</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Citation"/>
         </property>
         <property name="actvtyDfnRltedArtfctDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Display</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Dsply"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.ContentType</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_CntntTyp"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Creation</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Creation"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Data</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Data"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Hash</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Hash"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Language</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Lnguage"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Size</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Sz"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Title</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Ttl"/>
         </property>
         <property name="actvtyDfnRltedArtfctDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Document.Url</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Doc_Url"/>
         </property>
         <property name="actvtyDfnRltedArtfctLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Label</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Lbl"/>
         </property>
         <property name="actvtyDfnRltedArtfctRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Resource</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Rsrc"/>
         </property>
         <property name="actvtyDfnRltedArtfctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Type</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Typ"/>
         </property>
         <property name="actvtyDfnRltedArtfctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.RelatedArtifact.Url</meta>
             <column length="65535" name="ActvtyDfn_RltedArtfct_Url"/>
         </property>
         <property name="actvtyDfnRviewrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Name</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Nm"/>
         </property>
         <property name="actvtyDfnRviewrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.Period.End</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Prd_End"/>
         </property>
         <property name="actvtyDfnRviewrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.Period.Start</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Prd_Strt"/>
         </property>
         <property name="actvtyDfnRviewrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.Rank</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Rnk"/>
         </property>
         <property name="actvtyDfnRviewrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.System</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Sys"/>
         </property>
         <property name="actvtyDfnRviewrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.Use</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Use"/>
         </property>
         <property name="actvtyDfnRviewrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Reviewer.Telecom.Value</meta>
             <column length="65535" name="ActvtyDfn_Rviewr_Tlcm_Vl"/>
         </property>
         <property name="actvtyDfnSpcmnRqrment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SpecimenRequirement</meta>
             <column length="65535" name="ActvtyDfn_SpcmnRqrment"/>
         </property>
         <property name="actvtyDfnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Status</meta>
             <column length="65535" name="ActvtyDfn_Sts"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnSbjctCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectCodeableConcept.Text</meta>
             <column length="65535" name="ActvtyDfn_SbjctCdbleCncpt_Txt"/>
         </property>
         <property name="actvtyDfnSbjctRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.SubjectReference</meta>
             <column length="65535" name="ActvtyDfn_SbjctRfrnc"/>
         </property>
         <property name="actvtyDfnSubtitle" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Subtitle</meta>
             <column length="65535" name="ActvtyDfn_Subtitle"/>
         </property>
         <property name="actvtyDfnTmgAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingAge.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgAge_Cd"/>
         </property>
         <property name="actvtyDfnTmgAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingAge.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgAge_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingAge.System</meta>
             <column length="65535" name="ActvtyDfn_TmgAge_Sys"/>
         </property>
         <property name="actvtyDfnTmgAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingAge.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgAge_Unt"/>
         </property>
         <property name="actvtyDfnTmgAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingAge.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgAge_Vl"/>
         </property>
         <property name="actvtyDfnTmgDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDateTimeType</meta>
             <column length="65535" name="ActvtyDfn_TmgDtTimeTyp"/>
         </property>
         <property name="actvtyDfnTmgDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDuration.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgDuration_Cd"/>
         </property>
         <property name="actvtyDfnTmgDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDuration.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgDuration_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDuration.System</meta>
             <column length="65535" name="ActvtyDfn_TmgDuration_Sys"/>
         </property>
         <property name="actvtyDfnTmgDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDuration.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgDuration_Unt"/>
         </property>
         <property name="actvtyDfnTmgDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingDuration.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgDuration_Vl"/>
         </property>
         <property name="actvtyDfnTmgPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingPeriod.End</meta>
             <column length="65535" name="ActvtyDfn_TmgPrd_End"/>
         </property>
         <property name="actvtyDfnTmgPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingPeriod.Start</meta>
             <column length="65535" name="ActvtyDfn_TmgPrd_Strt"/>
         </property>
         <property name="actvtyDfnTmgRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnTmgRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnTmgRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnTmgRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnTmgRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnTmgRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnTmgRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnTmgRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnTmgTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnTmgTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnTmgTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnTmgTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnTmgTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnTmgTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Code.Text</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Cd_Txt"/>
         </property>
         <property name="actvtyDfnTmgTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Event</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Evnt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnTmgTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.Count</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_Cnt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.CountMax</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_CntMx"/>
         </property>
-        <property name="actvtyDfnTmgTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="actvtyDfnTmgTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.Duration</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_Duration"/>
         </property>
         <property name="actvtyDfnTmgTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.DurationMax</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_DurationMx"/>
         </property>
         <property name="actvtyDfnTmgTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_DurationUnt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.Frequency</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_Frqncy"/>
         </property>
         <property name="actvtyDfnTmgTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="actvtyDfnTmgTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.Offset</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_Off"/>
         </property>
         <property name="actvtyDfnTmgTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.Period</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_Prd"/>
         </property>
         <property name="actvtyDfnTmgTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_PrdMx"/>
         </property>
         <property name="actvtyDfnTmgTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_PrdUnt"/>
         </property>
         <property name="actvtyDfnTmgTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.TimingTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="actvtyDfnTmgTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_When"/>
-        </property>
         <property name="actvtyDfnTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Title</meta>
             <column length="65535" name="ActvtyDfn_Ttl"/>
         </property>
         <property name="actvtyDfnTopicCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_Topic_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnTopicCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_Topic_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnTopicCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_Topic_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnTopicCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_Topic_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnTopicCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_Topic_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnTopicTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Topic.Text</meta>
             <column length="65535" name="ActvtyDfn_Topic_Txt"/>
         </property>
         <property name="actvtyDfnTransform" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Transform</meta>
             <column length="65535" name="ActvtyDfn_Transform"/>
         </property>
         <property name="actvtyDfnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Url</meta>
             <column length="65535" name="ActvtyDfn_Url"/>
         </property>
         <property name="actvtyDfnUsg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Usage</meta>
             <column length="65535" name="ActvtyDfn_Usg"/>
         </property>
         <property name="actvtyDfnUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.Code.Code</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_Cd_Cd"/>
         </property>
         <property name="actvtyDfnUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.Code.Display</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="actvtyDfnUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.Code.System</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_Cd_Sys"/>
         </property>
         <property name="actvtyDfnUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.Code.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="actvtyDfnUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.Code.Version</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="actvtyDfnUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="actvtyDfnUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="actvtyDfnUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="actvtyDfnUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="actvtyDfnUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="actvtyDfnUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="actvtyDfnUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.UseContext.ValueReference</meta>
             <column length="65535" name="ActvtyDfn_UseCntxt_VlRfrnc"/>
         </property>
         <property name="actvtyDfnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ActivityDefinition.Version</meta>
             <column length="65535" name="ActvtyDfn_Vrsn"/>
         </property>
     </class>

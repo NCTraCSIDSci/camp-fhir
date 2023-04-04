@@ -7,595 +7,595 @@
             <generator class="identity"/>
         </id>
         <property name="qstnaireApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.ApprovalDate</meta>
             <column length="65535" name="Qstnaire_ApprovalDt"/>
         </property>
         <property name="qstnaireCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Code.Code</meta>
             <column length="65535" name="Qstnaire_Cd_Cd"/>
         </property>
         <property name="qstnaireCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Code.Display</meta>
             <column length="65535" name="Qstnaire_Cd_Dsply"/>
         </property>
         <property name="qstnaireCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Code.System</meta>
             <column length="65535" name="Qstnaire_Cd_Sys"/>
         </property>
         <property name="qstnaireCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Code.UserSelected</meta>
             <column length="65535" name="Qstnaire_Cd_UsrSltd"/>
         </property>
         <property name="qstnaireCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Code.Version</meta>
             <column length="65535" name="Qstnaire_Cd_Vrsn"/>
         </property>
         <property name="qstnaireCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Name</meta>
             <column length="65535" name="Qstnaire_Cntct_Nm"/>
         </property>
         <property name="qstnaireCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.Period.End</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="qstnaireCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="qstnaireCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.Rank</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="qstnaireCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.System</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Sys"/>
         </property>
         <property name="qstnaireCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.Use</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Use"/>
         </property>
         <property name="qstnaireCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Contact.Telecom.Value</meta>
             <column length="65535" name="Qstnaire_Cntct_Tlcm_Vl"/>
         </property>
         <property name="qstnaireCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Copyright</meta>
             <column length="65535" name="Qstnaire_Copyright"/>
         </property>
         <property name="qstnaireDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Date</meta>
             <column length="65535" name="Qstnaire_Dt"/>
         </property>
         <property name="qstnaireDerivedFrom" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.DerivedFrom</meta>
             <column length="65535" name="Qstnaire_DerivedFrom"/>
         </property>
         <property name="qstnaireDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Description</meta>
             <column length="65535" name="Qstnaire_Dscrptn"/>
         </property>
         <property name="qstnaireEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.EffectivePeriod.End</meta>
             <column length="65535" name="Qstnaire_EfctivePrd_End"/>
         </property>
         <property name="qstnaireEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.EffectivePeriod.Start</meta>
             <column length="65535" name="Qstnaire_EfctivePrd_Strt"/>
         </property>
         <property name="qstnaireExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Experimental</meta>
             <column length="65535" name="Qstnaire_Exprmtl"/>
         </property>
         <property name="qstnaireIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Assigner</meta>
             <column length="65535" name="Qstnaire_Id_Assigner"/>
         </property>
         <property name="qstnaireIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Period.End</meta>
             <column length="65535" name="Qstnaire_Id_Prd_End"/>
         </property>
         <property name="qstnaireIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Period.Start</meta>
             <column length="65535" name="Qstnaire_Id_Prd_Strt"/>
         </property>
         <property name="qstnaireIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.System</meta>
             <column length="65535" name="Qstnaire_Id_Sys"/>
         </property>
         <property name="qstnaireIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="qstnaireIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="qstnaireIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="qstnaireIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="qstnaireIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="qstnaireIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Type.Text</meta>
             <column length="65535" name="Qstnaire_Id_Typ_Txt"/>
         </property>
         <property name="qstnaireIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Use</meta>
             <column length="65535" name="Qstnaire_Id_Use"/>
         </property>
         <property name="qstnaireIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Identifier.Value</meta>
             <column length="65535" name="Qstnaire_Id_Vl"/>
         </property>
         <property name="qstnaireItmAnsOptionInitialSlcted" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.InitialSelected</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_InitialSlcted"/>
         </property>
         <property name="qstnaireItmAnsOptionVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueCoding.Code</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlCdg_Cd"/>
         </property>
         <property name="qstnaireItmAnsOptionVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueCoding.Display</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlCdg_Dsply"/>
         </property>
         <property name="qstnaireItmAnsOptionVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueCoding.System</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlCdg_Sys"/>
         </property>
         <property name="qstnaireItmAnsOptionVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueCoding.UserSelected</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlCdg_UsrSltd"/>
         </property>
         <property name="qstnaireItmAnsOptionVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueCoding.Version</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlCdg_Vrsn"/>
         </property>
         <property name="qstnaireItmAnsOptionVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueDateType</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlDtTyp"/>
         </property>
         <property name="qstnaireItmAnsOptionVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueIntegerType</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlIntegerTyp"/>
         </property>
         <property name="qstnaireItmAnsOptionVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueReference</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlRfrnc"/>
         </property>
         <property name="qstnaireItmAnsOptionVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueStringType</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlStrgTyp"/>
         </property>
         <property name="qstnaireItmAnsOptionVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerOption.ValueTimeType</meta>
             <column length="65535" name="Qstnaire_Itm_AnsOption_VlTimeTyp"/>
         </property>
         <property name="qstnaireItmAnsVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.AnswerValueSet</meta>
             <column length="65535" name="Qstnaire_Itm_AnsVlSt"/>
         </property>
         <property name="qstnaireItmCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Code.Code</meta>
             <column length="65535" name="Qstnaire_Itm_Cd_Cd"/>
         </property>
         <property name="qstnaireItmCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Code.Display</meta>
             <column length="65535" name="Qstnaire_Itm_Cd_Dsply"/>
         </property>
         <property name="qstnaireItmCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Code.System</meta>
             <column length="65535" name="Qstnaire_Itm_Cd_Sys"/>
         </property>
         <property name="qstnaireItmCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Code.UserSelected</meta>
             <column length="65535" name="Qstnaire_Itm_Cd_UsrSltd"/>
         </property>
         <property name="qstnaireItmCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Code.Version</meta>
             <column length="65535" name="Qstnaire_Itm_Cd_Vrsn"/>
         </property>
         <property name="qstnaireItmDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Definition</meta>
             <column length="65535" name="Qstnaire_Itm_Dfn"/>
         </property>
         <property name="qstnaireItmEnableBehavior" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableBehavior</meta>
             <column length="65535" name="Qstnaire_Itm_EnableBehavior"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerBooleanType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsBooleanTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerCoding.Code</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsCdg_Cd"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerCoding.Display</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsCdg_Dsply"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerCoding.System</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsCdg_Sys"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerCoding.UserSelected</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsCdg_UsrSltd"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerCoding.Version</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsCdg_Vrsn"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerDateTimeType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsDtTimeTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerDateType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsDtTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerDecimalType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsDecimalTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerIntegerType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsIntegerTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerQuantity.Code</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsQnty_Cd"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerQuantity.Comparator</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsQnty_Cmprtr"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerQuantity.System</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsQnty_Sys"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerQuantity.Unit</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsQnty_Unt"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerQuantity.Value</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsQnty_Vl"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerReference</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsRfrnc"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerStringType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsStrgTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenAnsTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.AnswerTimeType</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_AnsTimeTyp"/>
         </property>
         <property name="qstnaireItmEnableWhenOperator" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.Operator</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_Operator"/>
         </property>
         <property name="qstnaireItmEnableWhenQuestion" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.EnableWhen.Question</meta>
             <column length="65535" name="Qstnaire_Itm_EnableWhen_Question"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.ContentType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_CntntTyp"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Creation</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Creation"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Data</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Data"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Hash</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Hash"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Language</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Lnguage"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Size</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Sz"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Title</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Ttl"/>
         </property>
         <property name="qstnaireItmInitialVlAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueAttachment.Url</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlAttchmnt_Url"/>
         </property>
         <property name="qstnaireItmInitialVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueBooleanType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlBooleanTyp"/>
         </property>
         <property name="qstnaireItmInitialVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueCoding.Code</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlCdg_Cd"/>
         </property>
         <property name="qstnaireItmInitialVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueCoding.Display</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlCdg_Dsply"/>
         </property>
         <property name="qstnaireItmInitialVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueCoding.System</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlCdg_Sys"/>
         </property>
         <property name="qstnaireItmInitialVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueCoding.UserSelected</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlCdg_UsrSltd"/>
         </property>
         <property name="qstnaireItmInitialVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueCoding.Version</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlCdg_Vrsn"/>
         </property>
         <property name="qstnaireItmInitialVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueDateTimeType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlDtTimeTyp"/>
         </property>
         <property name="qstnaireItmInitialVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueDateType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlDtTyp"/>
         </property>
         <property name="qstnaireItmInitialVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueDecimalType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlDecimalTyp"/>
         </property>
         <property name="qstnaireItmInitialVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueIntegerType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlIntegerTyp"/>
         </property>
         <property name="qstnaireItmInitialVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueQuantity.Code</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlQnty_Cd"/>
         </property>
         <property name="qstnaireItmInitialVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueQuantity.Comparator</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlQnty_Cmprtr"/>
         </property>
         <property name="qstnaireItmInitialVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueQuantity.System</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlQnty_Sys"/>
         </property>
         <property name="qstnaireItmInitialVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueQuantity.Unit</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlQnty_Unt"/>
         </property>
         <property name="qstnaireItmInitialVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueQuantity.Value</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlQnty_Vl"/>
         </property>
         <property name="qstnaireItmInitialVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueReference</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlRfrnc"/>
         </property>
         <property name="qstnaireItmInitialVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueStringType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlStrgTyp"/>
         </property>
         <property name="qstnaireItmInitialVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueTimeType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlTimeTyp"/>
         </property>
         <property name="qstnaireItmInitialVlUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Initial.ValueUriType</meta>
             <column length="65535" name="Qstnaire_Itm_Initial_VlUriTyp"/>
         </property>
         <property name="qstnaireItmLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.LinkId</meta>
             <column length="65535" name="Qstnaire_Itm_LinkId"/>
         </property>
         <property name="qstnaireItmMxLength" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.MaxLength</meta>
             <column length="65535" name="Qstnaire_Itm_MxLength"/>
         </property>
         <property name="qstnaireItmPrefix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Prefix</meta>
             <column length="65535" name="Qstnaire_Itm_Prefix"/>
         </property>
         <property name="qstnaireItmReadOnly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.ReadOnly</meta>
             <column length="65535" name="Qstnaire_Itm_ReadOnly"/>
         </property>
         <property name="qstnaireItmRpts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Repeats</meta>
             <column length="65535" name="Qstnaire_Itm_Rpts"/>
         </property>
         <property name="qstnaireItmRequired" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Required</meta>
             <column length="65535" name="Qstnaire_Itm_Required"/>
         </property>
         <property name="qstnaireItmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Text</meta>
             <column length="65535" name="Qstnaire_Itm_Txt"/>
         </property>
         <property name="qstnaireItmTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Item.Type</meta>
             <column length="65535" name="Qstnaire_Itm_Typ"/>
         </property>
         <property name="qstnaireJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="qstnaireJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="qstnaireJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Coding.System</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="qstnaireJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="qstnaireJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="qstnaireJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Jurisdiction.Text</meta>
             <column length="65535" name="Qstnaire_Jrsdctn_Txt"/>
         </property>
         <property name="qstnaireLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.LastReviewDate</meta>
             <column length="65535" name="Qstnaire_LastReviewDt"/>
         </property>
         <property name="qstnaireNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Name</meta>
             <column length="65535" name="Qstnaire_Nm"/>
         </property>
         <property name="qstnairePblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Publisher</meta>
             <column length="65535" name="Qstnaire_Pblshr"/>
         </property>
         <property name="qstnairePrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Purpose</meta>
             <column length="65535" name="Qstnaire_Prpse"/>
         </property>
         <property name="qstnaireSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Status</meta>
             <column length="65535" name="Qstnaire_Sts"/>
         </property>
         <property name="qstnaireSbjctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.SubjectType</meta>
             <column length="65535" name="Qstnaire_SbjctTyp"/>
         </property>
         <property name="qstnaireTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Title</meta>
             <column length="65535" name="Qstnaire_Ttl"/>
         </property>
         <property name="qstnaireUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Url</meta>
             <column length="65535" name="Qstnaire_Url"/>
         </property>
         <property name="qstnaireUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.Code.Code</meta>
             <column length="65535" name="Qstnaire_UseCntxt_Cd_Cd"/>
         </property>
         <property name="qstnaireUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.Code.Display</meta>
             <column length="65535" name="Qstnaire_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="qstnaireUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.Code.System</meta>
             <column length="65535" name="Qstnaire_UseCntxt_Cd_Sys"/>
         </property>
         <property name="qstnaireUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.Code.UserSelected</meta>
             <column length="65535" name="Qstnaire_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="qstnaireUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.Code.Version</meta>
             <column length="65535" name="Qstnaire_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="qstnaireUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="qstnaireUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="qstnaireUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="qstnaireUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="qstnaireUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="qstnaireUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="qstnaireUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="qstnaireUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="qstnaireUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="qstnaireUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="qstnaireUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="qstnaireUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="qstnaireUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="qstnaireUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="qstnaireUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="qstnaireUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="qstnaireUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.UseContext.ValueReference</meta>
             <column length="65535" name="Qstnaire_UseCntxt_VlRfrnc"/>
         </property>
         <property name="qstnaireVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Questionnaire.Version</meta>
             <column length="65535" name="Qstnaire_Vrsn"/>
         </property>
     </class>

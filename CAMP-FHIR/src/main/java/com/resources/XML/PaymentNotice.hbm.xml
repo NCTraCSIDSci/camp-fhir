@@ -7,119 +7,119 @@
             <generator class="identity"/>
         </id>
         <property name="pymntNoticeAmntCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Amount.Currency</meta>
             <column length="65535" name="PymntNotice_Amnt_Crncy"/>
         </property>
         <property name="pymntNoticeAmntVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Amount.Value</meta>
             <column length="65535" name="PymntNotice_Amnt_Vl"/>
         </property>
         <property name="pymntNoticeCreated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Created</meta>
             <column length="65535" name="PymntNotice_Created"/>
         </property>
         <property name="pymntNoticeIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Assigner</meta>
             <column length="65535" name="PymntNotice_Id_Assigner"/>
         </property>
         <property name="pymntNoticeIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Period.End</meta>
             <column length="65535" name="PymntNotice_Id_Prd_End"/>
         </property>
         <property name="pymntNoticeIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Period.Start</meta>
             <column length="65535" name="PymntNotice_Id_Prd_Strt"/>
         </property>
         <property name="pymntNoticeIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.System</meta>
             <column length="65535" name="PymntNotice_Id_Sys"/>
         </property>
         <property name="pymntNoticeIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="pymntNoticeIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="pymntNoticeIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Coding.System</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="pymntNoticeIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="pymntNoticeIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="pymntNoticeIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Type.Text</meta>
             <column length="65535" name="PymntNotice_Id_Typ_Txt"/>
         </property>
         <property name="pymntNoticeIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Use</meta>
             <column length="65535" name="PymntNotice_Id_Use"/>
         </property>
         <property name="pymntNoticeIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Identifier.Value</meta>
             <column length="65535" name="PymntNotice_Id_Vl"/>
         </property>
         <property name="pymntNoticePayee" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Payee</meta>
             <column length="65535" name="PymntNotice_Payee"/>
         </property>
         <property name="pymntNoticePymnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Payment</meta>
             <column length="65535" name="PymntNotice_Pymnt"/>
         </property>
         <property name="pymntNoticePymntDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentDate</meta>
             <column length="65535" name="PymntNotice_PymntDt"/>
         </property>
         <property name="pymntNoticePymntStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Coding.Code</meta>
             <column length="65535" name="PymntNotice_PymntSts_Cdg_Cd"/>
         </property>
         <property name="pymntNoticePymntStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Coding.Display</meta>
             <column length="65535" name="PymntNotice_PymntSts_Cdg_Dsply"/>
         </property>
         <property name="pymntNoticePymntStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Coding.System</meta>
             <column length="65535" name="PymntNotice_PymntSts_Cdg_Sys"/>
         </property>
         <property name="pymntNoticePymntStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Coding.UserSelected</meta>
             <column length="65535" name="PymntNotice_PymntSts_Cdg_UsrSltd"/>
         </property>
         <property name="pymntNoticePymntStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Coding.Version</meta>
             <column length="65535" name="PymntNotice_PymntSts_Cdg_Vrsn"/>
         </property>
         <property name="pymntNoticePymntStsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.PaymentStatus.Text</meta>
             <column length="65535" name="PymntNotice_PymntSts_Txt"/>
         </property>
         <property name="pymntNoticeProvider" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Provider</meta>
             <column length="65535" name="PymntNotice_Provider"/>
         </property>
         <property name="pymntNoticeRecipient" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Recipient</meta>
             <column length="65535" name="PymntNotice_Recipient"/>
         </property>
         <property name="pymntNoticeRqst" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Request</meta>
             <column length="65535" name="PymntNotice_Rqst"/>
         </property>
         <property name="pymntNoticeRsps" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Response</meta>
             <column length="65535" name="PymntNotice_Rsps"/>
         </property>
         <property name="pymntNoticeSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">PaymentNotice.Status</meta>
             <column length="65535" name="PymntNotice_Sts"/>
         </property>
     </class>

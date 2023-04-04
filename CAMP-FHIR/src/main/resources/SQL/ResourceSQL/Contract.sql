@@ -195,7 +195,7 @@ Cnct_Trm_Actn_PrfrmrTyp_Cdg_Sys TEXT COMMENT 'Contract.Term.Action.PerformerType
 Cnct_Trm_Actn_PrfrmrTyp_Cdg_UsrSltd TEXT COMMENT 'Contract.Term.Action.PerformerType.Coding.UserSelected',
 Cnct_Trm_Actn_PrfrmrTyp_Cdg_Vrsn TEXT COMMENT 'Contract.Term.Action.PerformerType.Coding.Version',
 Cnct_Trm_Actn_PrfrmrTyp_Txt TEXT COMMENT 'Contract.Term.Action.PerformerType.Text',
-Cnct_Trm_Actn_RsnCd TEXT COMMENT 'Contract.Term.Action.ReasonCode',
+Cnct_Trm_Actn_RsnRfrnc TEXT COMMENT 'Contract.Term.Action.ReasonReference',
 Cnct_Trm_Actn_RsnCd_Cdg_Cd TEXT COMMENT 'Contract.Term.Action.ReasonCode.Coding.Code',
 Cnct_Trm_Actn_RsnCd_Cdg_Dsply TEXT COMMENT 'Contract.Term.Action.ReasonCode.Coding.Display',
 Cnct_Trm_Actn_RsnCd_Cdg_Sys TEXT COMMENT 'Contract.Term.Action.ReasonCode.Coding.System',
