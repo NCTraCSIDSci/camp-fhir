@@ -55,28 +55,28 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
-		    <version>6.1.4.Final</version>
+		   <version>6.2.0.Final</version>
 		    <type>pom</type>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-community-dialects -->
 		<dependency>
 		    <groupId>org.hibernate.orm</groupId>
 		    <artifactId>hibernate-community-dialects</artifactId>
-		    <version>6.1.4.Final</version>
+		    <version>6.2.0.Final</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-base -->
 		<dependency>
 		    <groupId>ca.uhn.hapi.fhir</groupId>
 		    <artifactId>hapi-fhir-base</artifactId>
-		    <version>5.4.0</version>
+		    <version>6.4.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-structures-r4 -->
 		<dependency>
 		    <groupId>ca.uhn.hapi.fhir</groupId>
 		    <artifactId>hapi-fhir-structures-r4</artifactId>
-		    <version>5.4.0</version>
+		    <version>6.4.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
