@@ -1,9 +1,11 @@
 package main.java.com.campfhir.service.conversion.test;
 import java.io.File;
-
-
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,61 +26,76 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ca.uhn.fhir.context.FhirContext;
+import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.rest.gclient.TokenClientParam;
 import main.java.com.campfhir.dao.ResourceDao;
 import main.java.com.campfhir.model.Campfhir;
 import main.java.com.campfhir.model.Resource;
-import main.java.com.campfhir.service.ResourceService;
+import main.java.com.campfhir.service.ResourceInService;
+//import main.java.com.campfhir.service.ResourceService;
 import main.java.com.campfhir.service.bidirectionalconversion.PatientBidirectionalConversion;
 import main.java.com.campfhir.service.conversion.PatientConversion;
 public class PatientConversionTest {
 	
 private static PatientConversion pc;
-private static ResourceService patientService;
+private static ResourceInService patientService;
 private static ResourceDao patientDao;
 private static PatientBidirectionalConversion PatientBidirectionalConversion;
 
 
 FhirContext ctx = FhirContext.forR4();
 IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4");
-@Test
-	void testBiConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException, ClassNotFoundException 
-	{
-
-		File directory = new File("config.json");
-		ObjectMapper mapper = new ObjectMapper();
-	    Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
-	
-		int p = Integer.parseInt(cf.getPartition());
-	
-//		 if(cf.getResource().equals("Patient"))
-//		{
+//@Test
+//	void testBiConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException, ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException 
+//	{
+//
+//		File directory = new File("config.json");
+//		ObjectMapper mapper = new ObjectMapper();
+//	    Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
+//	
+//		int p = Integer.parseInt(cf.getPartition());
+//	
+////		 if(cf.getResource().equals("Patient"))
+////		{
+////		
+////		File patientjson = new File("C:\\Users\\pikovach\\Downloads\\CAMPFHIR_1.0\\CAMPFHIR_ECLIPSE\\workspace\\Demo_Database\\patient_new.json");
+////		FileReader fr=null
+//		String fileName = "C:\\Users\\pikovach\\Downloads\\CAMPFHIR_2023_01_09\\CAMPFHIR_1.0\\CAMPFHIR_ECLIPSE\\workspace\\Demo_Database\\CAMPFHIR_JSON\\patient.json";
+//
+//		String content = new String(Files.readAllBytes(Paths.get(fileName)));
+//	//	System.out.println(content);
+//		// Instantiate a new parser
+//		IParser parser = ctx.newJsonParser();
+//
+//		// Parse it
+//		Bundle bundle = parser.parseResource(Bundle.class, content);
 //		
-		 @SuppressWarnings("deprecation")
-		Bundle bundle = (Bundle) client.search().forResource(Patient.class)
-				 .where(new TokenClientParam("_id").exactly().code("1963461"))
-			//	 .where(new TokenClientParam("active").exactly().code("true"))
-				 .prettyPrint()
-			//	 .limitTo(100)
-				 .execute();
-		PatientBidirectionalConversion pbc = new PatientBidirectionalConversion();
-		List<main.java.com.campfhir.model.Resource> patList = new ArrayList<main.java.com.campfhir.model.Resource>();
-		System.out.println(ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle));
-		for (BundleEntryComponent bec :  bundle.getEntry()) 
-		{ 
-			org.hl7.fhir.r4.model.Resource pat = bec.getResource();
-			main.java.com.campfhir.model.Resource pathibernate = (main.java.com.campfhir.model.Resource) pbc.Patients((Patient) pat);
-		    patList.add(pathibernate);
-		}
-		
-		new  ResourceService().persist(patList, cf);
-			     
-	//	}
-		System.out.println("Finished");
-		
-		//fail("Not yet implemented");
-	}
+//	//	try{fr = new FileReader(patientjson);}catch (FileNotFoundException fe){System.out.println("File not found");}
+//		@SuppressWarnings("deprecation")
+////		Bundle bundle = (Bundle) client.search().forResource(Patient.class)
+////				 .where(new TokenClientParam("_id").exactly().code("1963461"))
+////			//	 .where(new TokenClientParam("active").exactly().code("true"))
+////				 .prettyPrint()
+////			//	 .limitTo(100)
+////				 .execute();
+//		PatientBidirectionalConversion pbc = new PatientBidirectionalConversion();
+//		List<main.java.com.campfhir.model.Resource> patList = new ArrayList<main.java.com.campfhir.model.Resource>();
+//		//System.out.println(ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(parsed));
+//		for (BundleEntryComponent bec :  bundle.getEntry()) 
+//		{ 
+//			org.hl7.fhir.r4.model.Resource pat = bec.getResource();
+//			main.java.com.campfhir.model.Resource pathibernate = (main.java.com.campfhir.model.Resource) pbc.Patients((Patient) pat);
+//		    patList.add(pathibernate);
+//		}
+//		  new ResourceInService().run(cf);
+////		new  ResourceService().persist(patList, cf);
+//			     
+//	//	}
+//		System.out.println("Finished");
+//		
+//		//fail("Not yet implemented");
+//	}
 
 	@Test
 	void testConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException 
@@ -86,8 +103,9 @@ IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4
 		File directory = new File("config.json");
 		ObjectMapper mapper = new ObjectMapper();
 	    Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
-		int p = Integer.parseInt(cf.getPartition());
-		new  ResourceService().findAll(cf);			
+		int p = Integer.parseInt(cf.getoPartition());
+		  new ResourceInService().run(cf);
+//		new  ResourceService().findAll(cf);			
 	}
 }
 

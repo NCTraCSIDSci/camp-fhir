@@ -120,10 +120,13 @@ public class Patient   extends Resource{
      private String pntRace;
      private String pntRaceSystem;
      private String pntRaceDisplay;
+     private String pntExtRaceVl;
      private String pntEth;
      private String pntEthSystem;
      private String pntEthDisplay;
-
+     private String pntExtEthnVl;
+     private String pntAddrExtLatVl;
+     private String pntAddrExtLongVl;
     public Patient() {
     }
 
@@ -2692,6 +2695,46 @@ public class Patient   extends Resource{
     public void setPntEthDisplay(String pntEthDisplay) {
         this.pntEthDisplay = pntEthDisplay;
     }
+
+
+	public String getPntExtRaceVl() {
+		return pntExtRaceVl;
+	}
+
+
+	public void setPntExtRaceVl(String pntExtRaceVl) {
+		this.pntExtRaceVl = pntExtRaceVl;
+	}
+
+
+	public String getPntExtEthnVl() {
+		return pntExtEthnVl;
+	}
+
+
+	public void setPntExtEthnVl(String pntExtEthnVl) {
+		this.pntExtEthnVl = pntExtEthnVl;
+	}
+
+
+	public String getPntAddrExtLatVl() {
+		return pntAddrExtLatVl;
+	}
+
+
+	public void setPntAddrExtLatVl(String pntAddrExtLatVl) {
+		this.pntAddrExtLatVl = pntAddrExtLatVl;
+	}
+
+
+	public String getPntAddrExtLongVl() {
+		return pntAddrExtLongVl;
+	}
+
+
+	public void setPntAddrExtLongVl(String pntAddrExtLongVl) {
+		this.pntAddrExtLongVl = pntAddrExtLongVl;
+	}
     
 
 

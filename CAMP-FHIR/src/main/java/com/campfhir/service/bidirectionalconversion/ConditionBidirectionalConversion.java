@@ -8,7 +8,7 @@ public class ConditionBidirectionalConversion
 		 main.java.com.campfhir.model.Condition c = new  main.java.com.campfhir.model.Condition();
 
 		/******************** id ********************************************************************************/
-		c.setId(condition.getIdElement().getIdPart());
+		c.setId(condition.getIdElement().getIdPart().replace("urn:uuid:", ""));
 
 		/******************** conditioncode ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept conditioncode = condition.getCode();
@@ -1091,6 +1091,7 @@ public class ConditionBidirectionalConversion
 		 };
 		 };
 		/******************** conditionabatementrange ********************************************************************************/
+		if(condition.hasAbatementAge()) { 
 		org.hl7.fhir.r4.model.Range conditionabatementrange = condition.getAbatementRange();
 
 		/******************** conditionabatementrangelow ********************************************************************************/
@@ -1185,7 +1186,7 @@ public class ConditionBidirectionalConversion
 		} else {
 			c.addCndtnAbatementRngHiSys("NULL");
 		}
-
+		}
 
 		/******************** conditionevidence ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.Condition.ConditionEvidenceComponent> conditionevidencelist = condition.getEvidence();
@@ -1403,13 +1404,13 @@ public class ConditionBidirectionalConversion
 
 		 };
 		/******************** Cndtn_OnDtTimeTyp ********************************************************************************/
+		 
 		if(condition.hasOnsetDateTimeType()) {
-
 			c.addCndtnOnDtTimeTyp("\""+condition.getOnsetDateTimeType().getValueAsString()+"\"");
 		} else {
 			c.addCndtnOnDtTimeTyp("NULL");
 		}
-
+	
 
 		/******************** Cndtn_AbatementDtTimeTyp ********************************************************************************/
 		if(condition.hasAbatementDateTimeType()) {
@@ -1426,6 +1427,13 @@ public class ConditionBidirectionalConversion
 			c.addCndtnAbatementStrgTyp("\""+condition.getAbatementStringType().getValueAsString()+"\"");
 		} else {
 			c.addCndtnAbatementStrgTyp("NULL");
+		}
+		
+		if(condition.hasAbatementDateTimeType()) {
+
+			c.setCndtnAbatementDtTimeTyp("\""+condition.getAbatementDateTimeType().getValueAsString()+"\"");
+		} else {
+			c.setCndtnAbatementDtTimeTyp("NULL");
 		}
 
 

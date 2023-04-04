@@ -28,6 +28,7 @@ import org.reflections.Reflections;
 class CreateConversionCode
 {
 	public static LinkedHashMap<String, String> abbreviations;
+	public static FileWriter csvWriter;
     public static void main(String args[]) throws Exception
     {
         // Creating object whose property is to be checked
@@ -40,9 +41,9 @@ class CreateConversionCode
        	
        	//get abbreviations from csv for later use
        	CreateConversionCode.abbreviations = getAbbreviations();
-       	FileWriter csvWriter = createFileToWrite("C:\\Users\\pikovach\\camp-fhir\\CAMP-FHIR\\src\\main\\resources\\MappingCSV.csv");
-     	csvWriter.append("local_source, local_table, local_column, local_in_code, local_in_char, fhir_out_code, fhir_out_char, fhir_system, fhir_urn_oid_system, fhir_out_column, comments\n");
-       	csvWriter.append("");
+       	csvWriter = createFileToWrite("C:\\Users\\pikovach\\camp-fhir\\CAMP-FHIR\\src\\main\\resources\\MappingCSV.csv");
+		csvWriter.write("FHIR_RESOURCE" + ", " + "FHIR_ELEMENT_NAME"  + ", " + "FHIR_PATH" + ", " + "CAMPFHIR_COLUMN");
+       	csvWriter.write(System.lineSeparator());
        	
        	//looping through each model in hapi fhir model package 
        	while (iter.hasNext()) {
@@ -416,6 +417,13 @@ class CreateConversionCode
 	 				System.out.println(newhibernateFieldName);
 	 			}
 	    		sqlWriter.write(newhibernateFieldName + " TEXT COMMENT '"+fhirPath+"',\r\n");
+	    		if(fhirPath.split("\\.").length > 0 ) {
+	    			csvWriter.write(fhirPath.split("\\.")[0] + ", " + fhirPath.split("\\.")[fhirPath.split("\\.").length-1]  + ", " + fhirPath + ", " + newhibernateFieldName);
+	    		} else {
+	    			csvWriter.write("NULL" + ", " + "NULL"  + ", " + fhirPath  + ", " + newhibernateFieldName);
+
+	    		}
+	    		csvWriter.write(System.lineSeparator());
 			}
     }
     

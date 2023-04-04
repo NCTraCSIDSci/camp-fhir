@@ -753,25 +753,27 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationeffectiveperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period observationeffectiveperiod = observation.getEffectivePeriod();
-
-		/******************** Obsrvtn_EfctivePrd_Strt ********************************************************************************/
-		if(observationeffectiveperiod.hasStart()) {
-
-			o.addObsrvtnEfctivePrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(observationeffectiveperiod.getStart())+"\"");
-		} else {
-			o.addObsrvtnEfctivePrdStrt("NULL");
+		if(observation.hasEffectivePeriod()) {
+			org.hl7.fhir.r4.model.Period observationeffectiveperiod = observation.getEffectivePeriod();
+		
+		
+			/******************** Obsrvtn_EfctivePrd_Strt ********************************************************************************/
+			if(observationeffectiveperiod.hasStart()) {
+	
+				o.addObsrvtnEfctivePrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(observationeffectiveperiod.getStart())+"\"");
+			} else {
+				o.addObsrvtnEfctivePrdStrt("NULL");
+			}
+	
+	
+			/******************** Obsrvtn_EfctivePrd_End ********************************************************************************/
+			if(observationeffectiveperiod.hasEnd()) {
+	
+				o.addObsrvtnEfctivePrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(observationeffectiveperiod.getEnd())+"\"");
+			} else {
+				o.addObsrvtnEfctivePrdEnd("NULL");
+			}
 		}
-
-
-		/******************** Obsrvtn_EfctivePrd_End ********************************************************************************/
-		if(observationeffectiveperiod.hasEnd()) {
-
-			o.addObsrvtnEfctivePrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(observationeffectiveperiod.getEnd())+"\"");
-		} else {
-			o.addObsrvtnEfctivePrdEnd("NULL");
-		}
-
 
 		/******************** Obsrvtn_Spcmn ********************************************************************************/
 		if(observation.hasSpecimen()) {
@@ -803,6 +805,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationvaluesampleddata ********************************************************************************/
+		if(observation.hasValueSampledData()) {
 		org.hl7.fhir.r4.model.SampledData observationvaluesampleddata = observation.getValueSampledData();
 
 		/******************** Obsrvtn_VlSampledData_Dimensions ********************************************************************************/
@@ -904,7 +907,7 @@ public class ObservationBidirectionalConversion
 		} else {
 			o.addObsrvtnVlSampledDataLwerLmt("NULL");
 		}
-
+		}
 
 		/******************** Obsrvtn_EfctiveInstantTyp ********************************************************************************/
 		if(observation.hasEffectiveInstantType()) {
@@ -916,6 +919,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationvaluecodeableconcept ********************************************************************************/
+		if(observation.hasValueCodeableConcept()) {
 		org.hl7.fhir.r4.model.CodeableConcept observationvaluecodeableconcept = observation.getValueCodeableConcept();
 
 		/******************** Obsrvtn_VlCdbleCncpt_Txt ********************************************************************************/
@@ -993,6 +997,7 @@ public class ObservationBidirectionalConversion
 
 
 		 };
+		}
 		/******************** Obsrvtn_VlIntegerTyp ********************************************************************************/
 		if(observation.hasValueIntegerType()) {
 
@@ -1028,6 +1033,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationvaluerange ********************************************************************************/
+		if(observation.hasValueRange()) {
 		org.hl7.fhir.r4.model.Range observationvaluerange = observation.getValueRange();
 
 		/******************** observationvaluerangelow ********************************************************************************/
@@ -1123,8 +1129,10 @@ public class ObservationBidirectionalConversion
 			o.addObsrvtnVlRngHiSys("NULL");
 		}
 
-
+		}
+		
 		/******************** observationeffectivetiming ********************************************************************************/
+		if(observation.hasEffectiveTiming()) {
 		org.hl7.fhir.r4.model.Timing observationeffectivetiming = observation.getEffectiveTiming();
 
 		/******************** observationeffectivetimingcode ********************************************************************************/
@@ -1522,8 +1530,8 @@ public class ObservationBidirectionalConversion
 		} else {
 			o.addObsrvtnEfctiveTmgRptFrqncy("NULL");
 		}
-
-
+		}
+		if(observation.hasValuePeriod()) {
 		/******************** observationvalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period observationvalueperiod = observation.getValuePeriod();
 
@@ -1544,7 +1552,7 @@ public class ObservationBidirectionalConversion
 			o.addObsrvtnVlPrdEnd("NULL");
 		}
 
-
+		}
 		/******************** Obsrvtn_VlStrgTyp ********************************************************************************/
 		if(observation.hasValueStringType()) {
 
@@ -1555,6 +1563,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationvalueratio ********************************************************************************/
+		if(observation.hasValueRatio()) {
 		org.hl7.fhir.r4.model.Ratio observationvalueratio = observation.getValueRatio();
 
 		/******************** observationvaluerationumerator ********************************************************************************/
@@ -1650,7 +1659,7 @@ public class ObservationBidirectionalConversion
 			o.addObsrvtnVlRtioDnmntrSys("NULL");
 		}
 
-
+		}
 		/******************** observationinterpretation ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> observationinterpretationlist = observation.getInterpretation();
 		for(int observationinterpretationi = 0; observationinterpretationi<observationinterpretationlist.size();observationinterpretationi++ ) {
@@ -1736,7 +1745,8 @@ public class ObservationBidirectionalConversion
 		 };
 		 };
 		/******************** observationvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity observationvaluequantity = observation.getValueQuantity();
+		if(observation.hasValueQuantity()) {
+		 org.hl7.fhir.r4.model.Quantity observationvaluequantity = observation.getValueQuantity();
 
 		/******************** Obsrvtn_VlQnty_Vl ********************************************************************************/
 		if(observationvaluequantity.hasValue()) {
@@ -1797,7 +1807,7 @@ public class ObservationBidirectionalConversion
 			o.addObsrvtnHasMmbr("NULL");
 		}
 
-
+		}
 		/******************** observationreferencerange ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent> observationreferencerangelist = observation.getReferenceRange();
 		for(int observationreferencerangei = 0; observationreferencerangei<observationreferencerangelist.size();observationreferencerangei++ ) {
@@ -2402,6 +2412,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationcomponentvaluesampleddata ********************************************************************************/
+		if(observationcomponent.hasValueSampledData()) {
 		org.hl7.fhir.r4.model.SampledData observationcomponentvaluesampleddata = observationcomponent.getValueSampledData();
 
 		/******************** Obsrvtn_Cmpnt_VlSampledData_Dimensions ********************************************************************************/
@@ -2540,11 +2551,12 @@ public class ObservationBidirectionalConversion
 		}
 
 		if(observationcomponenti == observationcomponentlist.size()-1) {o.addObsrvtnCmpntVlSampledDataLwerLmt("]");}
-
+		}
 
 		/******************** observationcomponentvaluecodeableconcept ********************************************************************************/
+		if(observationcomponent.hasValueCodeableConcept()) {
 		org.hl7.fhir.r4.model.CodeableConcept observationcomponentvaluecodeableconcept = observationcomponent.getValueCodeableConcept();
-
+		
 		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Txt ********************************************************************************/
 		if(observationcomponenti == 0) {o.addObsrvtnCmpntVlCdbleCncptTxt("[");}
 		if(observationcomponentvaluecodeableconcept.hasText()) {
@@ -2623,6 +2635,7 @@ public class ObservationBidirectionalConversion
 
 
 		 };
+		}
 		/******************** Obsrvtn_Cmpnt_VlIntegerTyp ********************************************************************************/
 		if(observationcomponenti == 0) {o.addObsrvtnCmpntVlIntegerTyp("[");}
 		if(observationcomponent.hasValueIntegerType()) {
@@ -2648,6 +2661,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationcomponentvaluerange ********************************************************************************/
+		if(observationcomponent.hasValueRange()) {
 		org.hl7.fhir.r4.model.Range observationcomponentvaluerange = observationcomponent.getValueRange();
 
 		/******************** observationcomponentvaluerangelow ********************************************************************************/
@@ -2781,8 +2795,9 @@ public class ObservationBidirectionalConversion
 
 		if(observationcomponenti == observationcomponentlist.size()-1) {o.addObsrvtnCmpntVlRngHiSys("]");}
 
-
+		}
 		/******************** observationcomponentvalueperiod ********************************************************************************/
+		if(observationcomponent.hasValuePeriod()) {
 		org.hl7.fhir.r4.model.Period observationcomponentvalueperiod = observationcomponent.getValuePeriod();
 
 		/******************** Obsrvtn_Cmpnt_VlPrd_Strt ********************************************************************************/
@@ -2807,7 +2822,7 @@ public class ObservationBidirectionalConversion
 		}
 
 		if(observationcomponenti == observationcomponentlist.size()-1) {o.addObsrvtnCmpntVlPrdEnd("]");}
-
+		}
 
 		/******************** Obsrvtn_Cmpnt_VlStrgTyp ********************************************************************************/
 		if(observationcomponenti == 0) {o.addObsrvtnCmpntVlStrgTyp("[");}
@@ -2822,6 +2837,7 @@ public class ObservationBidirectionalConversion
 
 
 		/******************** observationcomponentvalueratio ********************************************************************************/
+		if(observationcomponent.hasValueRatio()) {
 		org.hl7.fhir.r4.model.Ratio observationcomponentvalueratio = observationcomponent.getValueRatio();
 
 		/******************** observationcomponentvaluerationumerator ********************************************************************************/
@@ -2954,7 +2970,7 @@ public class ObservationBidirectionalConversion
 		}
 
 		if(observationcomponenti == observationcomponentlist.size()-1) {o.addObsrvtnCmpntVlRtioDnmntrSys("]");}
-
+		}
 
 		/******************** observationcomponentinterpretation ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> observationcomponentinterpretationlist = observationcomponent.getInterpretation();
