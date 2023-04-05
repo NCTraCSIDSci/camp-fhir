@@ -764,10 +764,11 @@ public class ConditionConversion
 		}
 		/******************** Cndtn_OnDtTimeTyp ********************************************************************************/
 		if(c.getCndtnOnDtTimeTyp() != null ) {
-
+		
 			if(c.getCndtnOnDtTimeTyp().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnDtTimeTyp()==null) {} else {
 			condition.setOnset( new org.hl7.fhir.r4.model.DateTimeType(c.getCndtnOnDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
 			}
+		
 		}
 		/******************** Cndtn_OnPrd_End ********************************************************************************/
 		if(c.getCndtnOnPrdEnd() != null ) {

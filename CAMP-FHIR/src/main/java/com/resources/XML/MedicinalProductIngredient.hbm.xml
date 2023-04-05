@@ -1,826 +1,826 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="main.java.com.campfhir.model">
     <class catalog="campfhir" name="MedicinalProductIngredient" optimistic-lock="none" table="MedicinalProductIngredient">
-        <id name="id" type="string">
-            <column length="64" name="id"/>
-            <generator class="identity"/>
-        </id>
-        <property name="mdcnlPrdctIgrdntAllergenicIndicator" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.AllergenicIndicator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_AllergenicIndicator"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdAssigner" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Assigner</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Assigner"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdPrdEnd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Period.End</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Prd_End"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdPrdStrt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Period.Start</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Prd_Strt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdTypTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdUse" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Use</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Use"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntIdVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Id_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntManufacturer" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Manufacturer</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Manufacturer"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntRoleTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Role.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Role_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncCdTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncGrpTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.MeasurementPoint</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_MsrmentPoint"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.MeasurementPoint</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_MsrmentPoint"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncCdTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrCntryTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrMsrmentPoint" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.MeasurementPoint</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_MsrmentPoint"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Txt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.MeasurementPoint</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_MsrmentPoint"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Comparator</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Unit</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Value</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Code</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Display</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.System</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.UserSelected</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Version</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn"/>
-        </property>
-        <property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt" type="string">
-            <meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Text</meta>
-            <column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Txt"/>
-        </property>
-    </class>
+<id name="id" type="string">
+<column length="64" name="id"/>
+<generator class="identity"/>
+</id>
+<property name="mdcnlPrdctIgrdntAllergenicIndicator" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.AllergenicIndicator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_AllergenicIndicator"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdAssigner" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Assigner</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Assigner"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdPrdEnd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Period.End</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Prd_End"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdPrdStrt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Period.Start</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Prd_Strt"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdTypTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Type.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Typ_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdUse" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Use</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Use"/>
+</property>
+<property name="mdcnlPrdctIgrdntIdVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Identifier.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Id_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntManufacturer" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Manufacturer</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Manufacturer"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntRoleTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Role.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Role_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncCdTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Code.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Confidentiality.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncGrpTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Group.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Concentration.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ConcentrationLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Country.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.MeasurementPoint</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_MsrmentPoint"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.Presentation.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.PresentationLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Country.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.MeasurementPoint</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_MsrmentPoint"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Strength.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.Substance.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncCdTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Code.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Cd_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Concentration.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ConcentrationLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrCntryTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Country.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrMsrmentPoint" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.MeasurementPoint</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_MsrmentPoint"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.Presentation.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.PresentationLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Country.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Txt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.MeasurementPoint</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_MsrmentPoint"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Strength.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Denominator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Comparator</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Unit</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.StrengthLowLimit.Numerator.Value</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Code</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Display</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.System</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.UserSelected</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Coding.Version</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn"/>
+</property>
+<property name="mdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt" type="string">
+<meta attribute="fhir-path">MedicinalProductIngredient.Substance.Strength.ReferenceStrength.Substance.Text</meta>
+<column length="65535" name="MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Txt"/>
+</property>
+</class>
 </hibernate-mapping>

@@ -1,15 +1,20 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+
 import main.java.com.campfhir.model.Patient;
+/***This class takes in camfhirs relational format and creates a FHIR resource from it***/
+
 public class PatientConversion 
 {
-	public org.hl7.fhir.r4.model.Patient Patients(Patient p) throws ParseException
+	public org.hl7.fhir.r4.model.Patient Patients( main.java.com.campfhir.model.Patient p) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Patient patient = new org.hl7.fhir.r4.model.Patient();
 
 		/******************** id ********************************************************************************/
+		
 		patient.setId(p.getId());
-
+		//patient.setIdBase(p.getId());
+		
 		/******************** Pnt_Active ********************************************************************************/
 		if(p.getPntActive() != null ) {
 
@@ -132,7 +137,9 @@ public class PatientConversion
 		/******************** Pnt_BirthDt ********************************************************************************/
 		if(p.getPntBirthDt() != null ) {
 
-			if(p.getPntBirthDt().replace("[","").replace("]","").equals("NULL") | p.getPntBirthDt()==null) {} else {
+			if(p.getPntBirthDt().replace("[","").replace("]","").equals("NULL") | p.getPntBirthDt()==null) {} else {				
+//				java.text.SimpleDateFormat dmyFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+//				java.util.Date date = dmyFormat.format(p.getPntBirthDt());
 			patient.setBirthDate(p.getPntBirthDt().replace("[","").replace("]","").equals("NULL") | p.getPntBirthDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(p.getPntBirthDt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
@@ -1149,14 +1156,22 @@ public class PatientConversion
 		/******************** PNT_RACE **************************************************************************************
 		 * PNT_RACE maps to Patient / extension / race / coding / code
 		 ********************************************************************************************************************/
-		org.hl7.fhir.r4.model.Extension race = new org.hl7.fhir.r4.model.Extension().setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntRace()).setSystem(p.getPntRaceSystem()).setDisplay(p.getPntRaceDisplay())); 
-		patient.addExtension(race);
+		if(p.getPntRace() != null | p.getPntRaceSystem() != null | p.getPntRaceDisplay() != null) {
+			org.hl7.fhir.r4.model.Extension raceparent = new org.hl7.fhir.r4.model.Extension().setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race");
+			org.hl7.fhir.r4.model.Extension racechild = new org.hl7.fhir.r4.model.Extension().setUrl("ombCategory").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntRace()).setSystem(p.getPntRaceSystem()).setDisplay(p.getPntRaceDisplay())); 
+			raceparent.addExtension(racechild);
+			patient.addExtension(raceparent);
+		}
 
 		/******************** PNT_ETHNICITY *********************************************************************************
 		 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
 		 ********************************************************************************************************************/
-		org.hl7.fhir.r4.model.Extension ethnicity = new org.hl7.fhir.r4.model.Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Ethnicity").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntEth()).setDisplay(p.getPntEthDisplay()).setSystem(p.getPntEthSystem())); 
-		patient.addExtension(ethnicity);
+		if(p.getPntEth() != null | p.getPntEthSystem() != null | p.getPntEthDisplay() != null) {
+			org.hl7.fhir.r4.model.Extension ethnicityparent = new org.hl7.fhir.r4.model.Extension().setUrl("https://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity");
+			org.hl7.fhir.r4.model.Extension ethnicitychild = new org.hl7.fhir.r4.model.Extension().setUrl("ombCategory").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntEth()).setDisplay(p.getPntEthDisplay()).setSystem(p.getPntEthSystem())); 
+			ethnicityparent.addExtension(ethnicitychild);
+			patient.addExtension(ethnicityparent);
+		}
 
 
 		return patient;

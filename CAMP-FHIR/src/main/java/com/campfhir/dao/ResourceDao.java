@@ -13,12 +13,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-//import org.hl7.fhir.r4.model.Resource;
-import main.java.com.campfhir.model.Resource;
+
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.model.Campfhir;
-
+import main.java.com.campfhir.model.Patient;
+import main.java.com.campfhir.model.Resource;
 import main.java.utils.HibernateBaseDB;
 
 /**
@@ -36,19 +36,21 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 
 	public ResourceDao() {}
 
-	public Session openCurrentSession(Campfhir cf) 
+	public Session openCurrentSession(Campfhir cf, String direction) 
 			throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
-		currentSession = sessionFactory.openSession();
+		sessionFactory = HibernateBaseDB.getSessionFactory(cf, direction);
+//		currentSession = sessionFactory.openSession();
+		currentSession = sessionFactory.getCurrentSession();
 		return currentSession;
 	}
 
-	public Session openCurrentSessionwithTransaction(Campfhir cf) 
+	public Session openCurrentSessionwithTransaction(Campfhir cf, String direction) 
 			throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
-		currentSession = sessionFactory.openSession();
+		sessionFactory = HibernateBaseDB.getSessionFactory( cf,  direction);
+//		currentSession = sessionFactory.openSession();
+		currentSession = sessionFactory.getCurrentSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
@@ -64,14 +66,17 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 		currentSession.close();
 	}
 	
-	private static SessionFactory getSessionFactory() 
-	{
-		Configuration configuration = new Configuration().configure();
-		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-				.applySettings(configuration.getProperties());
-		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
-		return sessionFactory;
+	public  SessionFactory getSessionFactory() {
+		return this.sessionFactory;
 	}
+//	private static SessionFactory getSessionFactory() 
+//	{
+//		Configuration configuration = new Configuration().configure();
+//		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+//				.applySettings(configuration.getProperties());
+//		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
+//		return sessionFactory;
+//	}
 
 	public Session getCurrentSession() 
 	{
@@ -93,41 +98,25 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-
-//	public ScrollableResults findAll(int start, int max) 
-//	{
-//		ScrollableResults patients = getCurrentSession().createQuery("FROM Patient order by ID ASC")
-//				.setFirstResult(start)
-//				.setMaxResults(max)
-//				.setReadOnly(true)
-//		        .setCacheable(true)
-//		    .scroll(ScrollMode.FORWARD_ONLY);
-//		
-//
-//
-//		return patients;
-//	}
+	public void persist(Resource entity) 
+	{
+//		Transaction currtransaction = getCurrentSession().beginTransaction();
+		getCurrentSession().save((Resource) entity);
+//		currtransaction.commit();
+		
+		
+		
+	}
 	
 	public ScrollableResults findAll(Campfhir cf) 
 	{
-		ScrollableResults patients = getCurrentSession().createQuery("FROM "+cf.getResource())
+		ScrollableResults patients = null;
+		
+		patients = currentSession.createQuery("FROM "+cf.getResource())
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-		
+
 		return patients;
-	}
-
-//	@SuppressWarnings("deprecation")
-//	public void persist(Campfhir cf, main.java.com.campfhir.model.Resource resource) {
-//		getCurrentSession().save(cf.getResource(), resource);
-//
-//		
-//	}
-
-	@Override
-	public void persist(Resource entity) {
-		getCurrentSession().save(entity);
-		
 	}
 }

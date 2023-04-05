@@ -115,7 +115,7 @@ NtritnOrdr_Id_Typ_Cdg_Vrsn TEXT COMMENT 'NutritionOrder.Identifier.Type.Coding.V
 NtritnOrdr_Id_Typ_Txt TEXT COMMENT 'NutritionOrder.Identifier.Type.Text',
 NtritnOrdr_Id_Use TEXT COMMENT 'NutritionOrder.Identifier.Use',
 NtritnOrdr_Id_Vl TEXT COMMENT 'NutritionOrder.Identifier.Value',
-NtritnOrdr_Instantiates TEXT COMMENT 'NutritionOrder.Instantiates',
+NtritnOrdr_InstantiatesUri TEXT COMMENT 'NutritionOrder.InstantiatesUri',
 NtritnOrdr_InstantiatesCanonical TEXT COMMENT 'NutritionOrder.InstantiatesCanonical',
 NtritnOrdr_InstantiatesUri TEXT COMMENT 'NutritionOrder.InstantiatesUri',
 NtritnOrdr_Intent TEXT COMMENT 'NutritionOrder.Intent',

@@ -1,5 +1,6 @@
 package main.java.com.campfhir.service.bidirectionalconversion;
 import java.text.ParseException;
+/***This class takes in a FHIR resource and converts it into a relational format***/
 
 import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Extension;
@@ -13,7 +14,7 @@ public class PatientBidirectionalConversion
 		 main.java.com.campfhir.model.Patient p = new  main.java.com.campfhir.model.Patient();
 
 		/******************** id ********************************************************************************/
-		p.setId(patient.getIdElement().getIdPart());
+		p.setId(patient.getIdElement().getIdPart().replace("urn:uuid:", ""));
 
 		/******************** patientname ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.HumanName> patientnamelist = patient.getName();
@@ -1464,18 +1465,38 @@ public class PatientBidirectionalConversion
 //		org.hl7.fhir.r4.model.Extension race = new org.hl7.fhir.r4.model.Extension().setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntRace()).setSystem(p.getPntRaceSystem()).setDisplay(p.getPntRaceDisplay())); 
 		Extension raceex = patient.getExtensionByUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race");
 		if(raceex != null ) {
-			p.setPntRaceSystem(((Coding) raceex.getValue()).getSystem());
-			p.setPntRaceDisplay(((Coding) raceex.getValue()).getDisplay());
-			p.setPntRace(((Coding) raceex.getValue()).getCode());
+			
+			if(raceex.getValue() != null) {
+				p.setPntRaceSystem(((Coding) raceex.getValue()).getSystem());
+				p.setPntRaceDisplay(((Coding) raceex.getValue()).getDisplay());
+				p.setPntRace(((Coding) raceex.getValue()).getCode());
+			} else {
+				if(raceex.getExtensionByUrl("ombCategory") != null) {
+					//System.out.println(((Coding) raceex.getExtensionByUrl("ombCategory").getValue()).getCode());
+					p.setPntRaceSystem(((Coding) raceex.getExtensionByUrl("ombCategory").getValue()).getSystem());
+					p.setPntRaceDisplay(((Coding) raceex.getExtensionByUrl("ombCategory").getValue()).getDisplay());
+					p.setPntRace(((Coding) raceex.getExtensionByUrl("ombCategory").getValue()).getCode());
+				}
+			}
 		}
 		/******************** PNT_ETHNICITY *********************************************************************************
 		 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
 		 ********************************************************************************************************************/
-		Extension ethex = patient.getExtensionByUrl("http://terminology.hl7.org/ValueSet/v3-Ethnicity");
+		Extension ethex = patient.getExtensionByUrl("https://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity");
 		if(ethex != null ) {
-			p.setPntEthSystem(((Coding) ethex.getValue()).getSystem());
-			p.setPntEthDisplay(((Coding) ethex.getValue()).getDisplay());
-			p.setPntEth(((Coding) ethex.getValue()).getCode());
+//			System.out.println(ethex.getValue());
+			if(ethex.getValue() != null) {
+				p.setPntEthSystem(((Coding) ethex.getValue()).getSystem());
+				p.setPntEthDisplay(((Coding) ethex.getValue()).getDisplay());
+				p.setPntEth(((Coding) ethex.getValue()).getCode());
+			}  else {
+				if(ethex.getExtensionByUrl("ombCategory") != null) {
+					//System.out.println(((Coding) raceex.getExtensionByUrl("ombCategory").getValue()).getCode());
+					p.setPntEthSystem(((Coding) ethex.getExtensionByUrl("ombCategory").getValue()).getSystem());
+					p.setPntEthDisplay(((Coding) ethex.getExtensionByUrl("ombCategory").getValue()).getDisplay());
+					p.setPntEth(((Coding) ethex.getExtensionByUrl("ombCategory").getValue()).getCode());
+				}
+			}
 		}
 
 //		org.hl7.fhir.r4.model.Extension ethnicity = new org.hl7.fhir.r4.model.Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Ethnicity").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntEth()).setDisplay(p.getPntEthDisplay()).setSystem(p.getPntEthSystem())); 

@@ -36,12 +36,8 @@ import main.java.com.campfhir.service.ResourceInService;
 //import main.java.com.campfhir.service.ResourceService;
 import main.java.com.campfhir.service.bidirectionalconversion.PatientBidirectionalConversion;
 import main.java.com.campfhir.service.conversion.PatientConversion;
-public class PatientConversionTest {
+public class ObservationConversionTest {
 	
-private static PatientConversion pc;
-private static ResourceInService patientService;
-private static ResourceDao patientDao;
-private static PatientBidirectionalConversion PatientBidirectionalConversion;
 
 
 FhirContext ctx = FhirContext.forR4();

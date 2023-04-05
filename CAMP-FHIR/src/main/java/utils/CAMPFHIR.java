@@ -7,13 +7,16 @@ import java.text.ParseException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.hibernate.exception.SQLGrammarException;
 import org.hl7.fhir.exceptions.FHIRException; 
 import org.xml.sax.SAXException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import main.java.com.campfhir.dao.ResourceDao;
 import main.java.com.campfhir.model.Campfhir;
-import main.java.com.campfhir.service.ResourceService;
+import main.java.com.campfhir.service.ResourceInService;
+import main.java.com.campfhir.service.ResourceOutService;
 
 /**
 *
@@ -21,7 +24,7 @@ import main.java.com.campfhir.service.ResourceService;
 * @version 1.0
 * @since   2019-08-20
 */
-public class CAMPFHIR 
+public class CAMPFHIR  
 {
 	public static void main(String[] args) 
 			throws ParseException, 
@@ -30,14 +33,34 @@ public class CAMPFHIR
 			ParserConfigurationException, 
 			SAXException, 
 			InterruptedException, 
-			ClassNotFoundException, org.apache.commons.cli.ParseException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException 
+			ClassNotFoundException, 
+			org.apache.commons.cli.ParseException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException,SQLGrammarException 
 	{
+		String config = "";
+		if (args.length > 0) {
+			config = new File("./").getCanonicalPath()+ "/"+args[0];
+			System.out.println(config);
+		} else {
+			config = new File("./").getCanonicalPath()+ "/config.json";
+			System.out.println(config);
+		}
 		
-		File directory = new File("config.json");
 		ObjectMapper mapper = new ObjectMapper();
-        Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
+        Campfhir cf = mapper.readValue(new File(config), Campfhir.class);
 
-        new ResourceService().findAll(cf);
+        new ResourceInService().run(cf);
+        
+//        try {
+//        	ResourceDao rd = new ResourceDao();
+//        	rd.closeCurrentSession();
+//        } catch (Exception e) {
+//        	
+//        }
+        
+//        for(int i=0;i<100000;i++)
+//        {
+//        	System.out.println(i);
+//        }
 		
 		System.out.println("Finished");
 	}

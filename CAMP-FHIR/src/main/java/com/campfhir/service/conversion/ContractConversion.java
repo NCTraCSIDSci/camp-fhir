@@ -3905,816 +3905,823 @@ public class ContractConversion
 			}
 
 		}
-		/******************** Cnct_Trm_Asset_Scope_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmAsScopeCdgCd() != null ) {
 
-			String[] arrayi0 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
+		return Contracts_Extended4( c, contract);
 		}
-		/******************** Cnct_Trm_Asset_Scope_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmAsScopeCdgDsply() != null ) {
+		
+		public org.hl7.fhir.r4.model.Contract Contracts_Extended4(Contract c, org.hl7.fhir.r4.model.Contract contract) throws ParseException
+		{
+			/******************** Cnct_Trm_Asset_Scope_Cdg_Cd ********************************************************************************/
+			if(c.getCnctTrmAsScopeCdgCd() != null ) {
 
-			String[] arrayi0 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Scope_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmAsScopeCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Scope_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmAsScopeCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Scope_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmAsScopeCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Scope_Txt ********************************************************************************/
-		if(c.getCnctTrmAsScopeTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsScopeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsScopeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_SecurityLblNmbr ********************************************************************************/
-		if(c.getCnctTrmAsSecurityLblNmbr() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
-					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).addSecurityLabelNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						String[] arrayi3 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsScopeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Scope_Cdg_Dsply ********************************************************************************/
+			if(c.getCnctTrmAsScopeCdgDsply() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						String[] arrayi3 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsScopeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Scope_Cdg_Sys ********************************************************************************/
+			if(c.getCnctTrmAsScopeCdgSys() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						String[] arrayi3 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsScopeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Scope_Cdg_UsrSltd ********************************************************************************/
+			if(c.getCnctTrmAsScopeCdgUsrSltd() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						String[] arrayi3 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				String[] arrayi0 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsScopeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Scope_Cdg_Vrsn ********************************************************************************/
+			if(c.getCnctTrmAsScopeCdgVrsn() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						String[] arrayi3 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsScopeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).getScope().addCoding(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Scope_Txt ********************************************************************************/
+			if(c.getCnctTrmAsScopeTxt() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Subtype_Txt ********************************************************************************/
-		if(c.getCnctTrmAsSubtypeTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsScopeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsScopeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getScope().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_SecurityLblNmbr ********************************************************************************/
+			if(c.getCnctTrmAsSecurityLblNmbr() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Txt ********************************************************************************/
-		if(c.getCnctTrmAsTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmAsTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						String[] arrayi3 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+						if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).addSecurityLabelNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Cdg_Cd ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeCdgCd() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmAsTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						String[] arrayi3 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							String[] arrayi3 = c.getCnctTrmAsSubtypeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Cdg_Dsply ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeCdgDsply() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmAsTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						String[] arrayi3 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							String[] arrayi3 = c.getCnctTrmAsSubtypeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Cdg_Sys ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeCdgSys() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmAsTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						String[] arrayi3 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							String[] arrayi3 = c.getCnctTrmAsSubtypeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Cdg_UsrSltd ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeCdgUsrSltd() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmAsTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						String[] arrayi3 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							String[] arrayi3 = c.getCnctTrmAsSubtypeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Cdg_Vrsn ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeCdgVrsn() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_Typ_Txt ********************************************************************************/
-		if(c.getCnctTrmAsTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_TypRfrnc ********************************************************************************/
-		if(c.getCnctTrmAsTypRfrnc() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsTypRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsTypRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
-					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).addTypeReference(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_UsePrd_End ********************************************************************************/
-		if(c.getCnctTrmAsUsePrdEnd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addUsePeriod(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().get(i2).setEnd(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_UsePrd_Strt ********************************************************************************/
-		if(c.getCnctTrmAsUsePrdStrt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addUsePeriod(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().get(i2).setStart(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EfctiveTime ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEfctiveTime() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setEffectiveTime(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							String[] arrayi3 = c.getCnctTrmAsSubtypeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Subtype_Txt ********************************************************************************/
+			if(c.getCnctTrmAsSubtypeTxt() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsSubtypeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getSubtype().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addSubtype(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getSubtype().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Txt ********************************************************************************/
+			if(c.getCnctTrmAsTxt() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys() != null ) {
+				String[] arrayi0 = c.getCnctTrmAsTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
 
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+			/******************** Cnct_Trm_Asset_Typ_Cdg_Cd ********************************************************************************/
+			if(c.getCnctTrmAsTypCdgCd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							String[] arrayi3 = c.getCnctTrmAsTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Typ_Cdg_Dsply ********************************************************************************/
+			if(c.getCnctTrmAsTypCdgDsply() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				String[] arrayi0 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							String[] arrayi3 = c.getCnctTrmAsTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Typ_Cdg_Sys ********************************************************************************/
+			if(c.getCnctTrmAsTypCdgSys() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							String[] arrayi3 = c.getCnctTrmAsTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Typ_Cdg_UsrSltd ********************************************************************************/
+			if(c.getCnctTrmAsTypCdgUsrSltd() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Txt ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityCdbleCncptTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_EntityRfrnc ********************************************************************************/
-		if(c.getCnctTrmAsVldItmEntityRfrnc() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setEntity(new org.hl7.fhir.r4.model.Reference(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Factor ********************************************************************************/
-		if(c.getCnctTrmAsVldItmFactor() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setFactor((Double.parseDouble((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Assigner ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdAssigner() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Prd_End ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdPrdEnd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getPeriod().setEnd(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Prd_Strt ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdPrdStrt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getPeriod().setStart(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Sys ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							String[] arrayi3 = c.getCnctTrmAsTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Typ_Cdg_Vrsn ********************************************************************************/
+			if(c.getCnctTrmAsTypCdgVrsn() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							String[] arrayi3 = c.getCnctTrmAsTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_Typ_Txt ********************************************************************************/
+			if(c.getCnctTrmAsTypTxt() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getType().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addType(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getType().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_TypRfrnc ********************************************************************************/
+			if(c.getCnctTrmAsTypRfrnc() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				String[] arrayi0 = c.getCnctTrmAsTypRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsTypRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+						if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).addTypeReference(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
 						}
 					}
 				}
+
 			}
+			/******************** Cnct_Trm_Asset_UsePrd_End ********************************************************************************/
+			if(c.getCnctTrmAsUsePrdEnd() != null ) {
 
-		}
-		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmAsVldItmIdTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
-					String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
-						String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-						for(int i3 = 0; i3 < arrayi3.length; i3++) {
-							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
-							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				String[] arrayi0 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsUsePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addUsePeriod(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().get(i2).setEnd(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 						}
 					}
 				}
-			}
 
+			}
+			/******************** Cnct_Trm_Asset_UsePrd_Strt ********************************************************************************/
+			if(c.getCnctTrmAsUsePrdStrt() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsUsePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addUsePeriod(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getUsePeriod().get(i2).setStart(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EfctiveTime ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEfctiveTime() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEfctiveTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setEffectiveTime(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Cd ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Dsply ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Sys ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmEntityCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Txt ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityCdbleCncptTxt() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getEntityCodeableConcept().setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_EntityRfrnc ********************************************************************************/
+			if(c.getCnctTrmAsVldItmEntityRfrnc() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmEntityRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setEntity(new org.hl7.fhir.r4.model.Reference(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Factor ********************************************************************************/
+			if(c.getCnctTrmAsVldItmFactor() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).setFactor((Double.parseDouble((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Assigner ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdAssigner() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Prd_End ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdPrdEnd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getPeriod().setEnd(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Prd_Strt ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdPrdStrt() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getPeriod().setStart(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi2[i2].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Sys ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdSys() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Cd ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdTypCdgCd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Dsply ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdTypCdgDsply() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Sys ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdTypCdgSys() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdTypCdgUsrSltd() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+				}
+
+			}
+			/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Vrsn ********************************************************************************/
+			if(c.getCnctTrmAsVldItmIdTypCdgVrsn() != null ) {
+
+				String[] arrayi0 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i0 = 0; i0 < arrayi0.length; i0++) {
+					if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+					String[] arrayi1 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i1 = 0; i1 < arrayi1.length; i1++) {
+						if(contract.getTerm().get(i0).getAsset().size() < i1+1) { contract.getTerm().get(i0).addAsset(); }
+						String[] arrayi2 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i2 = 0; i2 < arrayi2.length; i2++) {
+							if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().size() < i2+1) { contract.getTerm().get(i0).getAsset().get(i1).addValuedItem(); }
+							String[] arrayi3 = c.getCnctTrmAsVldItmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i3 = 0; i3 < arrayi3.length; i3++) {
+								if(contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().size() < i3+1) { contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().addCoding(); }
+								if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {contract.getTerm().get(i0).getAsset().get(i1).getValuedItem().get(i2).getIdentifier().getType().getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+
+			}
+			return Contracts_Extended2( c, contract);
 		}
-		return Contracts_Extended2( c, contract);
-		}
-			public org.hl7.fhir.r4.model.Contract Contracts_Extended2(Contract c, org.hl7.fhir.r4.model.Contract contract) throws ParseException
-			{
+		
+		public org.hl7.fhir.r4.model.Contract Contracts_Extended2(Contract c, org.hl7.fhir.r4.model.Contract contract) throws ParseException
+		{
 		/******************** Cnct_Trm_Asset_VldItm_Id_Typ_Txt ********************************************************************************/
 		if(c.getCnctTrmAsVldItmIdTypTxt() != null ) {
 
@@ -5062,1818 +5069,1824 @@ public class ContractConversion
 			}
 
 		}
-		/******************** Cnct_Trm_Id_Assigner ********************************************************************************/
-		if(c.getCnctTrmIdAssigner() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Prd_End ********************************************************************************/
-		if(c.getCnctTrmIdPrdEnd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Prd_Strt ********************************************************************************/
-		if(c.getCnctTrmIdPrdStrt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Sys ********************************************************************************/
-		if(c.getCnctTrmIdSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmIdTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmIdTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmIdTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmIdTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmIdTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Typ_Txt ********************************************************************************/
-		if(c.getCnctTrmIdTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Use ********************************************************************************/
-		if(c.getCnctTrmIdUse() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Id_Vl ********************************************************************************/
-		if(c.getCnctTrmIdVl() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Issued ********************************************************************************/
-		if(c.getCnctTrmIssued() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmIssued().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setIssued(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_CntntTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntCntntTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntCntntTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntCntntTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setContentType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Creation ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntCreation() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntCreation().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntCreation().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setCreation(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Data ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntData() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntData().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntData().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setData(arrayi1[i1].replace("[","").replace("]","").replace("\"","").getBytes()); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Hash ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntHash() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntHash().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntHash().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setHash(arrayi1[i1].replace("[","").replace("]","").replace("\"","").getBytes()); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Lnguage ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntLnguage() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntLnguage().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntLnguage().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setLanguage(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Sz ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntSz() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntSz().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntSz().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setSize(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Ttl ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntTtl() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntTtl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntTtl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setTitle(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Url ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlAttchmntUrl() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntUrl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntUrl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setUrl(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlBooleanTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlBooleanTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlBooleanTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlBooleanTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.BooleanType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlCdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlCdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlCdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlCdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlCdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlDtTimeTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlDtTimeTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DateTimeType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlDtTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlDtTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlDtTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlDtTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DateType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlDecimalTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlDecimalTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlDecimalTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlDecimalTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DecimalType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlIntegerTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlIntegerTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlIntegerTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlIntegerTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.IntegerType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlQnty_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlQntyCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlQnty_Cmprtr ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlQntyCmprtr() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlQnty_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlQntySys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlQnty_Unt ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlQntyUnt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlQnty_Vl ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlQntyVl() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlRfrnc ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlRfrnc() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.Reference(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlStrgTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlStrgTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.StringType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlTimeTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlTimeTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.TimeType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Ans_VlUriTyp ********************************************************************************/
-		if(c.getCnctTrmOffrAnsVlUriTyp() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrAnsVlUriTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrAnsVlUriTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.UriType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Decision_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_DecisionMode_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrDecisionModeTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrDecisionModeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrDecisionModeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Assigner ********************************************************************************/
-		if(c.getCnctTrmOffrIdAssigner() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Prd_End ********************************************************************************/
-		if(c.getCnctTrmOffrIdPrdEnd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getPeriod().setEnd(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Prd_Strt ********************************************************************************/
-		if(c.getCnctTrmOffrIdPrdStrt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getPeriod().setStart(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrIdSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					String[] arrayi2 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					String[] arrayi2 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					String[] arrayi2 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					String[] arrayi2 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					String[] arrayi2 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Typ_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrIdTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Use ********************************************************************************/
-		if(c.getCnctTrmOffrIdUse() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Id_Vl ********************************************************************************/
-		if(c.getCnctTrmOffrIdVl() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setValue(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_LinkId ********************************************************************************/
-		if(c.getCnctTrmOffrLinkId() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrLinkId().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
-				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().addLinkId(currListStrSplit.replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Rfrnc ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRfrnc() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
-					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).addReference(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Party_Role_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrPartyRoleTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrPartyRoleTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrPartyRoleTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_SecurityLblNmbr ********************************************************************************/
-		if(c.getCnctTrmOffrSecurityLblNmbr() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
-				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().addSecurityLabelNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Topic ********************************************************************************/
-		if(c.getCnctTrmOffrTopic() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTopic().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().setTopic(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmOffrTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmOffrTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmOffrTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmOffrTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmOffrTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmOffrTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Offr_Typ_Txt ********************************************************************************/
-		if(c.getCnctTrmOffrTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmOffrTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Ctgry_Cd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblCtgryCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Ctgry_Dsply ********************************************************************************/
-		if(c.getCnctTrmSecurityLblCtgryDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Ctgry_Sys ********************************************************************************/
-		if(c.getCnctTrmSecurityLblCtgrySys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Ctgry_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblCtgryUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Ctgry_Vrsn ********************************************************************************/
-		if(c.getCnctTrmSecurityLblCtgryVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Clsfctn_Cd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblClsfctnCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Clsfctn_Dsply ********************************************************************************/
-		if(c.getCnctTrmSecurityLblClsfctnDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Clsfctn_Sys ********************************************************************************/
-		if(c.getCnctTrmSecurityLblClsfctnSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Clsfctn_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblClsfctnUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Clsfctn_Vrsn ********************************************************************************/
-		if(c.getCnctTrmSecurityLblClsfctnVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Control_Cd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblControlCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Control_Dsply ********************************************************************************/
-		if(c.getCnctTrmSecurityLblControlDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Control_Sys ********************************************************************************/
-		if(c.getCnctTrmSecurityLblControlSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Control_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmSecurityLblControlUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Control_Vrsn ********************************************************************************/
-		if(c.getCnctTrmSecurityLblControlVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					String[] arrayi2 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-					for(int i2 = 0; i2 < arrayi2.length; i2++) {
-						if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
-						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SecurityLbl_Nmbr ********************************************************************************/
-		if(c.getCnctTrmSecurityLblNmbr() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
-					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
-					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).addNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
-					}
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmSubTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSubTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmSubTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSubTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmSubTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSubTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmSubTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSubTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmSubTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmSubTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_SubTyp_Txt ********************************************************************************/
-		if(c.getCnctTrmSubTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmSubTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getSubType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_Txt ********************************************************************************/
-		if(c.getCnctTrmTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_TopicCdbleCncpt_Txt ********************************************************************************/
-		if(c.getCnctTrmTopicCdbleCncptTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Trm_TopicRfrnc ********************************************************************************/
-		if(c.getCnctTrmTopicRfrnc() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTopicRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setTopic(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTrmTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTrmTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTrmTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTrmTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTrmTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				String[] arrayi1 = c.getCnctTrmTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-				for(int i1 = 0; i1 < arrayi1.length; i1++) {
-					if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
-					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
-			}
-
-		}
-		/******************** Cnct_Trm_Typ_Txt ********************************************************************************/
-		if(c.getCnctTrmTypTxt() != null ) {
-
-			String[] arrayi0 = c.getCnctTrmTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Ttl ********************************************************************************/
-		if(c.getCnctTtl() != null ) {
-
-			if(c.getCnctTtl().replace("[","").replace("]","").equals("NULL") | c.getCnctTtl()==null) {} else {
-			contract.setTitle(c.getCnctTtl().replace("[","").replace("]","").replace("\"",""));
-			}
-		}
-		/******************** Cnct_TopicCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_TopicCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_TopicCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_TopicCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_TopicCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_TopicCdbleCncpt_Txt ********************************************************************************/
-		if(c.getCnctTopicCdbleCncptTxt() != null ) {
-
-			if(c.getCnctTopicCdbleCncptTxt().replace("[","").replace("]","").equals("NULL") | c.getCnctTopicCdbleCncptTxt()==null) {} else {
-			contract.getTopicCodeableConcept().setText(c.getCnctTopicCdbleCncptTxt().replace("[","").replace("]","").replace("\"",""));
-			}
-		}
-		/******************** Cnct_TopicRfrnc ********************************************************************************/
-		if(c.getCnctTopicRfrnc() != null ) {
-
-			if(c.getCnctTopicRfrnc().replace("[","").replace("]","").equals("NULL") | c.getCnctTopicRfrnc()==null) {} else {
-			contract.setTopic(new org.hl7.fhir.r4.model.Reference(c.getCnctTopicRfrnc().replace("[","").replace("]","").replace("\"","")));
-			}
-		}
-		/******************** Cnct_Typ_Cdg_Cd ********************************************************************************/
-		if(c.getCnctTypCdgCd() != null ) {
-
-			String[] arrayi0 = c.getCnctTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Typ_Cdg_Dsply ********************************************************************************/
-		if(c.getCnctTypCdgDsply() != null ) {
-
-			String[] arrayi0 = c.getCnctTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Typ_Cdg_Sys ********************************************************************************/
-		if(c.getCnctTypCdgSys() != null ) {
-
-			String[] arrayi0 = c.getCnctTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(c.getCnctTypCdgUsrSltd() != null ) {
-
-			String[] arrayi0 = c.getCnctTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
-
-		}
-		/******************** Cnct_Typ_Cdg_Vrsn ********************************************************************************/
-		if(c.getCnctTypCdgVrsn() != null ) {
-
-			String[] arrayi0 = c.getCnctTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
-			for(int i0 = 0; i0 < arrayi0.length; i0++) {
-				if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
-
-		}
-		/******************** Cnct_Typ_Txt ********************************************************************************/
-		if(c.getCnctTypTxt() != null ) {
-
-			if(c.getCnctTypTxt().replace("[","").replace("]","").equals("NULL") | c.getCnctTypTxt()==null) {} else {
-			contract.getType().setText(c.getCnctTypTxt().replace("[","").replace("]","").replace("\"",""));
-			}
-		}
-		/******************** Cnct_Url ********************************************************************************/
-		if(c.getCnctUrl() != null ) {
-
-			if(c.getCnctUrl().replace("[","").replace("]","").equals("NULL") | c.getCnctUrl()==null) {} else {
-			contract.setUrl(c.getCnctUrl().replace("[","").replace("]","").replace("\"",""));
-			}
-		}
-		/******************** Cnct_Vrsn ********************************************************************************/
-		if(c.getCnctVrsn() != null ) {
-
-			if(c.getCnctVrsn().replace("[","").replace("]","").equals("NULL") | c.getCnctVrsn()==null) {} else {
-			contract.setVersion(c.getCnctVrsn().replace("[","").replace("]","").replace("\"",""));
-			}
-		}
-		return contract;
+		return Contracts_Extended3(c, contract);
 	}
+			public org.hl7.fhir.r4.model.Contract Contracts_Extended3(Contract c, org.hl7.fhir.r4.model.Contract contract) throws ParseException
+			{			{
+				/******************** Cnct_Trm_Id_Assigner ********************************************************************************/
+				if(c.getCnctTrmIdAssigner() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Prd_End ********************************************************************************/
+				if(c.getCnctTrmIdPrdEnd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Prd_Strt ********************************************************************************/
+				if(c.getCnctTrmIdPrdStrt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Sys ********************************************************************************/
+				if(c.getCnctTrmIdSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmIdTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmIdTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmIdTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmIdTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmIdTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getIdentifier().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getIdentifier().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Typ_Txt ********************************************************************************/
+				if(c.getCnctTrmIdTypTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Use ********************************************************************************/
+				if(c.getCnctTrmIdUse() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Id_Vl ********************************************************************************/
+				if(c.getCnctTrmIdVl() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getIdentifier().setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Issued ********************************************************************************/
+				if(c.getCnctTrmIssued() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmIssued().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setIssued(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_CntntTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntCntntTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntCntntTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntCntntTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setContentType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Creation ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntCreation() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntCreation().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntCreation().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setCreation(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Data ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntData() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntData().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntData().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setData(arrayi1[i1].replace("[","").replace("]","").replace("\"","").getBytes()); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Hash ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntHash() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntHash().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntHash().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setHash(arrayi1[i1].replace("[","").replace("]","").replace("\"","").getBytes()); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Lnguage ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntLnguage() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntLnguage().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntLnguage().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setLanguage(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Sz ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntSz() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntSz().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntSz().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setSize(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Ttl ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntTtl() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntTtl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntTtl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setTitle(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlAttchmnt_Url ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlAttchmntUrl() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlAttchmntUrl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlAttchmntUrl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueAttachment().setUrl(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlBooleanTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlBooleanTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlBooleanTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlBooleanTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.BooleanType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlCdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlCdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlCdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlCdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlCdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueCoding().setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlDtTimeTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlDtTimeTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DateTimeType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlDtTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlDtTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlDtTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlDtTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DateType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlDecimalTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlDecimalTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlDecimalTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlDecimalTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.DecimalType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlIntegerTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlIntegerTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlIntegerTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlIntegerTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.IntegerType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlQnty_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlQntyCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlQnty_Cmprtr ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlQntyCmprtr() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlQnty_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlQntySys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlQnty_Unt ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlQntyUnt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlQnty_Vl ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlQntyVl() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).getValueQuantity().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlRfrnc ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlRfrnc() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.Reference(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlStrgTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlStrgTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.StringType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlTimeTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlTimeTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.TimeType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Ans_VlUriTyp ********************************************************************************/
+				if(c.getCnctTrmOffrAnsVlUriTyp() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrAnsVlUriTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrAnsVlUriTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getAnswer().size() < i1+1) { contract.getTerm().get(i0).getOffer().addAnswer(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getAnswer().get(i1).setValue(new org.hl7.fhir.r4.model.UriType(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecision().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getDecision().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Decision_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().getDecision().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							String[] arrayi2 = c.getCnctTrmOffrDecisionModeCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_DecisionMode_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrDecisionModeTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrDecisionModeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrDecisionModeTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getDecisionMode().size() < i1+1) { contract.getTerm().get(i0).getOffer().addDecisionMode(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getDecisionMode().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Assigner ********************************************************************************/
+				if(c.getCnctTrmOffrIdAssigner() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Prd_End ********************************************************************************/
+				if(c.getCnctTrmOffrIdPrdEnd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getPeriod().setEnd(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Prd_Strt ********************************************************************************/
+				if(c.getCnctTrmOffrIdPrdStrt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getPeriod().setStart(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrIdSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							String[] arrayi2 = c.getCnctTrmOffrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							String[] arrayi2 = c.getCnctTrmOffrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							String[] arrayi2 = c.getCnctTrmOffrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							String[] arrayi2 = c.getCnctTrmOffrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							String[] arrayi2 = c.getCnctTrmOffrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Typ_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrIdTypTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).getType().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Use ********************************************************************************/
+				if(c.getCnctTrmOffrIdUse() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Id_Vl ********************************************************************************/
+				if(c.getCnctTrmOffrIdVl() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getIdentifier().size() < i1+1) { contract.getTerm().get(i0).getOffer().addIdentifier(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getIdentifier().get(i1).setValue(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_LinkId ********************************************************************************/
+				if(c.getCnctTrmOffrLinkId() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrLinkId().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+						if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().addLinkId(currListStrSplit.replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Rfrnc ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRfrnc() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+							if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).addReference(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							String[] arrayi2 = c.getCnctTrmOffrPartyRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().size() < i2+1) { contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().addCoding(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Party_Role_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrPartyRoleTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrPartyRoleTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrPartyRoleTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getParty().size() < i1+1) { contract.getTerm().get(i0).getOffer().addParty(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getParty().get(i1).getRole().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_SecurityLblNmbr ********************************************************************************/
+				if(c.getCnctTrmOffrSecurityLblNmbr() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+						if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getOffer().addSecurityLabelNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Topic ********************************************************************************/
+				if(c.getCnctTrmOffrTopic() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTopic().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().setTopic(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmOffrTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmOffrTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmOffrTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmOffrTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmOffrTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmOffrTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getOffer().getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getOffer().getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getOffer().getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Offr_Typ_Txt ********************************************************************************/
+				if(c.getCnctTrmOffrTypTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmOffrTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getOffer().getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Ctgry_Cd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblCtgryCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblCtgryCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Ctgry_Dsply ********************************************************************************/
+				if(c.getCnctTrmSecurityLblCtgryDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblCtgryDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Ctgry_Sys ********************************************************************************/
+				if(c.getCnctTrmSecurityLblCtgrySys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblCtgrySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Ctgry_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblCtgryUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblCtgryUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Ctgry_Vrsn ********************************************************************************/
+				if(c.getCnctTrmSecurityLblCtgryVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblCtgryVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addCategory(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getCategory().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Clsfctn_Cd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblClsfctnCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Clsfctn_Dsply ********************************************************************************/
+				if(c.getCnctTrmSecurityLblClsfctnDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Clsfctn_Sys ********************************************************************************/
+				if(c.getCnctTrmSecurityLblClsfctnSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Clsfctn_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblClsfctnUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Clsfctn_Vrsn ********************************************************************************/
+				if(c.getCnctTrmSecurityLblClsfctnVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblClsfctnVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblClsfctnVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getClassification().setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Control_Cd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblControlCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblControlCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Control_Dsply ********************************************************************************/
+				if(c.getCnctTrmSecurityLblControlDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblControlDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Control_Sys ********************************************************************************/
+				if(c.getCnctTrmSecurityLblControlSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblControlSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Control_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmSecurityLblControlUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblControlUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Control_Vrsn ********************************************************************************/
+				if(c.getCnctTrmSecurityLblControlVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							String[] arrayi2 = c.getCnctTrmSecurityLblControlVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i2 = 0; i2 < arrayi2.length; i2++) {
+								if(contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().size() < i2+1) { contract.getTerm().get(i0).getSecurityLabel().get(i1).addControl(); }
+								if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).getControl().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SecurityLbl_Nmbr ********************************************************************************/
+				if(c.getCnctTrmSecurityLblNmbr() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSecurityLblNmbr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSecurityLabel().size() < i1+1) { contract.getTerm().get(i0).addSecurityLabel(); }
+							for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+							if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {contract.getTerm().get(i0).getSecurityLabel().get(i1).addNumber(Integer.parseInt(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmSubTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSubTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmSubTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSubTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmSubTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSubTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmSubTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSubTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmSubTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmSubTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getSubType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getSubType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getSubType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_SubTyp_Txt ********************************************************************************/
+				if(c.getCnctTrmSubTypTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmSubTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getSubType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_Txt ********************************************************************************/
+				if(c.getCnctTrmTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().size() < i1+1) { contract.getTerm().get(i0).getTopicCodeableConcept().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_TopicCdbleCncpt_Txt ********************************************************************************/
+				if(c.getCnctTrmTopicCdbleCncptTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getTopicCodeableConcept().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Trm_TopicRfrnc ********************************************************************************/
+				if(c.getCnctTrmTopicRfrnc() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTopicRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).setTopic(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTrmTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTrmTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTrmTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTrmTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTrmTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						String[] arrayi1 = c.getCnctTrmTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i1 = 0; i1 < arrayi1.length; i1++) {
+							if(contract.getTerm().get(i0).getType().getCoding().size() < i1+1) { contract.getTerm().get(i0).getType().addCoding(); }
+							if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {contract.getTerm().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+
+				}
+				/******************** Cnct_Trm_Typ_Txt ********************************************************************************/
+				if(c.getCnctTrmTypTxt() != null ) {
+
+					String[] arrayi0 = c.getCnctTrmTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTerm().size() < i0+1) { contract.addTerm(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTerm().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Ttl ********************************************************************************/
+				if(c.getCnctTtl() != null ) {
+
+					if(c.getCnctTtl().replace("[","").replace("]","").equals("NULL") | c.getCnctTtl()==null) {} else {
+					contract.setTitle(c.getCnctTtl().replace("[","").replace("]","").replace("\"",""));
+					}
+				}
+				/******************** Cnct_TopicCdbleCncpt_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTopicCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_TopicCdbleCncpt_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTopicCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_TopicCdbleCncpt_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTopicCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_TopicCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTopicCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_TopicCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTopicCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getTopicCodeableConcept().getCoding().size() < i0+1) { contract.getTopicCodeableConcept().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getTopicCodeableConcept().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_TopicCdbleCncpt_Txt ********************************************************************************/
+				if(c.getCnctTopicCdbleCncptTxt() != null ) {
+
+					if(c.getCnctTopicCdbleCncptTxt().replace("[","").replace("]","").equals("NULL") | c.getCnctTopicCdbleCncptTxt()==null) {} else {
+					contract.getTopicCodeableConcept().setText(c.getCnctTopicCdbleCncptTxt().replace("[","").replace("]","").replace("\"",""));
+					}
+				}
+				/******************** Cnct_TopicRfrnc ********************************************************************************/
+				if(c.getCnctTopicRfrnc() != null ) {
+
+					if(c.getCnctTopicRfrnc().replace("[","").replace("]","").equals("NULL") | c.getCnctTopicRfrnc()==null) {} else {
+					contract.setTopic(new org.hl7.fhir.r4.model.Reference(c.getCnctTopicRfrnc().replace("[","").replace("]","").replace("\"","")));
+					}
+				}
+				/******************** Cnct_Typ_Cdg_Cd ********************************************************************************/
+				if(c.getCnctTypCdgCd() != null ) {
+
+					String[] arrayi0 = c.getCnctTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Typ_Cdg_Dsply ********************************************************************************/
+				if(c.getCnctTypCdgDsply() != null ) {
+
+					String[] arrayi0 = c.getCnctTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Typ_Cdg_Sys ********************************************************************************/
+				if(c.getCnctTypCdgSys() != null ) {
+
+					String[] arrayi0 = c.getCnctTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Typ_Cdg_UsrSltd ********************************************************************************/
+				if(c.getCnctTypCdgUsrSltd() != null ) {
+
+					String[] arrayi0 = c.getCnctTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+
+				}
+				/******************** Cnct_Typ_Cdg_Vrsn ********************************************************************************/
+				if(c.getCnctTypCdgVrsn() != null ) {
+
+					String[] arrayi0 = c.getCnctTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i0 = 0; i0 < arrayi0.length; i0++) {
+						if(contract.getType().getCoding().size() < i0+1) { contract.getType().addCoding(); }
+						if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {contract.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+
+				}
+				/******************** Cnct_Typ_Txt ********************************************************************************/
+				if(c.getCnctTypTxt() != null ) {
+
+					if(c.getCnctTypTxt().replace("[","").replace("]","").equals("NULL") | c.getCnctTypTxt()==null) {} else {
+					contract.getType().setText(c.getCnctTypTxt().replace("[","").replace("]","").replace("\"",""));
+					}
+				}
+				/******************** Cnct_Url ********************************************************************************/
+				if(c.getCnctUrl() != null ) {
+
+					if(c.getCnctUrl().replace("[","").replace("]","").equals("NULL") | c.getCnctUrl()==null) {} else {
+					contract.setUrl(c.getCnctUrl().replace("[","").replace("]","").replace("\"",""));
+					}
+				}
+				/******************** Cnct_Vrsn ********************************************************************************/
+				if(c.getCnctVrsn() != null ) {
+
+					if(c.getCnctVrsn().replace("[","").replace("]","").equals("NULL") | c.getCnctVrsn()==null) {} else {
+					contract.setVersion(c.getCnctVrsn().replace("[","").replace("]","").replace("\"",""));
+					}
+				}
+				return contract;
+				
+			}
+			}
 }
