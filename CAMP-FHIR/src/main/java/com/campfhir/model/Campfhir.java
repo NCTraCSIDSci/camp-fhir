@@ -1,6 +1,5 @@
 package main.java.com.campfhir.model;
 
-
 public class Campfhir 
 {
 	
@@ -11,12 +10,10 @@ public class Campfhir
 	private String iDburl;
 	private String iDbusername;
 	private String iDbpassword;
-	
 
 	////Flat file
 	private String iInputfolder;
 	private String iFileType;
-	private String iPartition;
 	
 	
 	//Output values
@@ -31,8 +28,6 @@ public class Campfhir
 	private String oOutputfolder;
 	private String oFileType;
 	private String oPartition;
-
-	
 	
 	private String resource;
 
@@ -50,12 +45,9 @@ public class Campfhir
 		return iSqlDriverClass;
 	}
 
-
 	public void setiSqlDriverClass(String iSqlDriverClass) {
 		this.iSqlDriverClass = iSqlDriverClass;
 	}
-
-
 
 	public String getiDburl() {
 		return iDburl;
@@ -96,15 +88,6 @@ public class Campfhir
 		this.oPartition = oPartition;
 	}
 	
-	public String getiPartition() {
-		return iPartition;
-	}
-
-
-	public void setiPartition(String iPartition) {
-		this.iPartition = iPartition;
-	}
-
 	public String getiInputfolder() {
 		return iInputfolder;
 	}
@@ -170,42 +153,32 @@ public class Campfhir
 		return oOutputfolder;
 	}
 
-
 	public void setoOutputfolder(String oOutputfolder) {
 		this.oOutputfolder = oOutputfolder;
 	}
-
 
 	public String getResource() {
 		return resource;
 	}
 
-
 	public void setResource(String resource) {
 		this.resource = resource;
 	}
-
 
 	public String getiFileType() {
 		return iFileType;
 	}
 
-
 	public void setiFileType(String iFileType) {
 		this.iFileType = iFileType;
 	}
-
 
 	public String getoFileType() {
 		return oFileType;
 	}
 
-
 	public void setoFileType(String oFileType) {
 		this.oFileType = oFileType;
 	}
-
-
-
 
 }
