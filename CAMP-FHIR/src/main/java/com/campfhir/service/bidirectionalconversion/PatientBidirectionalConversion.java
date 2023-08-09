@@ -14,7 +14,7 @@ public class PatientBidirectionalConversion
 		 main.java.com.campfhir.model.Patient p = new  main.java.com.campfhir.model.Patient();
 
 		/******************** id ********************************************************************************/
-		p.setId(patient.getIdElement().getIdPart().replace("urn:uuid:", ""));
+		p.setId(patient.getIdElement().getIdPart());
 
 		/******************** patientname ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.HumanName> patientnamelist = patient.getName();
@@ -444,7 +444,9 @@ public class PatientBidirectionalConversion
 		if(patientidentifier.hasAssigner()) {
 
 			if(patientidentifier.getAssigner().getReference() != null) {
-			p.addPntIdAssigner(patientidentifier.getAssigner().getReference());
+				p.addPntIdAssigner(patientidentifier.getAssigner().getReference());
+			} else {
+				p.addPntIdAssigner("NULL");
 			}
 		} else {
 			p.addPntIdAssigner("NULL");

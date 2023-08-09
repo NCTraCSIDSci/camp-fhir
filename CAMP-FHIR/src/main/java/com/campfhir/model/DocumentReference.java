@@ -83,6 +83,7 @@ public class DocumentReference  extends Resource {
      private String docRfrncMasterIdUse;
      private String docRfrncMasterIdVl;
      private String docRfrncRelatesToCd;
+     private String docRfrncRelatesToTrgt;
      private String docRfrncSecurityLblCdgCd;
      private String docRfrncSecurityLblCdgDsply;
      private String docRfrncSecurityLblCdgSys;
@@ -1879,7 +1880,33 @@ public class DocumentReference  extends Resource {
     
     
     
-    public String getDocRfrncSecurityLblCdgCd() {
+    public String getDocRfrncRelatesToTrgt() {
+		return docRfrncRelatesToTrgt;
+	}
+
+
+	public void setDocRfrncRelatesToTrgt(String docRfrncRelatesToTrgt) {
+		this.docRfrncRelatesToTrgt = docRfrncRelatesToTrgt;
+	}
+	
+
+    
+    public void addDocRfrncRelatesToTrgt(String docRfrncRelatesToTrgt) {
+    	if( docRfrncRelatesToTrgt != null ) {
+	    	if( this.docRfrncRelatesToTrgt == null ) {
+	        	this.docRfrncRelatesToTrgt = docRfrncRelatesToTrgt;
+	        } else if(this.docRfrncRelatesToTrgt.substring(this.docRfrncRelatesToTrgt.length() - 1).equals("]") & docRfrncRelatesToTrgt.equals("[")) {
+	        	this.docRfrncRelatesToTrgt = this.docRfrncRelatesToTrgt+ "," + docRfrncRelatesToTrgt;
+	        } else if(docRfrncRelatesToTrgt.equals("[") | docRfrncRelatesToTrgt.equals("]") | this.docRfrncRelatesToTrgt.substring(this.docRfrncRelatesToTrgt.length() - 1).equals("[")) {
+	        	this.docRfrncRelatesToTrgt = this.docRfrncRelatesToTrgt+docRfrncRelatesToTrgt;
+	        } else  {
+	            this.docRfrncRelatesToTrgt = this.docRfrncRelatesToTrgt+ "," +docRfrncRelatesToTrgt;
+	        }
+        }
+    }
+
+
+	public String getDocRfrncSecurityLblCdgCd() {
         return this.docRfrncSecurityLblCdgCd;
     }
     

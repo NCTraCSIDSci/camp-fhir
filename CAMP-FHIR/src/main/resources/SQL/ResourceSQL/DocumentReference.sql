@@ -74,6 +74,7 @@ DocRfrnc_MasterId_Typ_Txt TEXT COMMENT 'DocumentReference.MasterIdentifier.Type.
 DocRfrnc_MasterId_Use TEXT COMMENT 'DocumentReference.MasterIdentifier.Use',
 DocRfrnc_MasterId_Vl TEXT COMMENT 'DocumentReference.MasterIdentifier.Value',
 DocRfrnc_RelatesTo_Cd TEXT COMMENT 'DocumentReference.RelatesTo.Code',
+DocRfrnc_RelatesTo_Trgt TEXT COMMENT 'DocumentReference.RelatesTo.Target',
 DocRfrnc_SecurityLbl_Cdg_Cd TEXT COMMENT 'DocumentReference.SecurityLabel.Coding.Code',
 DocRfrnc_SecurityLbl_Cdg_Dsply TEXT COMMENT 'DocumentReference.SecurityLabel.Coding.Display',
 DocRfrnc_SecurityLbl_Cdg_Sys TEXT COMMENT 'DocumentReference.SecurityLabel.Coding.System',

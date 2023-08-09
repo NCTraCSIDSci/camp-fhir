@@ -1,12 +1,41 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
+
 import main.java.com.campfhir.model.Observation;
 public class ObservationConversion 
 {
+
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	public static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
+	}
+	
 	public org.hl7.fhir.r4.model.Observation Observations(Observation o) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Observation observation = new org.hl7.fhir.r4.model.Observation();
-
+		SimpleDateFormat dateformatter = new SimpleDateFormat("yyyy-MM-dd");
+		
+//		 Date date = Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		
 		/******************** id ********************************************************************************/
 		observation.setId(o.getId());
 
@@ -1009,7 +1038,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlBooleanTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueBooleanType() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).setValue(new org.hl7.fhir.r4.model.BooleanType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1021,8 +1052,10 @@ public class ObservationConversion
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
 				String[] arrayi1 = o.getObsrvtnCmpntVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 					if(observation.getComponent().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { observation.getComponent().get(i0).getValueCodeableConcept().addCoding(); }
 					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
 				}
 			}
 
@@ -1035,9 +1068,11 @@ public class ObservationConversion
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
 				String[] arrayi1 = o.getObsrvtnCmpntVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 					if(observation.getComponent().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { observation.getComponent().get(i0).getValueCodeableConcept().addCoding(); }
 					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-				}
+					}
+					}
 			}
 
 		}
@@ -1049,8 +1084,10 @@ public class ObservationConversion
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
 				String[] arrayi1 = o.getObsrvtnCmpntVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 					if(observation.getComponent().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { observation.getComponent().get(i0).getValueCodeableConcept().addCoding(); }
 					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
 				}
 			}
 
@@ -1063,8 +1100,10 @@ public class ObservationConversion
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
 				String[] arrayi1 = o.getObsrvtnCmpntVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 					if(observation.getComponent().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { observation.getComponent().get(i0).getValueCodeableConcept().addCoding(); }
 					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
 				}
 			}
 
@@ -1077,8 +1116,10 @@ public class ObservationConversion
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
 				String[] arrayi1 = o.getObsrvtnCmpntVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 					if(observation.getComponent().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { observation.getComponent().get(i0).getValueCodeableConcept().addCoding(); }
 					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
 				}
 			}
 
@@ -1089,8 +1130,10 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueCodeableConcept() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueCodeableConcept().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
-			}
+				}
+				}
 
 		}
 		/******************** Obsrvtn_Cmpnt_VlDtTimeTyp ********************************************************************************/
@@ -1099,7 +1142,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueDateTimeType() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).setValue(new org.hl7.fhir.r4.model.DateTimeType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1109,7 +1154,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlIntegerTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueIntegerType() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).setValue(new org.hl7.fhir.r4.model.IntegerType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1119,7 +1166,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValuePeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(observation.getComponent().get(i0).hasValuePeriod() | !observation.getComponent().get(i0).hasValue())  {
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValuePeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1129,7 +1178,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValuePeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(observation.getComponent().get(i0).hasValuePeriod() | !observation.getComponent().get(i0).hasValue())  {
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValuePeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1139,7 +1190,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueQuantity() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1149,8 +1202,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueQuantity() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
+			}}
 
 		}
 		/******************** Obsrvtn_Cmpnt_VlQnty_Sys ********************************************************************************/
@@ -1159,7 +1213,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueQuantity() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1169,7 +1225,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueQuantity() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1179,7 +1237,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueQuantity() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1189,7 +1249,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getHigh().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1199,7 +1261,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1209,7 +1273,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getHigh().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1219,7 +1285,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getHigh().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1229,7 +1297,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getHigh().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1239,7 +1309,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getLow().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1249,7 +1321,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1259,7 +1333,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getLow().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1269,7 +1345,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getLow().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1279,7 +1357,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRange() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRange().getLow().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1289,7 +1369,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1299,7 +1381,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1309,7 +1393,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1319,7 +1405,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1329,7 +1417,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1339,7 +1429,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1349,7 +1441,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1359,7 +1453,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1369,7 +1465,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1379,7 +1477,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlRtioNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueRatio() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueRatio().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1389,7 +1489,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataData().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setData(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1399,7 +1501,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataDimensions().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setDimensions(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1409,7 +1513,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataFactor().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setFactor((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1419,7 +1525,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataLwerLmt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setLowerLimit((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1429,7 +1537,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataOriginCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().getOrigin().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1439,7 +1549,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataOriginCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().getOrigin().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1449,7 +1561,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataOriginSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().getOrigin().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1459,7 +1573,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataOriginUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().getOrigin().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1469,7 +1585,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataOriginVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().getOrigin().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1479,7 +1597,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataPrd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setPeriod((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1489,7 +1609,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlSampledDataUpperLmt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueSampledData() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).getValueSampledData().setUpperLimit((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
 			}
 
 		}
@@ -1499,7 +1621,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueStringType() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).setValue(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1509,7 +1633,9 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnCmpntVlTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getComponent().size() < i0+1) { observation.addComponent(); }
+				if(observation.getComponent().get(i0).hasValueTimeType() | !observation.getComponent().get(i0).hasValue())  {
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getComponent().get(i0).setValue(new org.hl7.fhir.r4.model.TimeType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1597,21 +1723,27 @@ public class ObservationConversion
 		if(o.getObsrvtnEfctiveInstantTyp() != null ) {
 
 			if(o.getObsrvtnEfctiveInstantTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveInstantTyp()==null) {} else {
-			observation.setEffective(new org.hl7.fhir.r4.model.InstantType(o.getObsrvtnEfctiveInstantTyp().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveInstantType())  {
+					observation.setEffective(new org.hl7.fhir.r4.model.InstantType(o.getObsrvtnEfctiveInstantTyp().replace("[","").replace("]","").replace("\"","")));
+				}
 			}
 		}
 		/******************** Obsrvtn_EfctivePrd_End ********************************************************************************/
 		if(o.getObsrvtnEfctivePrdEnd() != null ) {
 
 			if(o.getObsrvtnEfctivePrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdEnd()==null) {} else {
-			observation.getEffectivePeriod().setEnd(o.getObsrvtnEfctivePrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnEfctivePrdEnd().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectivePeriod())  {
+				observation.getEffectivePeriod().setEnd(o.getObsrvtnEfctivePrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdEnd()==null ? null : convertStringToDate(o.getObsrvtnEfctivePrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctivePrd_Strt ********************************************************************************/
 		if(o.getObsrvtnEfctivePrdStrt() != null ) {
 
 			if(o.getObsrvtnEfctivePrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdStrt()==null) {} else {
-			observation.getEffectivePeriod().setStart(o.getObsrvtnEfctivePrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnEfctivePrdStrt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectivePeriod())  {
+				observation.getEffectivePeriod().setStart(o.getObsrvtnEfctivePrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctivePrdStrt()==null ? null : convertStringToDate(o.getObsrvtnEfctivePrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_Cd ********************************************************************************/
@@ -1619,8 +1751,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnEfctiveTmgCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasEffectiveTiming())  {
 				if(observation.getEffectiveTiming().getCode().getCoding().size() < i0+1) { observation.getEffectiveTiming().getCode().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getEffectiveTiming().getCode().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1629,8 +1763,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnEfctiveTmgCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasEffectiveTiming())  {
 				if(observation.getEffectiveTiming().getCode().getCoding().size() < i0+1) { observation.getEffectiveTiming().getCode().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getEffectiveTiming().getCode().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1639,8 +1775,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnEfctiveTmgCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasEffectiveTiming())  {
 				if(observation.getEffectiveTiming().getCode().getCoding().size() < i0+1) { observation.getEffectiveTiming().getCode().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getEffectiveTiming().getCode().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -1649,8 +1787,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnEfctiveTmgCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasEffectiveTiming())  {
 				if(observation.getEffectiveTiming().getCode().getCoding().size() < i0+1) { observation.getEffectiveTiming().getCode().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getEffectiveTiming().getCode().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -1659,16 +1799,19 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnEfctiveTmgCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasEffectiveTiming())  {
 				if(observation.getEffectiveTiming().getCode().getCoding().size() < i0+1) { observation.getEffectiveTiming().getCode().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getEffectiveTiming().getCode().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
 		/******************** Obsrvtn_EfctiveTmg_Cd_Txt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgCdTxt() != null ) {
-
+			if(observation.hasEffectiveTiming())  {
 			if(o.getObsrvtnEfctiveTmgCdTxt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgCdTxt()==null) {} else {
 			observation.getEffectiveTiming().getCode().setText(o.getObsrvtnEfctiveTmgCdTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Evnt ********************************************************************************/
@@ -1676,204 +1819,261 @@ public class ObservationConversion
 
 				for( String currListStrSplit : o.getObsrvtnEfctiveTmgEvnt().replace("[","").replace("]","").replace("\"","").split(",")){
 			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
-			observation.getEffectiveTiming().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
-			}				}
+				if(observation.hasEffectiveTiming())  {
+			observation.getEffectiveTiming().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : convertStringToDate(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+				}}				}
 
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Cd ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsDurationCd() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsDurationCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsDurationCd()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsDuration().setCode(o.getObsrvtnEfctiveTmgRptBndsDurationCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsDuration().setCode(o.getObsrvtnEfctiveTmgRptBndsDurationCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Sys ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsDurationSys() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsDurationSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsDurationSys()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsDuration().setSystem(o.getObsrvtnEfctiveTmgRptBndsDurationSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsDuration().setSystem(o.getObsrvtnEfctiveTmgRptBndsDurationSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Unt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsDurationUnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsDurationUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsDurationUnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsDuration().setUnit(o.getObsrvtnEfctiveTmgRptBndsDurationUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsDuration().setUnit(o.getObsrvtnEfctiveTmgRptBndsDurationUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Vl ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsDurationVl() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsDurationVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsDurationVl()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsDurationVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsDurationVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsPrd_End ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsPrdEnd() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdEnd()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsPeriod().setEnd(o.getObsrvtnEfctiveTmgRptBndsPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnEfctiveTmgRptBndsPrdEnd().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsPeriod().setEnd(o.getObsrvtnEfctiveTmgRptBndsPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdEnd()==null ? null : convertStringToDate(o.getObsrvtnEfctiveTmgRptBndsPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsPrdStrt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdStrt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsPeriod().setStart(o.getObsrvtnEfctiveTmgRptBndsPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnEfctiveTmgRptBndsPrdStrt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsPeriod().setStart(o.getObsrvtnEfctiveTmgRptBndsPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsPrdStrt()==null ? null : convertStringToDate(o.getObsrvtnEfctiveTmgRptBndsPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Cd ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngHiCd() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngHiCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngHiCd()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Sys ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngHiSys() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngHiSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngHiSys()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setSystem(o.getObsrvtnEfctiveTmgRptBndsRngHiSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setSystem(o.getObsrvtnEfctiveTmgRptBndsRngHiSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Unt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngHiUnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setUnit(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setUnit(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Vl ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngHiVl() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngHiVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngHiVl()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsRngHiVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsRngHiVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Cd ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngLwCd() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngLwCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngLwCd()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Sys ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngLwSys() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngLwSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngLwSys()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setSystem(o.getObsrvtnEfctiveTmgRptBndsRngLwSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setSystem(o.getObsrvtnEfctiveTmgRptBndsRngLwSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Unt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngLwUnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setUnit(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setUnit(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Vl ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptBndsRngLwVl() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptBndsRngLwVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptBndsRngLwVl()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsRngLwVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptBndsRngLwVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_Cnt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptCnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptCnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptCnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setCount(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCnt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setCount(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCnt().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_CntMx ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptCntMx() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptCntMx().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptCntMx()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setCountMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCntMx().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setCountMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCntMx().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_Duration ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptDuration() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptDuration().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptDuration()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setDuration((Double.parseDouble((o.getObsrvtnEfctiveTmgRptDuration().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setDuration((Double.parseDouble((o.getObsrvtnEfctiveTmgRptDuration().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_DurationMx ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptDurationMx() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptDurationMx().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptDurationMx()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setDurationMax((Double.parseDouble((o.getObsrvtnEfctiveTmgRptDurationMx().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setDurationMax((Double.parseDouble((o.getObsrvtnEfctiveTmgRptDurationMx().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_DurationUnt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptDurationUnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptDurationUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptDurationUnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptDurationUnt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptDurationUnt().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_Frqncy ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptFrqncy() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptFrqncy().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptFrqncy()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setFrequency(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncy().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setFrequency(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncy().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_FrqncyMx ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptFrqncyMx() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptFrqncyMx().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptFrqncyMx()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setFrequencyMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncyMx().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setFrequencyMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncyMx().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_Off ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptOff() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptOff().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptOff()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setOffset(Integer.parseInt(o.getObsrvtnEfctiveTmgRptOff().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setOffset(Integer.parseInt(o.getObsrvtnEfctiveTmgRptOff().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_Prd ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptPrd() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptPrd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptPrd()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setPeriod((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptPrd().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setPeriod((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptPrd().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_PrdMx ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptPrdMx() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptPrdMx().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptPrdMx()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setPeriodMax((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptPrdMx().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setPeriodMax((new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptPrdMx().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_PrdUnt ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptPrdUnt() != null ) {
 
 			if(o.getObsrvtnEfctiveTmgRptPrdUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnEfctiveTmgRptPrdUnt()==null) {} else {
-			observation.getEffectiveTiming().getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptPrdUnt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(o.getObsrvtnEfctiveTmgRptPrdUnt().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_TimeOfDay ********************************************************************************/
@@ -1881,8 +2081,10 @@ public class ObservationConversion
 
 				for( String currListStrSplit : o.getObsrvtnEfctiveTmgRptTimeOfDay().replace("[","").replace("]","").replace("\"","").split(",")){
 			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
-			observation.getEffectiveTiming().getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
-			}				}
+				if(observation.hasEffectiveTiming())  {
+				observation.getEffectiveTiming().getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+				}
+				}				}
 
 		}
 		/******************** Obsrvtn_Enc ********************************************************************************/
@@ -1926,7 +2128,7 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getIdentifier().size() < i0+1) { observation.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -1936,7 +2138,7 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getIdentifier().size() < i0+1) { observation.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -2134,7 +2336,7 @@ public class ObservationConversion
 		if(o.getObsrvtnIssued() != null ) {
 
 			if(o.getObsrvtnIssued().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnIssued()==null) {} else {
-			observation.setIssued(o.getObsrvtnIssued().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnIssued()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnIssued().replace("[","").replace("]","").replace("\"","")));
+			observation.setIssued(o.getObsrvtnIssued().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnIssued()==null ? null : convertStringToDate(o.getObsrvtnIssued().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Obsrvtn_Mthd_Cdg_Cd ********************************************************************************/
@@ -2200,8 +2402,13 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnNtAthrRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getNote().size() < i0+1) { observation.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {
+					if(observation.getNote().get(i0).hasAuthorReference() | !observation.getNote().get(i0).hasAuthor()) {
+					observation.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
 			}
+				
 
 		}
 		/******************** Obsrvtn_Nt_AthrStrgTyp ********************************************************************************/
@@ -2210,8 +2417,12 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnNtAthrStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getNote().size() < i0+1) { observation.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
-			}
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {
+					if(observation.getNote().get(i0).hasAuthorStringType() | !observation.getNote().get(i0).hasAuthor()) {
+						observation.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+				
 
 		}
 		/******************** Obsrvtn_Nt_Txt ********************************************************************************/
@@ -2230,7 +2441,7 @@ public class ObservationConversion
 			String[] arrayi0 = o.getObsrvtnNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(observation.getNote().size() < i0+1) { observation.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -2671,7 +2882,9 @@ public class ObservationConversion
 		if(o.getObsrvtnVlBooleanTyp() != null ) {
 
 			if(o.getObsrvtnVlBooleanTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlBooleanTyp()==null) {} else {
-			observation.setValue(new org.hl7.fhir.r4.model.BooleanType(o.getObsrvtnVlBooleanTyp().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueBooleanType() | !observation.hasValue()) {
+				observation.setValue(new org.hl7.fhir.r4.model.BooleanType(o.getObsrvtnVlBooleanTyp().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
@@ -2679,8 +2892,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
 				if(observation.getValueCodeableConcept().getCoding().size() < i0+1) { observation.getValueCodeableConcept().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getValueCodeableConcept().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -2689,8 +2904,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
 				if(observation.getValueCodeableConcept().getCoding().size() < i0+1) { observation.getValueCodeableConcept().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getValueCodeableConcept().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -2699,8 +2916,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
 				if(observation.getValueCodeableConcept().getCoding().size() < i0+1) { observation.getValueCodeableConcept().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getValueCodeableConcept().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
 			}
 
 		}
@@ -2709,8 +2928,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
 				if(observation.getValueCodeableConcept().getCoding().size() < i0+1) { observation.getValueCodeableConcept().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getValueCodeableConcept().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 			}
 
 		}
@@ -2719,8 +2940,10 @@ public class ObservationConversion
 
 			String[] arrayi0 = o.getObsrvtnVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
 				if(observation.getValueCodeableConcept().getCoding().size() < i0+1) { observation.getValueCodeableConcept().addCoding(); }
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {observation.getValueCodeableConcept().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
 			}
 
 		}
@@ -2728,304 +2951,390 @@ public class ObservationConversion
 		if(o.getObsrvtnVlCdbleCncptTxt() != null ) {
 
 			if(o.getObsrvtnVlCdbleCncptTxt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlCdbleCncptTxt()==null) {} else {
-			observation.getValueCodeableConcept().setText(o.getObsrvtnVlCdbleCncptTxt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueCodeableConcept() | !observation.hasValue()) {
+				observation.getValueCodeableConcept().setText(o.getObsrvtnVlCdbleCncptTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlDtTimeTyp ********************************************************************************/
 		if(o.getObsrvtnVlDtTimeTyp() != null ) {
 
 			if(o.getObsrvtnVlDtTimeTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlDtTimeTyp()==null) {} else {
-			observation.setValue(new org.hl7.fhir.r4.model.DateTimeType(o.getObsrvtnVlDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueDateTimeType() | !observation.hasValue()) {
+				observation.setValue(new org.hl7.fhir.r4.model.DateTimeType(o.getObsrvtnVlDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlIntegerTyp ********************************************************************************/
 		if(o.getObsrvtnVlIntegerTyp() != null ) {
 
 			if(o.getObsrvtnVlIntegerTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlIntegerTyp()==null) {} else {
-			observation.setValue(new org.hl7.fhir.r4.model.IntegerType(o.getObsrvtnVlIntegerTyp().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueIntegerType() | !observation.hasValue()) {
+				observation.setValue(new org.hl7.fhir.r4.model.IntegerType(o.getObsrvtnVlIntegerTyp().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlPrd_End ********************************************************************************/
 		if(o.getObsrvtnVlPrdEnd() != null ) {
 
 			if(o.getObsrvtnVlPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdEnd()==null) {} else {
-			observation.getValuePeriod().setEnd(o.getObsrvtnVlPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnVlPrdEnd().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValuePeriod() | !observation.hasValue()) {
+				observation.getValuePeriod().setEnd(o.getObsrvtnVlPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdEnd()==null ? null : convertStringToDate(o.getObsrvtnVlPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlPrd_Strt ********************************************************************************/
 		if(o.getObsrvtnVlPrdStrt() != null ) {
 
 			if(o.getObsrvtnVlPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdStrt()==null) {} else {
-			observation.getValuePeriod().setStart(o.getObsrvtnVlPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getObsrvtnVlPrdStrt().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValuePeriod() | !observation.hasValue()) {
+					observation.getValuePeriod().setStart(o.getObsrvtnVlPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlPrdStrt()==null ? null : convertStringToDate(o.getObsrvtnVlPrdStrt().replace("[","").replace("]","").replace("\"","")));
+				}
 			}
 		}
 		/******************** Obsrvtn_VlQnty_Cd ********************************************************************************/
 		if(o.getObsrvtnVlQntyCd() != null ) {
 
 			if(o.getObsrvtnVlQntyCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlQntyCd()==null) {} else {
-			observation.getValueQuantity().setCode(o.getObsrvtnVlQntyCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueQuantity() | !observation.hasValue()) {
+				observation.getValueQuantity().setCode(o.getObsrvtnVlQntyCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlQnty_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlQntyCmprtr() != null ) {
 
 			if(o.getObsrvtnVlQntyCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlQntyCmprtr()==null) {} else {
-			observation.getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlQntyCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueQuantity() | !observation.hasValue()) {
+				observation.getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlQntyCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlQnty_Sys ********************************************************************************/
 		if(o.getObsrvtnVlQntySys() != null ) {
 
 			if(o.getObsrvtnVlQntySys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlQntySys()==null) {} else {
-			observation.getValueQuantity().setSystem(o.getObsrvtnVlQntySys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueQuantity() | !observation.hasValue()) {
+				observation.getValueQuantity().setSystem(o.getObsrvtnVlQntySys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlQnty_Unt ********************************************************************************/
 		if(o.getObsrvtnVlQntyUnt() != null ) {
 
 			if(o.getObsrvtnVlQntyUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlQntyUnt()==null) {} else {
-			observation.getValueQuantity().setUnit(o.getObsrvtnVlQntyUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueQuantity() | !observation.hasValue()) {
+				observation.getValueQuantity().setUnit(o.getObsrvtnVlQntyUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlQnty_Vl ********************************************************************************/
 		if(o.getObsrvtnVlQntyVl() != null ) {
 
 			if(o.getObsrvtnVlQntyVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlQntyVl()==null) {} else {
-			observation.getValueQuantity().setValue((new java.math.BigDecimal((o.getObsrvtnVlQntyVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueQuantity() | !observation.hasValue()) {
+				observation.getValueQuantity().setValue((new java.math.BigDecimal((o.getObsrvtnVlQntyVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Hi_Cd ********************************************************************************/
 		if(o.getObsrvtnVlRngHiCd() != null ) {
 
 			if(o.getObsrvtnVlRngHiCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngHiCd()==null) {} else {
-			observation.getValueRange().getHigh().setCode(o.getObsrvtnVlRngHiCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getHigh().setCode(o.getObsrvtnVlRngHiCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Hi_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlRngHiCmprtr() != null ) {
 
 			if(o.getObsrvtnVlRngHiCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngHiCmprtr()==null) {} else {
-			observation.getValueRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRngHiCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRngHiCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Hi_Sys ********************************************************************************/
 		if(o.getObsrvtnVlRngHiSys() != null ) {
 
 			if(o.getObsrvtnVlRngHiSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngHiSys()==null) {} else {
-			observation.getValueRange().getHigh().setSystem(o.getObsrvtnVlRngHiSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getHigh().setSystem(o.getObsrvtnVlRngHiSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Hi_Unt ********************************************************************************/
 		if(o.getObsrvtnVlRngHiUnt() != null ) {
 
 			if(o.getObsrvtnVlRngHiUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngHiUnt()==null) {} else {
-			observation.getValueRange().getHigh().setUnit(o.getObsrvtnVlRngHiUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getHigh().setUnit(o.getObsrvtnVlRngHiUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Hi_Vl ********************************************************************************/
 		if(o.getObsrvtnVlRngHiVl() != null ) {
 
 			if(o.getObsrvtnVlRngHiVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngHiVl()==null) {} else {
-			observation.getValueRange().getHigh().setValue((new java.math.BigDecimal((o.getObsrvtnVlRngHiVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getHigh().setValue((new java.math.BigDecimal((o.getObsrvtnVlRngHiVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Lw_Cd ********************************************************************************/
 		if(o.getObsrvtnVlRngLwCd() != null ) {
 
 			if(o.getObsrvtnVlRngLwCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngLwCd()==null) {} else {
-			observation.getValueRange().getLow().setCode(o.getObsrvtnVlRngLwCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getLow().setCode(o.getObsrvtnVlRngLwCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Lw_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlRngLwCmprtr() != null ) {
 
 			if(o.getObsrvtnVlRngLwCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngLwCmprtr()==null) {} else {
-			observation.getValueRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRngLwCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRngLwCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Lw_Sys ********************************************************************************/
 		if(o.getObsrvtnVlRngLwSys() != null ) {
 
 			if(o.getObsrvtnVlRngLwSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngLwSys()==null) {} else {
-			observation.getValueRange().getLow().setSystem(o.getObsrvtnVlRngLwSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+					observation.getValueRange().getLow().setSystem(o.getObsrvtnVlRngLwSys().replace("[","").replace("]","").replace("\"",""));
+				}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Lw_Unt ********************************************************************************/
 		if(o.getObsrvtnVlRngLwUnt() != null ) {
 
 			if(o.getObsrvtnVlRngLwUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngLwUnt()==null) {} else {
-			observation.getValueRange().getLow().setUnit(o.getObsrvtnVlRngLwUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getLow().setUnit(o.getObsrvtnVlRngLwUnt().replace("[","").replace("]","").replace("\"",""));
+				}
 			}
 		}
 		/******************** Obsrvtn_VlRng_Lw_Vl ********************************************************************************/
 		if(o.getObsrvtnVlRngLwVl() != null ) {
 
 			if(o.getObsrvtnVlRngLwVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRngLwVl()==null) {} else {
-			observation.getValueRange().getLow().setValue((new java.math.BigDecimal((o.getObsrvtnVlRngLwVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueRange() | !observation.hasValue()) {
+				observation.getValueRange().getLow().setValue((new java.math.BigDecimal((o.getObsrvtnVlRngLwVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Dnmntr_Cd ********************************************************************************/
 		if(o.getObsrvtnVlRtioDnmntrCd() != null ) {
 
 			if(o.getObsrvtnVlRtioDnmntrCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioDnmntrCd()==null) {} else {
-			observation.getValueRatio().getDenominator().setCode(o.getObsrvtnVlRtioDnmntrCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getDenominator().setCode(o.getObsrvtnVlRtioDnmntrCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Dnmntr_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlRtioDnmntrCmprtr() != null ) {
 
 			if(o.getObsrvtnVlRtioDnmntrCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioDnmntrCmprtr()==null) {} else {
-			observation.getValueRatio().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRtioDnmntrCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRtioDnmntrCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Dnmntr_Sys ********************************************************************************/
 		if(o.getObsrvtnVlRtioDnmntrSys() != null ) {
 
 			if(o.getObsrvtnVlRtioDnmntrSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioDnmntrSys()==null) {} else {
-			observation.getValueRatio().getDenominator().setSystem(o.getObsrvtnVlRtioDnmntrSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getDenominator().setSystem(o.getObsrvtnVlRtioDnmntrSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Dnmntr_Unt ********************************************************************************/
 		if(o.getObsrvtnVlRtioDnmntrUnt() != null ) {
 
 			if(o.getObsrvtnVlRtioDnmntrUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioDnmntrUnt()==null) {} else {
-			observation.getValueRatio().getDenominator().setUnit(o.getObsrvtnVlRtioDnmntrUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getDenominator().setUnit(o.getObsrvtnVlRtioDnmntrUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Dnmntr_Vl ********************************************************************************/
 		if(o.getObsrvtnVlRtioDnmntrVl() != null ) {
 
 			if(o.getObsrvtnVlRtioDnmntrVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioDnmntrVl()==null) {} else {
-			observation.getValueRatio().getDenominator().setValue((new java.math.BigDecimal((o.getObsrvtnVlRtioDnmntrVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getDenominator().setValue((new java.math.BigDecimal((o.getObsrvtnVlRtioDnmntrVl().replace("[","").replace("]","").replace("\"","")))));
+				}	
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Nmrtr_Cd ********************************************************************************/
 		if(o.getObsrvtnVlRtioNmrtrCd() != null ) {
 
 			if(o.getObsrvtnVlRtioNmrtrCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioNmrtrCd()==null) {} else {
-			observation.getValueRatio().getNumerator().setCode(o.getObsrvtnVlRtioNmrtrCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getNumerator().setCode(o.getObsrvtnVlRtioNmrtrCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Nmrtr_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlRtioNmrtrCmprtr() != null ) {
 
 			if(o.getObsrvtnVlRtioNmrtrCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioNmrtrCmprtr()==null) {} else {
-			observation.getValueRatio().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRtioNmrtrCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlRtioNmrtrCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Nmrtr_Sys ********************************************************************************/
 		if(o.getObsrvtnVlRtioNmrtrSys() != null ) {
 
 			if(o.getObsrvtnVlRtioNmrtrSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioNmrtrSys()==null) {} else {
-			observation.getValueRatio().getNumerator().setSystem(o.getObsrvtnVlRtioNmrtrSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getNumerator().setSystem(o.getObsrvtnVlRtioNmrtrSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Nmrtr_Unt ********************************************************************************/
 		if(o.getObsrvtnVlRtioNmrtrUnt() != null ) {
 
 			if(o.getObsrvtnVlRtioNmrtrUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioNmrtrUnt()==null) {} else {
-			observation.getValueRatio().getNumerator().setUnit(o.getObsrvtnVlRtioNmrtrUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getNumerator().setUnit(o.getObsrvtnVlRtioNmrtrUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlRtio_Nmrtr_Vl ********************************************************************************/
 		if(o.getObsrvtnVlRtioNmrtrVl() != null ) {
 
 			if(o.getObsrvtnVlRtioNmrtrVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlRtioNmrtrVl()==null) {} else {
-			observation.getValueRatio().getNumerator().setValue((new java.math.BigDecimal((o.getObsrvtnVlRtioNmrtrVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueRatio() | !observation.hasValue()) {
+				observation.getValueRatio().getNumerator().setValue((new java.math.BigDecimal((o.getObsrvtnVlRtioNmrtrVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Data ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataData() != null ) {
 
 			if(o.getObsrvtnVlSampledDataData().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataData()==null) {} else {
-			observation.getValueSampledData().setData(o.getObsrvtnVlSampledDataData().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setData(o.getObsrvtnVlSampledDataData().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Dimensions ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataDimensions() != null ) {
 
 			if(o.getObsrvtnVlSampledDataDimensions().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataDimensions()==null) {} else {
-			observation.getValueSampledData().setDimensions(Integer.parseInt(o.getObsrvtnVlSampledDataDimensions().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setDimensions(Integer.parseInt(o.getObsrvtnVlSampledDataDimensions().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Factor ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataFactor() != null ) {
 
 			if(o.getObsrvtnVlSampledDataFactor().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataFactor()==null) {} else {
-			observation.getValueSampledData().setFactor((Double.parseDouble((o.getObsrvtnVlSampledDataFactor().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setFactor((Double.parseDouble((o.getObsrvtnVlSampledDataFactor().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_LwerLmt ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataLwerLmt() != null ) {
 
 			if(o.getObsrvtnVlSampledDataLwerLmt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataLwerLmt()==null) {} else {
-			observation.getValueSampledData().setLowerLimit((Double.parseDouble((o.getObsrvtnVlSampledDataLwerLmt().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setLowerLimit((Double.parseDouble((o.getObsrvtnVlSampledDataLwerLmt().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Origin_Cd ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataOriginCd() != null ) {
 
 			if(o.getObsrvtnVlSampledDataOriginCd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataOriginCd()==null) {} else {
-			observation.getValueSampledData().getOrigin().setCode(o.getObsrvtnVlSampledDataOriginCd().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().getOrigin().setCode(o.getObsrvtnVlSampledDataOriginCd().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Origin_Cmprtr ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataOriginCmprtr() != null ) {
 
 			if(o.getObsrvtnVlSampledDataOriginCmprtr().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataOriginCmprtr()==null) {} else {
-			observation.getValueSampledData().getOrigin().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlSampledDataOriginCmprtr().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().getOrigin().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(o.getObsrvtnVlSampledDataOriginCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Origin_Sys ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataOriginSys() != null ) {
 
 			if(o.getObsrvtnVlSampledDataOriginSys().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataOriginSys()==null) {} else {
-			observation.getValueSampledData().getOrigin().setSystem(o.getObsrvtnVlSampledDataOriginSys().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().getOrigin().setSystem(o.getObsrvtnVlSampledDataOriginSys().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Origin_Unt ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataOriginUnt() != null ) {
 
 			if(o.getObsrvtnVlSampledDataOriginUnt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataOriginUnt()==null) {} else {
-			observation.getValueSampledData().getOrigin().setUnit(o.getObsrvtnVlSampledDataOriginUnt().replace("[","").replace("]","").replace("\"",""));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().getOrigin().setUnit(o.getObsrvtnVlSampledDataOriginUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Origin_Vl ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataOriginVl() != null ) {
 
 			if(o.getObsrvtnVlSampledDataOriginVl().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataOriginVl()==null) {} else {
-			observation.getValueSampledData().getOrigin().setValue((new java.math.BigDecimal((o.getObsrvtnVlSampledDataOriginVl().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().getOrigin().setValue((new java.math.BigDecimal((o.getObsrvtnVlSampledDataOriginVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_Prd ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataPrd() != null ) {
 
 			if(o.getObsrvtnVlSampledDataPrd().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataPrd()==null) {} else {
-			observation.getValueSampledData().setPeriod((new java.math.BigDecimal((o.getObsrvtnVlSampledDataPrd().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setPeriod((new java.math.BigDecimal((o.getObsrvtnVlSampledDataPrd().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlSampledData_UpperLmt ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataUpperLmt() != null ) {
 
 			if(o.getObsrvtnVlSampledDataUpperLmt().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlSampledDataUpperLmt()==null) {} else {
-			observation.getValueSampledData().setUpperLimit((new java.math.BigDecimal((o.getObsrvtnVlSampledDataUpperLmt().replace("[","").replace("]","").replace("\"","")))));
+				if(observation.hasValueSampledData() | !observation.hasValue()) {
+				observation.getValueSampledData().setUpperLimit((new java.math.BigDecimal((o.getObsrvtnVlSampledDataUpperLmt().replace("[","").replace("]","").replace("\"","")))));
+			}
 			}
 		}
 		/******************** Obsrvtn_VlStrgTyp ********************************************************************************/
 		if(o.getObsrvtnVlStrgTyp() != null ) {
 
 			if(o.getObsrvtnVlStrgTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlStrgTyp()==null) {} else {
-			observation.setValue(new org.hl7.fhir.r4.model.StringType(o.getObsrvtnVlStrgTyp().replace("[","").replace("]","").replace("\"","")));
-			}
+				if(observation.hasValueStringType() | !observation.hasValue()) {
+				observation.setValue(new org.hl7.fhir.r4.model.StringType(o.getObsrvtnVlStrgTyp().replace("[","").replace("]","").replace("\"","")));
+				}}
 		}
 		/******************** Obsrvtn_VlTimeTyp ********************************************************************************/
 		if(o.getObsrvtnVlTimeTyp() != null ) {
 
 			if(o.getObsrvtnVlTimeTyp().replace("[","").replace("]","").equals("NULL") | o.getObsrvtnVlTimeTyp()==null) {} else {
-			observation.setValue(new org.hl7.fhir.r4.model.TimeType(o.getObsrvtnVlTimeTyp().replace("[","").replace("]","").replace("\"","")));
+				if(observation.hasValueTimeType() | !observation.hasValue()) {
+				observation.setValue(new org.hl7.fhir.r4.model.TimeType(o.getObsrvtnVlTimeTyp().replace("[","").replace("]","").replace("\"","")));
+			}
 			}
 		}
 		return observation;
 	}
+	
 }
 

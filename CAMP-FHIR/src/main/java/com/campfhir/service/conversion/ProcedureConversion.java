@@ -1,8 +1,31 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
+
 import main.java.com.campfhir.model.Procedure;
 public class ProcedureConversion 
 {
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	public static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
+	}
 	public org.hl7.fhir.r4.model.Procedure Procedures(Procedure p) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Procedure procedure = new org.hl7.fhir.r4.model.Procedure();
@@ -502,7 +525,7 @@ public class ProcedureConversion
 			String[] arrayi0 = p.getPrcdrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(procedure.getIdentifier().size() < i0+1) { procedure.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -512,7 +535,7 @@ public class ProcedureConversion
 			String[] arrayi0 = p.getPrcdrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(procedure.getIdentifier().size() < i0+1) { procedure.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -687,7 +710,7 @@ public class ProcedureConversion
 			String[] arrayi0 = p.getPrcdrNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(procedure.getNote().size() < i0+1) { procedure.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {procedure.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -803,14 +826,14 @@ public class ProcedureConversion
 		if(p.getPrcdrPerformedPrdEnd() != null ) {
 
 			if(p.getPrcdrPerformedPrdEnd().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdEnd()==null) {} else {
-			procedure.getPerformedPeriod().setEnd(p.getPrcdrPerformedPrdEnd().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(p.getPrcdrPerformedPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			procedure.getPerformedPeriod().setEnd(p.getPrcdrPerformedPrdEnd().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdEnd()==null ? null : convertStringToDate(p.getPrcdrPerformedPrdEnd().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Prcdr_PerformedPrd_Strt ********************************************************************************/
 		if(p.getPrcdrPerformedPrdStrt() != null ) {
 
 			if(p.getPrcdrPerformedPrdStrt().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdStrt()==null) {} else {
-			procedure.getPerformedPeriod().setStart(p.getPrcdrPerformedPrdStrt().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(p.getPrcdrPerformedPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			procedure.getPerformedPeriod().setStart(p.getPrcdrPerformedPrdStrt().replace("[","").replace("]","").equals("NULL") | p.getPrcdrPerformedPrdStrt()==null ? null : convertStringToDate(p.getPrcdrPerformedPrdStrt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Prcdr_PerformedRng_Hi_Cd ********************************************************************************/

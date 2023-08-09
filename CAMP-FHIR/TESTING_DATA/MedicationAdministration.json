@@ -1,0 +1,200 @@
+{
+  "resourceType": "Bundle",
+  "id": "31ca8f14-952d-442b-b902-c346fbad07c6",
+  "meta": {
+    "lastUpdated": "2023-04-14T15:37:46.619+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR4/MedicationAdministration?_format=json&_id=26565%2C30073%2C30079&_pretty=true"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR4/MedicationAdministration/26565",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "26565",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-24T20:44:50.617+00:00",
+        "source": "#b8596fa04106e064"
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "322254008",
+          "display": "Paracetamol 240mg suppository (product)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1200",
+        "display": "Roshni Sachu"
+      },
+      "effectivePeriod": {
+        "start": "2015-01-15T22:03:00+01:00",
+        "end": "2015-01-16T02:03:00+01:00"
+      },
+      "performer": [ {
+        "actor": {
+          "reference": "Practitioner/1058",
+          "display": "Guru Practitioner"
+        }
+      } ],
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+          "code": "c",
+          "display": "Emergency"
+        } ]
+      } ],
+      "request": {
+        "reference": "MedicationRequest/26233"
+      },
+      "dosage": {
+        "text": "Insert one suppository rectally twice daily as needed for fever to a maximim of 3 per day",
+        "site": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "34402009",
+            "display": "Rectum structure"
+          } ]
+        },
+        "dose": {
+          "value": 240,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseR4/MedicationAdministration/30073",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "30073",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-26T10:22:52.554+00:00",
+        "source": "#175d668b329e18bb"
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "322254008",
+          "display": "Paracetamol 240mg suppository (product)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1194",
+        "display": "Roshni"
+      },
+      "effectivePeriod": {
+        "start": "2015-01-15T22:03:00+01:00",
+        "end": "2015-01-16T02:03:00+01:00"
+      },
+      "performer": [ {
+        "actor": {
+          "reference": "Practitioner/1058",
+          "display": "Guru Practitioner"
+        }
+      } ],
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+          "code": "c",
+          "display": "Emergency"
+        } ]
+      } ],
+      "request": {
+        "reference": "MedicationRequest/29870"
+      },
+      "dosage": {
+        "text": "Insert one suppository rectally twice daily as needed for fever to a maximim of 3 per day",
+        "site": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "34402009",
+            "display": "Rectum structure"
+          } ]
+        },
+        "dose": {
+          "value": 240,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseR4/MedicationAdministration/30079",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "30079",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-26T10:39:31.896+00:00",
+        "source": "#a1ada6ec898a9e61"
+      },
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "322254008",
+          "display": "Paracetamol 240mg suppository (product)"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/1201",
+        "display": "Priya Sahu"
+      },
+      "effectivePeriod": {
+        "start": "2015-01-15T22:03:00+01:00",
+        "end": "2015-01-16T02:03:00+01:00"
+      },
+      "performer": [ {
+        "actor": {
+          "reference": "Practitioner/1058",
+          "display": "Guru Practitioner"
+        }
+      } ],
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+          "code": "c",
+          "display": "Emergency"
+        } ]
+      } ],
+      "request": {
+        "reference": "MedicationRequest/30076"
+      },
+      "dosage": {
+        "text": "Insert one suppository rectally twice daily as needed for fever to a maximim of 3 per day",
+        "site": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "34402009",
+            "display": "Rectum structure"
+          } ]
+        },
+        "dose": {
+          "value": 240,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

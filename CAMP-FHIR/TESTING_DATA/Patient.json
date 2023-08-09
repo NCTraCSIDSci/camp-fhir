@@ -1,0 +1,89 @@
+{
+  "resourceType": "Bundle",
+  "id": "f2d285aa-b44d-4ddb-8181-b8f3445f319e",
+  "meta": {
+    "lastUpdated": "2023-04-14T12:42:14.121+00:00"
+  },
+  "type": "searchset",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR4/Patient?_id=9222929%2C9222930%2C9222933%2C9222935%2C9222937&_pretty=true"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR4/Patient/9222929",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "9222929",
+      "identifier": [ {
+        "use": "usual",
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "12345",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "name": [ {
+        "use": "official",
+        "family": "Chalmers",
+        "given": [ "Peter", "James" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      } ],
+      "telecom": [ {
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work"
+      } ],
+      "gender": "male",
+      "birthDate": "1974-12",
+      "deceasedBoolean": true,
+      "address": [ {
+        "use": "home",
+        "line": [ "534 Erewhon St" ],
+        "city": "PleasantVille",
+        "state": "Vic",
+        "postalCode": "3999"
+      } ],
+      "maritalStatus": {
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/nullFlavor",
+          "valueCode": "ASKU"
+        } ]
+      },
+      "multipleBirthInteger": 3,
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://example.org/fhir/CodeSystem/patient-contact-relationship",
+            "code": "partner"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marche",
+          "given": [ "Bénédicte", "Denise", "Marie" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ]
+      } ],
+      "generalPractitioner": [ {
+        "reference": "Reference/1936778"
+      } ],
+      "managingOrganization": {
+        "reference": "Organization/1936778"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  
+  } ]
+}

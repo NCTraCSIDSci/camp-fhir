@@ -1,8 +1,32 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
+
 import main.java.com.campfhir.model.Condition;
 public class ConditionConversion 
 {
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	public static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
+	}
+	
 	public org.hl7.fhir.r4.model.Condition Conditions(Condition c) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Condition condition = new org.hl7.fhir.r4.model.Condition();
@@ -56,14 +80,14 @@ public class ConditionConversion
 		if(c.getCndtnAbatementPrdEnd() != null ) {
 
 			if(c.getCndtnAbatementPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdEnd()==null) {} else {
-			condition.getAbatementPeriod().setEnd(c.getCndtnAbatementPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(c.getCndtnAbatementPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			condition.getAbatementPeriod().setEnd(c.getCndtnAbatementPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdEnd()==null ? null : convertStringToDate(c.getCndtnAbatementPrdEnd().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Cndtn_AbatementPrd_Strt ********************************************************************************/
 		if(c.getCndtnAbatementPrdStrt() != null ) {
 
 			if(c.getCndtnAbatementPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdStrt()==null) {} else {
-			condition.getAbatementPeriod().setStart(c.getCndtnAbatementPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(c.getCndtnAbatementPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			condition.getAbatementPeriod().setStart(c.getCndtnAbatementPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnAbatementPrdStrt()==null ? null : convertStringToDate(c.getCndtnAbatementPrdStrt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Cndtn_AbatementRng_Hi_Cd ********************************************************************************/
@@ -563,7 +587,7 @@ public class ConditionConversion
 			String[] arrayi0 = c.getCndtnIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(condition.getIdentifier().size() < i0+1) { condition.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -573,7 +597,7 @@ public class ConditionConversion
 			String[] arrayi0 = c.getCndtnIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(condition.getIdentifier().size() < i0+1) { condition.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -723,7 +747,7 @@ public class ConditionConversion
 			String[] arrayi0 = c.getCndtnNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(condition.getNote().size() < i0+1) { condition.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {condition.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -774,14 +798,14 @@ public class ConditionConversion
 		if(c.getCndtnOnPrdEnd() != null ) {
 
 			if(c.getCndtnOnPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdEnd()==null) {} else {
-			condition.getOnsetPeriod().setEnd(c.getCndtnOnPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(c.getCndtnOnPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			condition.getOnsetPeriod().setEnd(c.getCndtnOnPrdEnd().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdEnd()==null ? null : convertStringToDate(c.getCndtnOnPrdEnd().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Cndtn_OnPrd_Strt ********************************************************************************/
 		if(c.getCndtnOnPrdStrt() != null ) {
 
 			if(c.getCndtnOnPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdStrt()==null) {} else {
-			condition.getOnsetPeriod().setStart(c.getCndtnOnPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(c.getCndtnOnPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			condition.getOnsetPeriod().setStart(c.getCndtnOnPrdStrt().replace("[","").replace("]","").equals("NULL") | c.getCndtnOnPrdStrt()==null ? null : convertStringToDate(c.getCndtnOnPrdStrt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Cndtn_OnRng_Hi_Cd ********************************************************************************/
@@ -865,7 +889,7 @@ public class ConditionConversion
 		if(c.getCndtnRecordedDt() != null ) {
 
 			if(c.getCndtnRecordedDt().replace("[","").replace("]","").equals("NULL") | c.getCndtnRecordedDt()==null) {} else {
-			condition.setRecordedDate(c.getCndtnRecordedDt().replace("[","").replace("]","").equals("NULL") | c.getCndtnRecordedDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(c.getCndtnRecordedDt().replace("[","").replace("]","").replace("\"","")));
+			condition.setRecordedDate(c.getCndtnRecordedDt().replace("[","").replace("]","").equals("NULL") | c.getCndtnRecordedDt()==null ? null : convertStringToDate(c.getCndtnRecordedDt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** Cndtn_Recorder ********************************************************************************/

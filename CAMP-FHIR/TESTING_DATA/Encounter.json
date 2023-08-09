@@ -1,0 +1,143 @@
+{
+  "resourceType": "Bundle",
+  "id": "b8857641-988a-4e38-bcde-cb011d297e06",
+  "meta": {
+    "lastUpdated": "2023-04-14T15:32:58.242+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR4/Encounter?_format=json&_id=42037%2C42040%2C42041&_pretty=true"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR4/Encounter/42037",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "42037",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-10-09T22:44:04.005+00:00",
+        "source": "#bde55e27f5134889"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sep 3rd 2019 for headache</div>"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "GP"
+      } ],
+      "subject": {
+        "reference": "Patient/42024"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/30166",
+          "display": "Dr Annette Jones"
+        }
+      } ],
+      "period": {
+        "start": "2019-09-03T22:44:03.942Z"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/42027"
+        }
+      }, {
+        "condition": {
+          "reference": "Condition/42035"
+        }
+      }, {
+        "condition": {
+          "reference": "Condition/42026"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseR4/Encounter/42040",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "42040",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-10-09T22:44:04.005+00:00",
+        "source": "#bde55e27f5134889"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sep 22nd 2019 for headache</div>"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "OutPatient"
+      } ],
+      "subject": {
+        "reference": "Patient/42024"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/30164",
+          "display": "Dr John Doe"
+        }
+      } ],
+      "period": {
+        "start": "2019-09-22T22:44:03.943Z"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/42031"
+        }
+      }, {
+        "condition": {
+          "reference": "Condition/42030"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseR4/Encounter/42041",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "42041",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-10-09T22:44:04.005+00:00",
+        "source": "#bde55e27f5134889"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oct 8th 2019 for headache</div>"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "GP"
+      } ],
+      "subject": {
+        "reference": "Patient/42024"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/30166",
+          "display": "Dr Annette Jones"
+        }
+      } ],
+      "period": {
+        "start": "2019-10-08T22:44:03.943Z"
+      },
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/42029"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

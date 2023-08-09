@@ -1,8 +1,32 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
+
 import main.java.com.campfhir.model.MedicationRequest;
 public class MedicationRequestConversion 
 {
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+		    .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	public static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
+	}
+
 	public org.hl7.fhir.r4.model.MedicationRequest MedicationRequests(MedicationRequest m) throws ParseException
 	{
 		org.hl7.fhir.r4.model.MedicationRequest medicationrequest = new org.hl7.fhir.r4.model.MedicationRequest();
@@ -14,7 +38,7 @@ public class MedicationRequestConversion
 		if(m.getMdctnRqstAthredOn() != null ) {
 
 			if(m.getMdctnRqstAthredOn().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstAthredOn()==null) {} else {
-			medicationrequest.setAuthoredOn(m.getMdctnRqstAthredOn().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstAthredOn()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdctnRqstAthredOn().replace("[","").replace("]","").replace("\"","")));
+			medicationrequest.setAuthoredOn(m.getMdctnRqstAthredOn().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstAthredOn()==null ? null : convertStringToDate(m.getMdctnRqstAthredOn().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** MdctnRqst_BasedOn ********************************************************************************/
@@ -365,14 +389,14 @@ public class MedicationRequestConversion
 		if(m.getMdctnRqstDispnsRqstValidityPrdEnd() != null ) {
 
 			if(m.getMdctnRqstDispnsRqstValidityPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdEnd()==null) {} else {
-			medicationrequest.getDispenseRequest().getValidityPeriod().setEnd(m.getMdctnRqstDispnsRqstValidityPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdctnRqstDispnsRqstValidityPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			medicationrequest.getDispenseRequest().getValidityPeriod().setEnd(m.getMdctnRqstDispnsRqstValidityPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdEnd()==null ? null : convertStringToDate(m.getMdctnRqstDispnsRqstValidityPrdEnd().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** MdctnRqst_DispnsRqst_ValidityPrd_Strt ********************************************************************************/
 		if(m.getMdctnRqstDispnsRqstValidityPrdStrt() != null ) {
 
 			if(m.getMdctnRqstDispnsRqstValidityPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdStrt()==null) {} else {
-			medicationrequest.getDispenseRequest().getValidityPeriod().setStart(m.getMdctnRqstDispnsRqstValidityPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdctnRqstDispnsRqstValidityPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			medicationrequest.getDispenseRequest().getValidityPeriod().setStart(m.getMdctnRqstDispnsRqstValidityPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstDispnsRqstValidityPrdStrt()==null ? null : convertStringToDate(m.getMdctnRqstDispnsRqstValidityPrdStrt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** MdctnRqst_DoNotPerform ********************************************************************************/
@@ -1797,7 +1821,7 @@ public class MedicationRequestConversion
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getDosageInstruction().size() < i0+1) { medicationrequest.addDosageInstruction(); }
 				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
-				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : convertStringToDate(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
 				}
 			}
 
@@ -1858,7 +1882,7 @@ public class MedicationRequestConversion
 			String[] arrayi0 = m.getMdctnRqstDsgInstrctnTmgRptBndsPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getDosageInstruction().size() < i0+1) { medicationrequest.addDosageInstruction(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().getRepeat().getBoundsPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().getRepeat().getBoundsPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -1868,7 +1892,7 @@ public class MedicationRequestConversion
 			String[] arrayi0 = m.getMdctnRqstDsgInstrctnTmgRptBndsPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getDosageInstruction().size() < i0+1) { medicationrequest.addDosageInstruction(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().getRepeat().getBoundsPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getDosageInstruction().get(i0).getTiming().getRepeat().getBoundsPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -2121,14 +2145,14 @@ public class MedicationRequestConversion
 		if(m.getMdctnRqstGrpIdPrdEnd() != null ) {
 
 			if(m.getMdctnRqstGrpIdPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdEnd()==null) {} else {
-			medicationrequest.getGroupIdentifier().getPeriod().setEnd(m.getMdctnRqstGrpIdPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdctnRqstGrpIdPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			medicationrequest.getGroupIdentifier().getPeriod().setEnd(m.getMdctnRqstGrpIdPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdEnd()==null ? null : convertStringToDate(m.getMdctnRqstGrpIdPrdEnd().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** MdctnRqst_GrpId_Prd_Strt ********************************************************************************/
 		if(m.getMdctnRqstGrpIdPrdStrt() != null ) {
 
 			if(m.getMdctnRqstGrpIdPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdStrt()==null) {} else {
-			medicationrequest.getGroupIdentifier().getPeriod().setStart(m.getMdctnRqstGrpIdPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdctnRqstGrpIdPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			medicationrequest.getGroupIdentifier().getPeriod().setStart(m.getMdctnRqstGrpIdPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdctnRqstGrpIdPrdStrt()==null ? null : convertStringToDate(m.getMdctnRqstGrpIdPrdStrt().replace("[","").replace("]","").replace("\"","")));
 			}
 		}
 		/******************** MdctnRqst_GrpId_Sys ********************************************************************************/
@@ -2225,7 +2249,7 @@ public class MedicationRequestConversion
 			String[] arrayi0 = m.getMdctnRqstIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getIdentifier().size() < i0+1) { medicationrequest.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -2235,7 +2259,7 @@ public class MedicationRequestConversion
 			String[] arrayi0 = m.getMdctnRqstIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getIdentifier().size() < i0+1) { medicationrequest.addIdentifier(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}
@@ -2483,7 +2507,7 @@ public class MedicationRequestConversion
 			String[] arrayi0 = m.getMdctnRqstNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
 			for(int i0 = 0; i0 < arrayi0.length; i0++) {
 				if(medicationrequest.getNote().size() < i0+1) { medicationrequest.addNote(); }
-				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicationrequest.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : convertStringToDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
 			}
 
 		}

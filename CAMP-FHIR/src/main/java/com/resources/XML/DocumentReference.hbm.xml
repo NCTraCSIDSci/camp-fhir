@@ -298,6 +298,10 @@
             <meta attribute="fhir-path">DocumentReference.RelatesTo.Code</meta>
             <column length="65535" name="DocRfrnc_RelatesTo_Cd"/>
         </property>
+        <property name="docRfrncRelatesToTrgt" type="string">
+            <meta attribute="fhir-path">DocumentReference.RelatesTo.Target</meta>
+            <column length="65535" name="DocRfrnc_RelatesTo_Trgt"/>
+        </property>
         <property name="docRfrncSecurityLblCdgCd" type="string">
             <meta attribute="fhir-path">DocumentReference.SecurityLabel.Coding.Code</meta>
             <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_Cd"/>
