@@ -51,7 +51,7 @@ public class PatientConversionTest {
             .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
     		.appendOptional(DateTimeFormatter.ofPattern("EEE MMM dd HH:mm:ss zzz yyyy")).toFormatter();
 
-	public static Date convertStringToDate(String dateString) {
+	private static Date convertStringToDate(String dateString) {
 		 try {
 			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
 		 } catch(Exception e) {

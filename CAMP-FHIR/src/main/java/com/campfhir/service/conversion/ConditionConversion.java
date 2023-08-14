@@ -11,21 +11,7 @@ import java.util.Date;
 import main.java.com.campfhir.model.Condition;
 public class ConditionConversion 
 {
-	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
-            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-		    .toFormatter();
-	
 
-	public static Date convertStringToDate(String dateString) {
-		 try {
-			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
-		 } catch(Exception e) {
-			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
-		 }
-	}
 	
 	public org.hl7.fhir.r4.model.Condition Conditions(Condition c) throws ParseException
 	{
@@ -1194,5 +1180,21 @@ public class ConditionConversion
 
 		}
 		return condition;
+	}
+	
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	private static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
 	}
 }

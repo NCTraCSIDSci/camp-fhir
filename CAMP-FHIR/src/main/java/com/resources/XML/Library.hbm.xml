@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="main.java.com.campfhir.model">
-    <class catalog="campfhir" name="Library" optimistic-lock="none" table="Library">
+    <class name="Library" optimistic-lock="none" table="Library">
         <id name="id" type="string">
             <column length="64" name="id"/>
-            <generator class="identity"/>
+            <generator class="uuid.hex"/>
         </id>
         <property name="libraryApprovalDt" type="string">
             <meta attribute="fhir-path">Library.ApprovalDate</meta>

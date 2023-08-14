@@ -23,6 +23,7 @@
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
+				
 					<archive>
 						<manifest>
 							<mainClass>main.java.utils.CAMPFHIR</mainClass>
@@ -31,6 +32,7 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
+					
 				</configuration>
 				        <executions>
           <execution>
@@ -43,6 +45,15 @@
         </executions>
 			</plugin>
 		</plugins>
+		<resources>
+     <resource>
+       <directory>src/main/resources</directory>          
+     </resource>
+     <resource>
+       <directory>src/main/java/com/resources/XML</directory>
+     </resource>
+</resources>
+
 	</build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core 
@@ -51,6 +62,14 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.30.Final</version>
 		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.13.2</version>
+		    
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
@@ -84,13 +103,7 @@
 		    <artifactId>commons-cli</artifactId>
 		    <version>1.5.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
-		<dependency>
-		    <groupId>com.microsoft.sqlserver</groupId>
-		    <artifactId>mssql-jdbc</artifactId>
-		    <version>10.2.0.jre17</version>
-		</dependency>
-		
+
 
 
 		<!-- https://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->

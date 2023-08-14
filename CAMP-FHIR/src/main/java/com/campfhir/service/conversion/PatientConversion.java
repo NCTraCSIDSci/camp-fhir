@@ -13,22 +13,7 @@ import main.java.com.campfhir.model.Patient;
 
 public class PatientConversion 
 {
-	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
-            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-		    .toFormatter();
-	
 
-	public static Date convertStringToDate(String dateString) {
-		 try {
-			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
-		 } catch(Exception e) {
-			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
-		 }
-	}
-	
 	public org.hl7.fhir.r4.model.Patient Patients( main.java.com.campfhir.model.Patient p) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Patient patient = new org.hl7.fhir.r4.model.Patient();
@@ -1199,4 +1184,21 @@ public class PatientConversion
 
 		return patient;
 	}
+	
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	private static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
+	}
+	
 }

@@ -33,6 +33,7 @@ public class HibernateBaseDB
     static String url;
     static String username;
     static String password;
+    static String schema;
     
     public static SessionFactory getSessionFactory(Campfhir cf, String direction) 
     		throws ParserConfigurationException, SAXException, IOException 
@@ -46,6 +47,7 @@ public class HibernateBaseDB
 	        url = cf.getiDburl();
 	        username = cf.getiDbusername();
 	        password = cf.getiDbpassword();
+	        schema = cf.getSchema();
         }
         else if(direction.equals("out"))
         {
@@ -54,6 +56,7 @@ public class HibernateBaseDB
 	        url = cf.getoDburl();
 	        username = cf.getoDbusername();
 	        password = cf.getoDbpassword();
+	        schema = cf.getSchema();
         }
         
         
@@ -66,11 +69,13 @@ public class HibernateBaseDB
         properties.put("hibernate.connection.password", password);
         properties.put("hibernate.current_session_context_class", "thread");
         properties.put("show_sql", "true");
+        properties.put("hibernate.default_schema", schema);
 
         configuration.setProperties(properties);
-        configuration.addFile(new File("./").getCanonicalPath()+"/"+cf.getResource()+".hbm.xml"); // C:\Users\pikovach\camp-fhir\CAMP-FHIR\Patient.hbm.xml
+       // configuration.addFile(new File("./").getCanonicalPath()+"/"+cf.getResource()+".hbm.xml"); // C:\Users\pikovach\camp-fhir\CAMP-FHIR\Patient.hbm.xml
+        //configuration.addFile(new File("./src/main/java/com/resources/XML").getCanonicalPath()+"/"+cf.getResource()+".hbm.xml"); //
 
-        // configuration.addResource(cf.getResource()+".hbm.xml");
+         configuration.addResource(cf.getResource()+".hbm.xml");
 //        configuration.addResource("C:\\Users\\pikovach\\camp-fhir\\CAMP-FHIR\\Patient.hbm.xml");
         
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

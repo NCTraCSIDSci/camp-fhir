@@ -1,12 +1,19 @@
 {
-	"sqldialects":"org.hibernate.dialect.H2Dialect",
-	"driverclass":"org.h2.Driver",
-	"dburl":"jdbc:h2:C:\\Users\\pikovach\\Downloads\\CAMPFHIR_1.0\\CAMPFHIR_ECLIPSE\\workspace\\Demo_Database\\OMOP_H2.db"
-	,"dbusername":"demo","dbpassword":"demo",
-	"outputfolder":"C:\\Users\\pikovach\\camp-fhir-output",
-	"partition":"1000",
-	"resourceconfiguration":"",
+	"iSqldialects":"org.hibernate.dialect.H2Dialect",
+	"iSqlDriverClass":"org.h2.Driver",
+	"iDburl":"jdbc:h2:C:\\Users\\pikovach\\Documents\\CAMPFHIR_RELEASE_FOLDER\\CAMPFHIR_1.0\\SAMPLE_FHIR_DATA\\OMOP_H2.db",
+	"iDbusername":"demo",
+	"iDbpassword":"demo",
+	"schema": "campfhir",
+	"iInputfolder":"",
+	"iFileType":"",
+	"oSqldialects":"",
+	"oSqlDriverClass" : "",
+	"oDburl":"",
+	"oDbusername":"",
+	"oDbpassword":"",
+	"oFileType":"json",
+	"oOutputfolder":".\\FHIR_OUTPUT",
 	"resource":"Patient",
-	"custommapping":"false",
-	"format": "json"
+	"oPartition":"1000"	
 }

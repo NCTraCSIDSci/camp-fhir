@@ -13,21 +13,6 @@ import main.java.com.campfhir.model.Observation;
 public class ObservationConversion 
 {
 
-	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
-            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
-		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-		    .toFormatter();
-	
-
-	public static Date convertStringToDate(String dateString) {
-		 try {
-			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
-		 } catch(Exception e) {
-			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
-		 }
-	}
 	
 	public org.hl7.fhir.r4.model.Observation Observations(Observation o) throws ParseException
 	{
@@ -2332,6 +2317,12 @@ public class ObservationConversion
 			}
 
 		}
+
+		return Observations2(o, observation);
+	}
+	
+	private org.hl7.fhir.r4.model.Observation Observations2(Observation o, org.hl7.fhir.r4.model.Observation observation) throws ParseException
+	{
 		/******************** Obsrvtn_Issued ********************************************************************************/
 		if(o.getObsrvtnIssued() != null ) {
 
@@ -3334,6 +3325,22 @@ public class ObservationConversion
 			}
 		}
 		return observation;
+	}
+	
+	public static DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"))
+            .appendOptional(DateTimeFormatter.ofPattern("EEE, d MMM yyyy HH:mm:ss 'GMT'"))
+		    .appendOptional(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		    .toFormatter();
+	
+
+	private static Date convertStringToDate(String dateString) {
+		 try {
+			 return Date.from(LocalDateTime.parse(dateString, formatter).atZone(ZoneOffset.UTC).toInstant());
+		 } catch(Exception e) {
+			 return Date.from(LocalDate.parse(dateString, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
+		 }
 	}
 	
 }

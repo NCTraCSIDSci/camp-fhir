@@ -32,11 +32,19 @@ public class Campfhir
 	private String oFileType;
 	private String oPartition;
 
-	
+	private String schema;
 	
 	private String resource;
 
+	public String getSchema() {
+		return schema;
+	}
 
+
+	public void setSchema(String schema) {
+		this.schema = schema;
+	}
+	
 	public String getiSqldialects() {
 		return iSqldialects;
 	}
