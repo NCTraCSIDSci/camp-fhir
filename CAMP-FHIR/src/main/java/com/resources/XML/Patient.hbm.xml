@@ -422,5 +422,29 @@
             <meta attribute="fhir-path">Patient.Telecom.Value</meta>
             <column length="65535" name="Pnt_Tlcm_Vl"/>
         </property>
+        <property generated="never" lazy="false" name="pntRace" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pnt_Race"/>
+        </property>
+        <property name="pntRaceSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pnt_Race_System"/>
+        </property>
+        <property name="pntRaceDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pnt_Race_Display"/>
+        </property>
+        <property generated="never" lazy="false" name="pntEth" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pnt_Eth"/>
+        </property>
+        <property generated="never" lazy="false" name="pntEthSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pnt_Eth_System"/>
+        </property>
+            <property generated="never" lazy="false" name="pntEthDisplay" type="string">
+            <meta attribute="resource-type"/>
+        <column length="65535" name="Pnt_Eth_Display"/>
+        </property>
     </class>
 </hibernate-mapping>
