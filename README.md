@@ -25,3 +25,4 @@ There are three basic steps to transform clinical data using CAMP FHIR, along wi
     - Run CAMP FHIR from command\-line simply by setting your configuration file (config.json) and running the command java \-jar CAMPFHIR\.jar\.
     - Run CAMP FHIR using our new graphical user interface which provides a visual and user friendly alternative to running CAMP FHIR from command\-line\. The GUI focuses on allowing users to create a script that runs CAMPFHIR once the inputs are filled\. The user has access to all of the available resources and has the option to activate database resource mapping through the GUI\. 
 
+For additional information and questions please see our wiki page [here](https://github.com/NCTraCSIDSci/camp-fhir/wiki)
